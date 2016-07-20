@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Todolists</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+	<%if logged_in? %>
+		<div style= "float: right">
+			<% if current_user.username =="admin" %>
+				Logged in as Administrator
+			<%else%>
+				Logged in as <%="#{current_user.first_name} #{current_user.last_name}" %>
+			<%end%>
+			<%=link_to "Logout", logout_path, method: :delete %>
+		</div>
+	<%end%>
+
+<%= yield %>
+
+</body>
+</html>

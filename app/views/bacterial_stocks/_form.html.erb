@@ -1,0 +1,66 @@
+<%= form_for [@sequence, @bacterial_stock] do |f| %>
+  <% if bacterial_stock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bacterial_stock.errors.count, "error") %> prohibited this bacterial_stock from being saved:</h2>
+
+      <ul>
+      <% bacterial_stock.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :number %>
+    <%= f.number_field :number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :insert %>
+    <%= f.text_field :insert %>
+  </div>
+
+  <div class="field">
+    <%= f.label :plasmid %>
+    <%= f.text_field :plasmid %>
+  </div>
+
+  <div class="field">
+    <%= f.label :tag %>
+    <%= f.text_field :tag %>
+  </div>
+
+  <div class="field">
+    <%= f.label :species %>
+    <%= f.text_field :species %>
+  </div>
+
+  <div class="field">
+    <%= f.label :strain %>
+    <%= f.text_field :strain %>
+  </div>
+
+  <div class="field">
+    <%= f.label :antibiotic_resistance %>
+    <%= f.text_field :antibiotic_resistance %>
+  </div>
+
+  <div class="field">
+    <%= f.label :methods_of_cloning %>
+    <%= f.text_field :methods_of_cloning %>
+  </div>
+
+  <div class="field">
+    <%= f.label :source %>
+    <%= f.text_field :source %>
+  </div>
+
+  <div class="field">
+    <%= f.label :comments %>
+    <%= f.text_area :comments %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

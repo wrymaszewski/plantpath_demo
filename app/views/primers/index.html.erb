@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Primers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Primer sequence</th>
+      <th>Direction</th>
+      <th>Tm</th>
+      <th>Sequence</th>
+      <th>Comments</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @primers.each do |primer| %>
+      <tr>
+        <td><%= primer.name %></td>
+        <td><%= primer.p_sequence %></td>
+        <td><%= primer.direction %></td>
+        <td><%= primer.Tm.round(1) %></td>
+        <td><%= link_to "#{primer.gene_sequence}", @sequences.find(primer.sequence_id) %></td>
+        <td><%= primer.comments %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%=link_to "All sequences", sequences_path %>
+<%= link_to 'Back', root_path %>
+
+

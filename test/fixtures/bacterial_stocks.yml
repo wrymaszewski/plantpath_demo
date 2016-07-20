@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  insert: MyString
+  plasmid: MyString
+  tag: MyString
+  species: MyString
+  strain: MyString
+  antibiotic_resistance: MyString
+  methods_of_cloning: MyString
+  source: MyString
+  comments: MyText
+  references: 
+
+two:
+  number: 1
+  insert: MyString
+  plasmid: MyString
+  tag: MyString
+  species: MyString
+  strain: MyString
+  antibiotic_resistance: MyString
+  methods_of_cloning: MyString
+  source: MyString
+  comments: MyText
+  references: 

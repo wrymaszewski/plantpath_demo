@@ -1,0 +1,29 @@
+<%= form_for [@sequence, @sequence_attachment] do |f| %>
+  <% if @sequence_attachment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@sequence_attachment.errors.count, "error") %> prohibited this sequence_attachment from being saved:</h2>
+
+      <ul>
+      <% @sequence_attachment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :file %><br>
+    <%= f.file_field :file, :multiple => false %>
+  </div>
+  <div class="field">
+    <%= f.label :type %><br>
+    <%= f.text_field :sequence_type %>
+  </div>
+  <div class="field">
+    <%= f.label :comment %><br>
+    <%= f.text_area :comment %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

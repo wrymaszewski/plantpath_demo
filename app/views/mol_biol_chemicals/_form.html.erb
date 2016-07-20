@@ -1,0 +1,50 @@
+<%= form_for(mol_biol_chemical) do |f| %>
+  <% if mol_biol_chemical.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mol_biol_chemical.errors.count, "error") %> prohibited this mol_biol_chemical from being saved:</h2>
+
+      <ul>
+      <% mol_biol_chemical.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :producer %>
+    <%= f.text_field :producer %>
+  </div>
+
+  <div class="field">
+    <%= f.label :catalogue_number %>
+    <%= f.text_field :catalogue_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :quantity %>
+    <%= f.text_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= f.label :delivery_date %>
+    <%= f.text_field :delivery_date %>
+  </div>
+  <div class="field">
+    <%= f.label :place %>
+    <%= f.text_field :place%>
+  </div>
+  <div class="field">
+    <%= f.label :comments %>
+    <%= f.text_area :comments %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

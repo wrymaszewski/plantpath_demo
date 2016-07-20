@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  plasmid: MyString
+  sequence: MyString
+  Tm: 1.5
+  comments: MyText
+
+two:
+  name: MyString
+  plasmid: MyString
+  sequence: MyString
+  Tm: 1.5
+  comments: MyText
