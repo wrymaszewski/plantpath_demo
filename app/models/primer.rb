@@ -2,7 +2,6 @@ class Primer < ActiveRecord::Base
 	belongs_to :sequence
   validates :name, presence: true
   validates :p_sequence, presence: true
-  validates :gene_sequence, presence: true
 
 	def calculate_tm
 		seq = self.p_sequence
@@ -22,7 +21,7 @@ class Primer < ActiveRecord::Base
       end     
     end 
     if self.p_sequence.length < 14
-      self.Tm = (at*2) + (gc*4)
+      self.Tm = ((a+t)*2) + ((g+c)*4)
     elsif self.p_sequence.length > 13
       self.Tm = 64.9+((41*(g+c-16.4))/(a+t+g+c))
     end

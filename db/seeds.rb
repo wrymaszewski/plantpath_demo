@@ -1,17 +1,9 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-
 User.destroy_all
 RegularChemical.destroy_all
 Primer.destroy_all
 Sequence.destroy_all
 BacterialStock.destroy_all
+MolBiolChemical.destroy_all
 
 users = User.create! [
   { username: "wrymaszewski", password: "123", first_name: "Wojciech", last_name: "Rymaszewski" },
@@ -27,6 +19,8 @@ csv = File.read(Rails.root.join('lib', 'seeds', 'primers1.csv')).scrub
 csvprim = CSV.parse(csv, :headers => true)
 csv = File.read(Rails.root.join('lib', 'seeds', 'bacteria2.csv')).scrub
 csvbac= CSV.parse(csv, :headers => true)
+csv = File.read(Rails.root.join('lib', 'seeds', 'mol_biol.csv')).scrub
+csvmolbiol= CSV.parse(csv, :headers => true)
 
 csvregchem.each do |r|
 	t = RegularChemical.new
@@ -38,13 +32,27 @@ csvregchem.each do |r|
 	t.place = r["place"]
 	t.comments = r["comments"]
 	t.save
-	puts t.short_name
+	puts "Regular chemicals #{t.short_name} added"
 end
+
+csvmolbiol.each do |m|
+	t = MolBiolChemical.new
+	t.name = m["Fast Digest"]
+	t.producer = m["Producer"]
+	t.catalogue_number = m["Nr kat."]
+	t.comments = m["Uwagi"]
+	t.quantity = m["Zapas "]
+	t.delivery_date = m["delivery"]
+	t.rodzaj = m["type"]
+	t.save
+	puts "Molecular biology chemical #{t.name} added"
+end
+
 csvseq.each do |r|
 	t = Sequence.new
 	t.name = r["seq"]
 	t.organism = r["organism"]
-	puts t.name
+	puts "##################### Sequence #{t.name} added ########################"
 	csvprim.each do |prow|
 		if prow["seq"] == t.name
 			p = t.primers.new
@@ -55,23 +63,24 @@ csvseq.each do |r|
 			p.refine
 			p.calculate_tm
 			p.calculate_length
-			puts p.p_sequence
+			puts "Primer #{p.name} added"
 		end
 	end
 	csvbac.each do |bac|
 		if bac['sequence'] == t.name
 			b = t.bacterial_stocks.new
 			b.number = bac['number']
-			b.insert = bac['insert']
+			b.wstawka = bac['insert']
 			b.sequence_name = bac['sequence']
 			b.plasmid = bac['plasmid']
 			b.tag = bac['TAG']
 			b.species = bac['species']
+			b.strain = bac['strain']
 			b.antibiotic_resistance = bac['antibiotics resistance']
 			b.methods_of_cloning = bac['methods of cloning']
 			b.source = bac['source']
 			b.comments = bac['comments']
-			puts b.insert
+			puts "Bacterial stock #{b.wstawka} added"
 		end
 	end
 	t.save

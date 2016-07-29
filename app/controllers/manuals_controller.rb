@@ -1,5 +1,5 @@
 class ManualsController < ApplicationController
-  before_action :set_manual, only: [:show, :edit, :update, :destroy, :view_file, :download_file]
+  before_action :set_manual, only: [:show, :edit, :update, :destroy, :download_file]
 
   # GET /manuals
   # GET /manuals.json
@@ -61,19 +61,17 @@ class ManualsController < ApplicationController
     end
   end
 
-    def download_file
-    send_file(@manual.file.path,
-          :disposition => 'attachment',
-          :url_based_filename => false,
-          :filename => @manual.file.to_s)
-   end
-
-   def view_file
-    send_file(@manual.file.path,
-          :disposition => 'inline',
-          :url_based_filename => false,
-          :filename => @manual.file.to_s)
-   end
+def download_file
+  send_file(@manual.file.path, :disposition => 'attachment',
+   :url_based_filename => false,
+    :filename => @manual.file_identifier.to_s)
+end
+def view_file
+  send_file(@manual.file.path,
+    :disposition => 'inline',
+    :url_based_filename => false,
+    :filename => @manual.file_identifier.to_s)
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.

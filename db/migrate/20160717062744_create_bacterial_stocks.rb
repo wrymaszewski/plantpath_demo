@@ -12,7 +12,7 @@ class CreateBacterialStocks < ActiveRecord::Migration[5.0]
       t.string :methods_of_cloning
       t.string :source
       t.text :comments
-      t.references :sequence
+      t.references :sequence, foreign_key: true
 
       t.timestamps
     end

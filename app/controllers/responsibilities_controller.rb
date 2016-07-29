@@ -1,10 +1,9 @@
 class ResponsibilitiesController < ApplicationController
+  
   before_action :set_responsibility, only: [:show, :edit, :update, :destroy]
 
-  # GET /responsibilities
-  # GET /responsibilities.json
   def index
-    @responsibilities = Responsibility.all
+   @responsibilities = Responsibility.all
   end
 
   # GET /responsibilities/1
@@ -28,7 +27,7 @@ class ResponsibilitiesController < ApplicationController
 
     respond_to do |format|
       if @responsibility.save
-        format.html { redirect_to responsibilites_path, notice: 'Responsibility was successfully created.' }
+        format.html { redirect_to responsibilities_path, notice: 'Responsibility was successfully created.' }
         format.json { render :show, status: :created, location: @responsibility }
       else
         format.html { render :new }
@@ -42,7 +41,7 @@ class ResponsibilitiesController < ApplicationController
   def update
     respond_to do |format|
       if @responsibility.update(responsibility_params)
-        format.html { redirect_to responsibilites_path, notice: 'Responsibility was successfully updated.' }
+        format.html { redirect_to responsibilities_path, notice: 'Responsibility was successfully updated.' }
         format.json { render :show, status: :ok, location: @responsibility }
       else
         format.html { render :edit }

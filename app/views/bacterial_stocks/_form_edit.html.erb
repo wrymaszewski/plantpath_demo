@@ -1,0 +1,62 @@
+<  <style type="text/css">
+    input, select, textarea {
+      padding: 8px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      background: #fff;
+      font-size: 120%;
+    }
+  </style>
+<%= form_for [@sequence, @bacterial_stock] do |f| %>
+  <% if bacterial_stock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bacterial_stock.errors.count, "error") %> prohibited this bacterial_stock from being saved:</h2>
+
+      <ul>
+      <% bacterial_stock.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container form_container">
+    <div class="row">
+      <span class = "form_label">Number</span><span class = "form_field"><%= f.number_field :number %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Insert</span><span class = "form_field"><%= f.text_field :wstawka %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Plasmid</span><span class = "form_field"><%= f.text_field :plasmid %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Tag</span><span class = "form_field"><%= f.text_field :tag %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Species</span><span class = "form_field"><%= f.text_field :species %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Strain</span><span class = "form_field"><%= f.text_field :strain %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Antibiotic resistance</span><span class = "form_field"><%= f.text_field :antibiotic_resistance %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Method of cloning</span><span class = "form_field"><%= f.text_field :methods_of_cloning %></span>
+    </div><br><div class="row">
+      <span class = "form_label">Source</span><span class = "form_field"><%= f.text_field :source %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Change sequence</span><span class = "form_field"><%= f.select :sequence_id, options_from_collection_for_select(@sequences, 'id', 'name') %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Comments</span><span class = "form_field"><%= f.text_area :comments %></span>
+    </div><br>
+    <div class="actions submit_button form_submit">
+      <%= f.submit "Create " %>
+    </div>
+  <% end %>
+</div>

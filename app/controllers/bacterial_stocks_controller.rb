@@ -1,12 +1,14 @@
 class BacterialStocksController < ApplicationController
-  before_action :set_all_sequences, only: [:index]
+  before_action :set_all_sequences, only: [:index, :edit]
   before_action :set_sequence, only: [:show, :edit, :update, :destroy, :new, :create]
   before_action :set_bacterial_stock, only: [:show, :edit, :update, :destroy]
 
-  # GET /bacterial_stocks
-  # GET /bacterial_stocks.json
   def index
-    @bacterial_stocks = BacterialStock.all
+   @bacterial_stocks = BacterialStock.all
+    # respond_to do |format|
+    #   format.html
+    #   format.json { render json: BacterialStocksDatatable.new(view_context) }
+    # end
   end
 
   # GET /bacterial_stocks/1
@@ -80,6 +82,6 @@ class BacterialStocksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def bacterial_stock_params
-      params.require(:bacterial_stock).permit(:number, :insert, :plasmid, :tag, :species, :strain, :antibiotic_resistance, :methods_of_cloning, :source, :comments, :references)
+      params.require(:bacterial_stock).permit(:number, :wstawka, :plasmid, :tag, :species, :strain, :antibiotic_resistance, :methods_of_cloning, :source, :comments, :sequence_id)
     end
 end

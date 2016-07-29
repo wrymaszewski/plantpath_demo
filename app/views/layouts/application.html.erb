@@ -1,24 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Todolists</title>
+  <title>PlantPath</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-	<%if logged_in? %>
-		<div style= "float: right">
-			<% if current_user.username =="admin" %>
-				Logged in as Administrator
-			<%else%>
-				Logged in as <%="#{current_user.first_name} #{current_user.last_name}" %>
-			<%end%>
-			<%=link_to "Logout", logout_path, method: :delete %>
-		</div>
-	<%end%>
 
+
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class = "navbar-left" id = "brand" href="http://www.plantpath.pl">
+        <%= image_tag("plant_path.png", :height => 50, :width => 57) %></a>
+    </div>
+    <ul class="nav navbar-nav">
+    
+      <li class=<%='active' if params[:controller] == 'fronts' %>>
+        <%=link_to root_path, class: "btn btn-link" do %>
+          <i class = "glyphicon glyphicon-home"></i>
+        <%end%>
+
+      </li>
+      <li class=<%='active' if params[:controller] == 'sequences' %>><%=link_to "Sequences",sequences_path %></li>
+      <li class=<%='active' if params[:controller] == 'primers' %>><%=link_to "Primers",primers_path %></li> 
+      <li class=<%='active' if params[:controller] == 'bacterial_stocks' %>><%=link_to "Bacterial stocks", bacterial_stocks_path %></li> 
+      <li class=<%='active' if params[:controller] == 'regular_chemicals' %>><%=link_to "Regular chemicals", regular_chemicals_path %></li> 
+      <li class=<%='active' if params[:controller] == 'mol_biol_chemicals' %>><%=link_to "Molecular biology chemicals", mol_biol_chemicals_path %></li>
+      <li class=<%='active' if params[:controller] == 'responsibilities' %>><%=link_to "Responsibilities", responsibilities_path %></li>
+      <li class=<%='active' if params[:controller] == 'manuals' %>><%=link_to "Manuals", manuals_path %></li>
+      <li id = "loadImage"><%= image_tag("loading_new.gif", :size => 40) %></li>
+    </ul>
+
+    
+    <%if logged_in? %>
+    <div id = "UserContainer">
+      <div class = "user"><span class = "glyphicon glyphicon-user"></span>
+        <% if current_user.username =="admin" %>
+         <% user = 'Administrator' %>
+        <%else%>
+          <%user = "#{current_user.first_name} #{current_user.last_name}" %>
+        <%end%>
+        <%=link_to "#{user}", logout_path, method: :delete %>
+      </div>
+    <%end%>
+    </div>
+    </div>
+		
+</nav>
+ <div id ="loadDiv"></div>
 <%= yield %>
-
+<body>
 </body>
+
 </html>
+
+

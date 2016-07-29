@@ -1,7 +1,7 @@
 class PrimersController < ApplicationController
   
-  end
-  before_action :set_all_sequences, only: [:index]
+  
+  before_action :set_all_sequences, only: [:index, :edit]
   before_action :set_sequence, only: [:show, :edit, :update, :destroy, :new, :create]
   before_action :set_primer, only: [:show, :edit, :update, :destroy]
   
@@ -9,14 +9,7 @@ class PrimersController < ApplicationController
   # GET /primers
   # GET /primers.json
   def index
-    @grid = PrimersGrid.new(params[:primers_grid]) do |scope|
-      scope.page(params[:page])
-    end
-  
-
-  # GET /primers/1
-  # GET /primers/1.json
-  def show
+    @primers = Primer.all
   end
 
   # GET /primers/new

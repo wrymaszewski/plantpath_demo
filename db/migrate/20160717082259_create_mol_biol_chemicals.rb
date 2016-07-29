@@ -4,6 +4,7 @@ class CreateMolBiolChemicals < ActiveRecord::Migration[5.0]
       t.string :name
       t.string :producer
       t.string :catalogue_number
+      t.string :rodzaj
       t.string :quantity
       t.date :delivery_date
       t.string :place

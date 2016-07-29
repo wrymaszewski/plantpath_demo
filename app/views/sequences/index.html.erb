@@ -1,13 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Sequences</h1>
+<h1 class = "text-center">Listing Sequences</h1>
 
-<table>
+<table id ="sequences" class = "display">
   <thead>
     <tr>
       <th>Name</th>
       <th>Organism</th>
-      <th colspan="3"></th>
+      <% if current_user.username == 'admin' %>
+          <th>Edit</th>
+          <th>Delete</th>
+      <%end%>
     </tr>
   </thead>
 
@@ -17,16 +20,14 @@
         <td><%= link_to sequence.name, sequence %></td>
         <td><%= sequence.organism %></td>
         <% if current_user.username == 'admin' %>
-          <td><%= link_to 'Edit', edit_sequence_path(sequence) %></td>
-          <td><%= link_to 'Destroy', sequence, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to edit_sequence_path(sequence), class: "btn btn-link" do %>
+            <i class = "glyphicon glyphicon-edit"></i><%end%></td> 
+          <td><%= link_to sequence, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" do %>
+             <i class = "glyphicon glyphicon-floppy-remove"></i><%end%></td> 
         <%end%>
       </tr>
     <% end %>
   </tbody>
-</table>
+</table><br>
 
-<br>
-
-<%= link_to 'New Sequence', new_sequence_path %>
-<%= link_to 'Back', root_path %>
-
+<%= button_to 'Create sequence', new_sequence_path, :method => :get %>

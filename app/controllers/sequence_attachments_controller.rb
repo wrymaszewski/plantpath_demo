@@ -2,17 +2,6 @@ class SequenceAttachmentsController < ApplicationController
   before_action :set_sequence, only: [:show, :edit, :update, :destroy, :new, :create, :index]
   before_action :set_sequence_attachment, only: [:show, :edit, :update, :destroy]
 
-  # GET /sequence_attachments
-  # GET /sequence_attachments.json
-  def index
-    @sequence_attachments = @sequence.sequence_attachments.all
-  end
-
-  # GET /sequence_attachments/1
-  # GET /sequence_attachments/1.json
-  def show
-  end
-
   # GET /sequence_attachments/new
   def new
     @sequence_attachment = @sequence.sequence_attachments.new
@@ -64,7 +53,7 @@ class SequenceAttachmentsController < ApplicationController
     send_file(@sequence_attachment.file.path,
           :disposition => 'attachment',
           :url_based_filename => false,
-          :filename => @sequence_attachment.file.to_s)
+          :filename => @sequence_attachment.file_identifier.to_s)
    end
 
    def view_file
@@ -73,7 +62,7 @@ class SequenceAttachmentsController < ApplicationController
     send_file(@sequence_attachment.file.path,
           :disposition => 'inline',
           :url_based_filename => false,
-          :filename => @sequence_attachment.file.to_s)
+          :filename => @sequence_attachment.file_identifier.to_s)
    end
 
 

@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Regular Chemicals</h1>
+<h1 class = "text-center">Regular Chemicals</h1>
 
-<table>
+<table id="regular_chemicals" class="display">
   <thead>
     <tr>
       <th>Short name</th>
@@ -13,8 +13,11 @@
       <th>Delivery date</th>
       <th>Place</th>
       <th>Comments</th>
-      <th colspan="3"></th>
-    </tr>
+      <% if current_user.username == 'admin' %>
+          <th>Edit</th>
+          <th>Delete</th>
+      <%end%>
+     </tr>
   </thead>
 
   <tbody>
@@ -29,15 +32,15 @@
         <td><%= regular_chemical.place %></td>
         <td><%= regular_chemical.comments %></td>
         <% if current_user.username == 'admin' %>
-          <td><%= link_to 'Edit', edit_regular_chemical_path(regular_chemical) %></td>
-          <td><%= link_to 'Destroy', regular_chemical, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to edit_regular_chemical_path(regular_chemical), class: "btn btn-link" do %>
+            <i class = "glyphicon glyphicon-edit"></i><%end%></td> 
+          <td><%= link_to regular_chemical, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" do %>
+             <i class = "glyphicon glyphicon-floppy-remove"></i><%end%></td> 
         <%end%>
       </tr>
     <% end %>
   </tbody>
-</table>
+</table><br>
 
-<br>
-
-<%= link_to 'New Regular Chemical', new_regular_chemical_path %>
-<%= link_to 'Back', root_path %>
+<div class="button"><%= button_to 'New regular chemical', new_regular_chemical_path, :method => :get %>
+</div>

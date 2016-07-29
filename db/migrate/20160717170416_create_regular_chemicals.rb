@@ -8,6 +8,7 @@ class CreateRegularChemicals < ActiveRecord::Migration[5.0]
       t.string :catalogue_number
       t.date :delivery_date
       t.string :place
+      t.string :quantity
       t.text :comments
 
       t.timestamps

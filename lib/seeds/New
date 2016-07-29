@@ -1,0 +1,15 @@
+    <% @bacterial_stocks.each do |bacterial_stock| %>
+      <tr>
+        <td><%= bacterial_stock.number %></td>
+        <td><%= bacterial_stock.insert %></td>
+        <td><%= link_to "#{bacterial_stock.sequence_name}", @sequences.find(bacterial_stock.sequence_id) %></td>
+        <td><%= bacterial_stock.plasmid %></td>
+        <td><%= bacterial_stock.tag %></td>
+        <td><%= bacterial_stock.species %></td>
+        <td><%= bacterial_stock.strain %></td>
+        <td><%= bacterial_stock.antibiotic_resistance %></td>
+        <td><%= bacterial_stock.methods_of_cloning %></td>
+        <td><%= bacterial_stock.source %></td>
+        <td><%= bacterial_stock.comments %></td>
+       </tr>
+    <% end %>

@@ -1,3 +1,15 @@
+  <style type="text/css">
+    input, select, textarea {
+      padding: 8px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      background: #fff;
+      font-size: 120%;
+    }
+  </style>
 <%= form_for [@sequence, @bacterial_stock] do |f| %>
   <% if bacterial_stock.errors.any? %>
     <div id="error_explanation">
@@ -10,57 +22,38 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :number %>
-    <%= f.number_field :number %>
-  </div>
-
-  <div class="field">
-    <%= f.label :insert %>
-    <%= f.text_field :insert %>
-  </div>
-
-  <div class="field">
-    <%= f.label :plasmid %>
-    <%= f.text_field :plasmid %>
-  </div>
-
-  <div class="field">
-    <%= f.label :tag %>
-    <%= f.text_field :tag %>
-  </div>
-
-  <div class="field">
-    <%= f.label :species %>
-    <%= f.text_field :species %>
-  </div>
-
-  <div class="field">
-    <%= f.label :strain %>
-    <%= f.text_field :strain %>
-  </div>
-
-  <div class="field">
-    <%= f.label :antibiotic_resistance %>
-    <%= f.text_field :antibiotic_resistance %>
-  </div>
-
-  <div class="field">
-    <%= f.label :methods_of_cloning %>
-    <%= f.text_field :methods_of_cloning %>
-  </div>
-
-  <div class="field">
-    <%= f.label :source %>
-    <%= f.text_field :source %>
-  </div>
-
-  <div class="field">
-    <%= f.label :comments %>
-    <%= f.text_area :comments %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+  <div class="container form_container">
+    <div class="row">
+      <span class = "form_label">Number</span><span class = "form_field"><%= f.number_field :number %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Insert</span><span class = "form_field"><%= f.text_field :wstawka %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Plasmid</span><span class = "form_field"><%= f.text_field :plasmid %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Tag</span><span class = "form_field"><%= f.text_field :tag %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Species</span><span class = "form_field"><%= f.text_field :species %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Strain</span><span class = "form_field"><%= f.text_field :strain %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Antibiotic resistance</span><span class = "form_field"><%= f.text_field :antibiotic_resistance %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Method of cloning</span><span class = "form_field"><%= f.text_field :methods_of_cloning %></span>
+    </div><br><div class="row">
+      <span class = "form_label">Source</span><span class = "form_field"><%= f.text_field :source %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Comments</span><span class = "form_field"><%= f.text_area :comments %></span>
+    </div><br>
+    <div class="actions submit_button form_submit">
+      <%= f.submit "Create " %>
+    </div>
+  <% end %>
+</div>

@@ -1,3 +1,15 @@
+  <style type="text/css">
+    input, select, textarea {
+      padding: 8px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      background: #fff;
+      font-size: 120%;
+    }
+  </style>
 <%= form_for(@sequence, :html =>{:multipart => true}) do |f| %>
   <% if @sequence.errors.any? %>
 
@@ -12,26 +24,21 @@
       </ul>
     </div>
   <% end %>
+<div class="container form_container">
+    <div class="row">
+      <span class = "form_label">Name</span><span class = "form_field"><%= f.text_field :name %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Organism</span><span class = "form_field"><%= f.text_field :organism%></span>
+    </div><br>
+    <div class="row">
+      <%= f.fields_for :sequence_attachments do |s| %>
+      <span class = "form_label">Sequence attachment</span><span class = "attachment_field"><%= s.file_field  :file, :multiple => false, name: "sequence_attachments[file][]" %></span>
+      <%end%>
+    </div><br>
+    <div class="actions submit_button form_submit">
+      <%= f.submit "Create " %>
+    </div>
+  <% end %>
+</div>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :organism %><br>
-    <%= f.text_field :organism %>
-  </div>
-
-  <%= f.fields_for :sequence_attachments do |s| %>
-  <div class="field">
-    <%= s.label :file %><br>
-    <%= s.file_field :file, :multiple => false, name: "sequence_attachments[file][]" %>
-  </div>
-  <%end%>
-  
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

@@ -57,6 +57,7 @@ class SequencesController < ApplicationController
         format.json { render json: @sequence.errors, status: :unprocessable_entity }
       end
     end
+    @sequence.change_names
   end
 
   # DELETE /sequences/1
@@ -99,6 +100,6 @@ class SequencesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def sequence_params
       params.require(:sequence).permit(:name, sequence_attachments_attributes: [:id, :sequence_id, :file],
-        primers_attributes: [:id, :sequence_id, :checked], bacterial_stocks: [:id, :sequence_id])
+        primers_attributes: [:id, :sequence_id, :checked, :gene_sequence], bacterial_stocks: [:id, :sequence_id, :sequence_name, :wstawka, :strain, :species, :tag, :antibiotic_resistance, :methods_of_cloning, :source, :comments])
     end
 end

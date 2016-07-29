@@ -1,8 +1,9 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Bacterial Stocks</h1>
+<h1 class="text-center">Bacterial Stocks</h1>
 
-<table>
+<table id="bacterial_stocks" class="display">
+
   <thead>
     <tr>
       <th>Number</th>
@@ -16,29 +17,24 @@
       <th>Methods of cloning</th>
       <th>Source</th>
       <th>Comments</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
     <% @bacterial_stocks.each do |bacterial_stock| %>
-      <tr>
-        <td><%= bacterial_stock.number %></td>
-        <td><%= bacterial_stock.insert %></td>
-        <td><%= link_to "#{bacterial_stock.sequence_name}", @sequences.find(bacterial_stock.sequence_id) %></td>
-        <td><%= bacterial_stock.plasmid %></td>
-        <td><%= bacterial_stock.tag %></td>
-        <td><%= bacterial_stock.species %></td>
-        <td><%= bacterial_stock.strain %></td>
-        <td><%= bacterial_stock.antibiotic_resistance %></td>
-        <td><%= bacterial_stock.methods_of_cloning %></td>
-        <td><%= bacterial_stock.source %></td>
-        <td><%= bacterial_stock.comments %></td>
-       </tr>
-    <% end %>
+    <tr>
+      <td><%= bacterial_stock.number %></td>
+      <td><%= bacterial_stock.wstawka %></td>
+      <td><%= link_to bacterial_stock.sequence_name, Sequence.find(bacterial_stock.sequence_id) %></td>
+      <td><%= bacterial_stock.plasmid %></td>
+      <td><%= bacterial_stock.tag %></td>
+      <td><%= bacterial_stock.species %></td>
+      <td><%= bacterial_stock.strain %></td>
+      <td><%= bacterial_stock.antibiotic_resistance %></td>
+      <td><%= bacterial_stock.methods_of_cloning %></td>
+      <td><%= bacterial_stock.source %></td>
+      <td><%= bacterial_stock.comments %></td>
+    </tr>
+    <%end%>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Bacterial Stock', new_bacterial_stock_path %>

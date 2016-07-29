@@ -1,17 +1,27 @@
-<h1>Login</h1>
+<style type="text/css">
+  input, select, textarea {
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    background: #fff;
+    font-size: 120%;
+  }
+</style>
+<h1 class = "text-center">Login</h1>
 
 <%=form_for(:user, url: sessions_path) do |f| %>
-	<div class="field">
-		<%= f.label :username %> <br/>
-		<%= f.text_field :username %>
-	</div>
-	<p/>
-	<div class= "field">
-		<%= f.label :password %> <br/>
-		<%= f.password_field :password %>
-	</div>
-	<p/>
-	<div class= "actions">
-		<%= f.submit "Login" %>
-	</div>
-	<%end%>
+ <div class="container form_container" id ="login_container">
+    <div class="row">
+      <span class = "form_label" id ="login_label">Username</span><span class = "form_field" id="login_field"><%= f.text_field :username %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label" id ="login_label">Password</span><span class = "form_field" id="login_field"><%= f.password_field :password %></span>
+    </div><br>
+    <div class="actions submit_button form_submit">
+      <%= f.submit "Login" %>
+    </div>
+  <% end %>
+</div>

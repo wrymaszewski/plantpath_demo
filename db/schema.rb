@@ -10,11 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160719172542) do
+ActiveRecord::Schema.define(version: 20160723174121) do
 
   create_table "bacterial_stocks", force: :cascade do |t|
     t.integer  "number"
-    t.string   "insert"
+    t.string   "wstawka"
     t.string   "sequence_name"
     t.string   "plasmid"
     t.string   "tag"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20160719172542) do
     t.string   "name"
     t.string   "producer"
     t.string   "catalogue_number"
+    t.string   "rodzaj"
     t.string   "quantity"
     t.date     "delivery_date"
     t.string   "place"
@@ -74,6 +75,7 @@ ActiveRecord::Schema.define(version: 20160719172542) do
     t.string   "catalogue_number"
     t.date     "delivery_date"
     t.string   "place"
+    t.string   "quantity"
     t.text     "comments"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false

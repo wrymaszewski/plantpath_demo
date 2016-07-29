@@ -1,3 +1,25 @@
+  <style type="text/css">
+    input, textarea {
+      padding: 8px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      background: #fff;
+      font-size: 120%;
+    }
+    select {
+      padding: 8px 10px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 32.3%;
+      background: #fff;
+      font-size: 120%;
+    }
+  </style>
 <%= form_for(responsibility) do |f| %>
   <% if responsibility.errors.any? %>
     <div id="error_explanation">
@@ -10,33 +32,24 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :action %>
-    <%= f.text_field :action %>
-  </div>
-
-  <div class="field">
-    <%= f.label :date_of_action %>
-    <%= f.date_select :date_of_action %>
-  </div>
-
-  <div class="field">
-    <%= f.label :comments %>
-    <%= f.text_area :comments %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+ <div class="container form_container">
+    <div class="row">
+      <span class = "form_label">First name</span><span class = "form_field"><%= f.text_field :first_name %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Last name</span><span class = "form_field"><%= f.text_field :last_name %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Action</span><span class = "form_field"><%= f.text_field :action %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Date</span><span class = "form_field"><%= f.date_select :date_of_action %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Comments</span><span class = "form_field"><%= f.text_area :comments %></span>
+    </div><br>
+    <div class="actions submit_button form_submit">
+      <%= f.submit "Submit" %>
+    </div>
+  <% end %>
+</div>

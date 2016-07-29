@@ -1,3 +1,25 @@
+  <style type="text/css">
+    input, textarea {
+      padding: 8px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      background: #fff;
+      font-size: 120%;
+    }
+    select {
+      padding: 8px 10px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 32.3%;
+      background: #fff;
+      font-size: 120%;
+    }
+  </style>
 <%= form_for(mol_biol_chemical) do |f| %>
   <% if mol_biol_chemical.errors.any? %>
     <div id="error_explanation">
@@ -10,41 +32,33 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-  </div>
-
-  <div class="field">
-    <%= f.label :producer %>
-    <%= f.text_field :producer %>
-  </div>
-
-  <div class="field">
-    <%= f.label :catalogue_number %>
-    <%= f.text_field :catalogue_number %>
-  </div>
-
-  <div class="field">
-    <%= f.label :quantity %>
-    <%= f.text_field :quantity %>
-  </div>
-
-  <div class="field">
-    <%= f.label :delivery_date %>
-    <%= f.text_field :delivery_date %>
-  </div>
-  <div class="field">
-    <%= f.label :place %>
-    <%= f.text_field :place%>
-  </div>
-  <div class="field">
-    <%= f.label :comments %>
-    <%= f.text_area :comments %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div class="container form_container">
+    <div class="row">
+      <span class = "form_label">Name</span><span class = "form_field"><%= f.text_field :name %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Type</span><span class = "form_field"><%= f.text_field :rodzaj %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Producer</span><span class = "form_field"><%= f.text_field :producer %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Catalogue number</span><span class = "form_field"><%= f.text_field :catalogue_number %></span>
+    </div><br>
+    <div class="row">
+     <span class = "form_label">Quantity</span><span class = "form_field"><%= f.text_field :quantity %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Delivery date</span><span class = "form_field"><%= f.date_select :delivery_date %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Place</span><span class = "form_field"><%= f.text_field :place %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Comments</span><span class = "form_field"><%= f.text_area :comments %></span>
+    </div><br>
+    <div class="actions submit_button form_submit">
+      <%= f.submit "Submit" %>
+    </div>
+  <% end %>
+</div>

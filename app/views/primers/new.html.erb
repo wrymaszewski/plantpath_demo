@@ -1,10 +1,3 @@
-<p>
-  <strong>Name:</strong>
-  <%= @sequence.name %>
-</p>
-
-<h1>New Primer</h1>
+<h1 class = "text-center">Create primer for sequence: <span class = "sequence_name" ><%=@sequence.name%></span></h1>
 
 <%= render 'form' %>
-
-<%= link_to 'Back', @sequence %>

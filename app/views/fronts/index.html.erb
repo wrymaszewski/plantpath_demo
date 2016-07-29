@@ -1,27 +1,20 @@
-<h1> Choose action </h1>
-<%=link_to "Sequences database",sequences_path %><br>
-<%=link_to "Primers database",primers_path %><br>
-<%=link_to "Regular chemicals database", regular_chemicals_path %><br>
-<%=link_to "Molecular biology chemicals database", mol_biol_chemicals_path %><br>
-<%=link_to "Responsibilities", responsibilities_path %><br>
-<%=link_to "Manuals", manuals_path %><br>
+<p id="notice"><%= notice %></p>
 
-<% if current_user.username == "Admin" %>
-	<%=link_to "Create User", new_user_path %>
-<%end%>
-
+<% if current_user.username == "admin" %>
+	<div class="button"><%=button_to "Create new user", new_user_path, :method => :get %></div>
+	<div class="button"><%=button_to "Manage accounts", users_path, :method => :get %></div>
+<br><hr><%end%>
 
 <% if @responsibilities_pending.first %>
-	<h1>Pending responsibilities</h1>
-	<table>
+	<h1 class = "text-center">Pending responsibilities</h1>
+	<table id = "pending_resp" class = "display">
 	  <thead>
 	    <tr>
 	      <th>First name</th>
 	      <th>Last name</th>
 	      <th>Action</th>
-	      <th>Data of action</th>
+	      <th>Date of action</th>
 	      <th>Comments</th>
-	      <th colspan="3"></th>
 	    </tr>
 	  </thead>
 	  <tbody>

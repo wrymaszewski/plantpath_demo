@@ -1,6 +1,2 @@
-<h1>Editing Bacterial Stock</h1>
-
-<%= render 'form', bacterial_stock: @bacterial_stock %>
-
-<%= link_to 'Show', @bacterial_stock %> |
-<%= link_to 'Back', bacterial_stocks_path %>
+<h1 class = "text-center">Edit bacterial stock for sequence: <span class = "sequence_name" ><%=@sequence.name%></span></h1>
+<%= render 'form_edit', bacterial_stock: @bacterial_stock %>
