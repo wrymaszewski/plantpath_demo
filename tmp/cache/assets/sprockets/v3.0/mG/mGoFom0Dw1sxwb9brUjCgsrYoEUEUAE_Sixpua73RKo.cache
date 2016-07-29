@@ -1,0 +1,10 @@
+I"¯(function() {
+  jQuery(function() {
+    return $('#mol_biol_chemicals').dataTable({
+      sPaginationType: "full_numbers",
+      bJQueryUI: true
+    });
+  });
+
+}).call(this);
+:ET

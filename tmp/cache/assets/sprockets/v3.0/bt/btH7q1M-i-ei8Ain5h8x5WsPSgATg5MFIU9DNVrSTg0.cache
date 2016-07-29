@@ -1,0 +1,13 @@
+I"(function() {
+  jQuery(function() {
+    return $('#responsibilities').dataTable({
+      sPaginationType: "full_numbers",
+      bJQueryUI: true,
+      bProcessing: true,
+      bServerSide: true,
+      sAjaxSource: $('#responsibilities').data('source')
+    });
+  });
+
+}).call(this);
+:ET

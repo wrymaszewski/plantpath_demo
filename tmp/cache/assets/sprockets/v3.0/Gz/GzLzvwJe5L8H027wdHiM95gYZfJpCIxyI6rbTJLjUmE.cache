@@ -1,0 +1,10 @@
+I"‹(function() {
+  jQuery(function() {
+    $('#regular_chemicals').dataTable;
+    return {
+      bJQueryUI: true
+    };
+  });
+
+}).call(this);
+:ET

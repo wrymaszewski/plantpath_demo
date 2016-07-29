@@ -1,0 +1,10 @@
+I"¢(function() {
+  jQuery(function() {
+    return $('#users').dataTable({
+      sPaginationType: "full_numbers",
+      bJQueryUI: true
+    });
+  });
+
+}).call(this);
+:ET

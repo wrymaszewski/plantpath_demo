@@ -1,0 +1,10 @@
+I"©(function() {
+  jQuery(function() {
+    return $('#pending_resp').dataTable({
+      sPaginationType: "full_numbers",
+      bJQueryUI: true
+    });
+  });
+
+}).call(this);
+:ET

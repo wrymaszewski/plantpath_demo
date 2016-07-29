@@ -1,0 +1,11 @@
+  [1m[36m (79.1ms)[0m  [1mCREATE TABLE "primers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "p_sequence" varchar, "direction" varchar, "length" integer, "position" integer, "Tm" integer, "gene_sequence" varchar, "comments" text, "sequence_id" integer, "checked" boolean DEFAULT 'f', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (79.9ms)[0m  CREATE TABLE "sequence_attachments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sequence_id" integer, "sequence_type" varchar, "file" varchar, "comment" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (72.7ms)[0m  [1mCREATE TABLE "sequences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "organism" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (72.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.4ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (97.0ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (58.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160715184958')
+  [1m[36m (65.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160706200014')[0m
+  [1m[35m (74.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160706203301')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m

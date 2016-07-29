@@ -1,0 +1,24 @@
+I"Á(function() {
+  jQuery(function() {
+    return $('#bacterial_stocks_s').dataTable({
+      sPaginationType: "full_numbers",
+      bJQueryUI: true
+    });
+  });
+
+  jQuery(function() {
+    return $('#primers_s').dataTable({
+      sPaginationType: "full_numbers",
+      bJQueryUI: true
+    });
+  });
+
+  jQuery(function() {
+    return $('#sequences').dataTable({
+      sPaginationType: "full_numbers",
+      bJQueryUI: true
+    });
+  });
+
+}).call(this);
+:ET
