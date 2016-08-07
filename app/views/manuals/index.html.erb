@@ -1,37 +1,38 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="text-center">Manuals</h1>
+<div class="container">
+  <h1 class="text-center">Manuals</h1>
+  <table id="manuals" class="display">
 
-<table id="manuals" class="display">
-
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Author</th>
-      <th>Comments</th>
-      <th>View/Download</th>
-      <% if current_user.username == 'admin' %>
-        <th>Modify</th>
-      <%end%>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @manuals.each do |manual| %>
+    <thead>
       <tr>
-        <td><%= manual.title %></td>
-        <td><%= manual.author %></td>
-        <td><%= manual.comments %></td>
-        <td><%= link_to :controller => 'manuals', :action => 'view_file', :id => manual.id, class: "btn btn-link" do %><i class = "glyphicon glyphicon-eye-open ikona"></i><%end%>
-          <%= link_to :controller => 'manuals', :action => 'download_file', :id => manual.id, class: "btn btn-link" do %><i class="glyphicon glyphicon-floppy-save ikona"></i><%end%></td>
-          <% if current_user.username == "admin" %>
-            <td><%= link_to manual, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link"  do %>
-              <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Comments</th>
+        <th>View/Download</th>
+        <% if current_user.username == 'admin' %>
+          <th>Modify</th>
         <%end%>
       </tr>
-    <% end %>
-  </tbody>
-</table><br>
+    </thead>
 
-<div class="button"> <%= button_to 'New manual', new_manual_path, :method => :get %>
+    <tbody>
+      <% @manuals.each do |manual| %>
+        <tr>
+          <td><%= manual.title %></td>
+          <td><%= manual.author %></td>
+          <td><%= manual.comments %></td>
+          <td><%= link_to :controller => 'manuals', :action => 'view_file', :id => manual.id, class: "btn btn-link" do %><i class = "glyphicon glyphicon-eye-open ikona"></i><%end%>
+            <%= link_to :controller => 'manuals', :action => 'download_file', :id => manual.id, class: "btn btn-link" do %><i class="glyphicon glyphicon-floppy-save ikona"></i><%end%></td>
+            <% if current_user.username == "admin" %>
+              <td><%= link_to manual, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link"  do %>
+                <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
+          <%end%>
+        </tr>
+      <% end %>
+    </tbody>
+  </table><br>
+
+  <div class="button"> <%= button_to 'New manual', new_manual_path, :method => :get %>
+  </div>
 </div>
