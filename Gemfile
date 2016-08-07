@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
-gem  'bootstrap-sass', '~>3.2.0'
+gem 'bootstrap-sass', '~>3.2.0'
 gem 'autoprefixer-rails'
 gem 'carrierwave'
 gem 'kaminari'
-# gem 'pg'
 # gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails'#, '4.2.6'

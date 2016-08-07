@@ -23,20 +23,3 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
-
-# development:
-#   adapter: postgresql
-#   encoding: unicode
-#   database: plantpath_dev
-#   host: localhost
-#   pool: 5
-#   username: wojciech
-#   password: wojciech
-
-# test:
-#   adapter: postgresql
-#   encoding: unicode
-#   database: plantpath_test
-#   pool: 5
-#   username: wrymaszewski
-#   password:
