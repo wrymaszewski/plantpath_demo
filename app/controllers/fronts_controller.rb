@@ -8,7 +8,6 @@ class FrontsController < ApplicationController
   def index
   end
 
-
   def select_responsibilities
     @responsibilities_pending = Responsibility.where({done: false})
   end
@@ -18,9 +17,6 @@ class FrontsController < ApplicationController
    def select_molecular_chemicals
     @mol_biol_chemicals_empty = MolBiolChemical.where('state != "full"')
   end
-
-
-
 
   private
     def done_responsibilities

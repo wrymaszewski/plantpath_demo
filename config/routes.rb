@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'fronts#index'
   resources :competent_cells, except: :show
   resources :vectors do
     resources :vector_attachments, except: [:index, :show] do
@@ -46,5 +47,4 @@ Rails.application.routes.draw do
 
   get "/login" => "sessions#new", as: "login"
   delete "/logout" => "sessions#destroy", as: "logout"
-  root to: 'fronts#index'
 end

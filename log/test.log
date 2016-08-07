@@ -9,3 +9,579 @@
   [1m[36m (65.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160706200014')[0m
   [1m[35m (74.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160706203301')
   [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (69.2ms)[0m  [1m[35mCREATE TABLE "bacterial_stocks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "number" integer, "wstawka" varchar, "sequence_name" varchar, "plasmid" varchar, "tag" varchar, "species" varchar, "strain" varchar, "antibiotic_resistance" varchar, "methods_of_cloning" varchar, "source" varchar, "comments" text, "place" varchar, "sequence_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mselect sqlite_version(*)[0m
+  [1m[35m (64.9ms)[0m  [1m[35mCREATE  INDEX "index_bacterial_stocks_on_sequence_id" ON "bacterial_stocks" ("sequence_id")[0m
+  [1m[35m (73.9ms)[0m  [1m[35mCREATE TABLE "competent_cells" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "place" varchar, "species" varchar, "strain" varchar, "genotype" varchar, "antibiotic_resistance" varchar, "usage" varchar, "comments" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (75.0ms)[0m  [1m[35mCREATE TABLE "manuals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "author" varchar, "file" varchar, "comments" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (83.5ms)[0m  [1m[35mCREATE TABLE "mol_biol_chemicals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "producer" varchar, "catalogue_number" varchar, "rodzaj" varchar, "quantity" varchar, "delivery_date" date, "place" varchar, "comments" text, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (74.8ms)[0m  [1m[35mCREATE TABLE "primers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "p_sequence" varchar, "direction" varchar, "length" integer, "position" integer, "Tm" float, "gene_sequence" varchar, "comments" text, "place" varchar, "sequence_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (73.7ms)[0m  [1m[35mCREATE TABLE "regular_chemicals" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "short_name" varchar, "full_name" varchar, "formula" varchar, "producer" varchar, "catalogue_number" varchar, "delivery_date" date, "place" varchar, "quantity" varchar, "comments" text, "rodzaj" varchar, "state" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (82.8ms)[0m  [1m[35mCREATE TABLE "responsibilities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "action" varchar, "date_of_action" date, "comments" text, "done" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (73.3ms)[0m  [1m[35mCREATE TABLE "sequence_attachments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "sequence_id" integer, "sequence_type" varchar, "file" varchar, "comment" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (74.2ms)[0m  [1m[35mCREATE TABLE "sequences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "organism" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (67.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "first_name" varchar, "last_name" varchar, "username" varchar, "password_digest" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (65.3ms)[0m  [1m[35mCREATE TABLE "vector_attachments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "file_type" varchar, "file" varchar, "comments" text, "vector_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (66.0ms)[0m  [1m[35mCREATE  INDEX "index_vector_attachments_on_vector_id" ON "vector_attachments" ("vector_id")[0m
+  [1m[35m (81.8ms)[0m  [1m[35mCREATE TABLE "vectors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "size" integer, "antibiotic_resistance" varchar, "copy_number" varchar, "usage" varchar, "tag" varchar, "casette" text, "comments" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (82.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (58.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES ('20160807111807')[0m
+  [1m[35m (60.9ms)[0m  [1m[32mINSERT INTO schema_migrations (version) VALUES ('20160706200000'), ('20160717082259'), ('20160717062744'), ('20160715184958'), ('20160719172542'), ('20160723174121'), ('20160706200014'), ('20160803145720'), ('20160717170416'), ('20160717173820'), ('20160719071248'), ('20160805153905');
+
+[0m
+  [1m[35m (81.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", 2016-08-07 17:24:25 UTC], ["updated_at", 2016-08-07 17:24:25 UTC]]
+  [1m[35m (57.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:25.831405', '2016-08-07 17:24:25.831405', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:25.831405', '2016-08-07 17:24:25.831405', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.088927', '2016-08-07 17:24:26.088927', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.088927', '2016-08-07 17:24:26.088927', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.099328', '2016-08-07 17:24:26.099328', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.099328', '2016-08-07 17:24:26.099328', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.109568', '2016-08-07 17:24:26.109568', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.109568', '2016-08-07 17:24:26.109568', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.119691', '2016-08-07 17:24:26.119691', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.119691', '2016-08-07 17:24:26.119691', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.129349', '2016-08-07 17:24:26.129349', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.129349', '2016-08-07 17:24:26.129349', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.142079', '2016-08-07 17:24:26.142079', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.142079', '2016-08-07 17:24:26.142079', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.155965', '2016-08-07 17:24:26.155965', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.155965', '2016-08-07 17:24:26.155965', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.169704', '2016-08-07 17:24:26.169704', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.169704', '2016-08-07 17:24:26.169704', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.184748', '2016-08-07 17:24:26.184748', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.184748', '2016-08-07 17:24:26.184748', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.198803', '2016-08-07 17:24:26.198803', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.198803', '2016-08-07 17:24:26.198803', 298486374)[0m
+  [1m[36mFixture Delete (0.5ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.212977', '2016-08-07 17:24:26.212977', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.212977', '2016-08-07 17:24:26.212977', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.225558', '2016-08-07 17:24:26.225558', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.225558', '2016-08-07 17:24:26.225558', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.239016', '2016-08-07 17:24:26.239016', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.239016', '2016-08-07 17:24:26.239016', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.254167', '2016-08-07 17:24:26.254167', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.254167', '2016-08-07 17:24:26.254167', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.264120', '2016-08-07 17:24:26.264120', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.264120', '2016-08-07 17:24:26.264120', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.274396', '2016-08-07 17:24:26.274396', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.274396', '2016-08-07 17:24:26.274396', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.284776', '2016-08-07 17:24:26.284776', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.284776', '2016-08-07 17:24:26.284776', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.294614', '2016-08-07 17:24:26.294614', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.294614', '2016-08-07 17:24:26.294614', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.304744', '2016-08-07 17:24:26.304744', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.304744', '2016-08-07 17:24:26.304744', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.314981', '2016-08-07 17:24:26.314981', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.314981', '2016-08-07 17:24:26.314981', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.325626', '2016-08-07 17:24:26.325626', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.325626', '2016-08-07 17:24:26.325626', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.335808', '2016-08-07 17:24:26.335808', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.335808', '2016-08-07 17:24:26.335808', 298486374)[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.345939', '2016-08-07 17:24:26.345939', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.345939', '2016-08-07 17:24:26.345939', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.356046', '2016-08-07 17:24:26.356046', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.356046', '2016-08-07 17:24:26.356046', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.367045', '2016-08-07 17:24:26.367045', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.367045', '2016-08-07 17:24:26.367045', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.377005', '2016-08-07 17:24:26.377005', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.377005', '2016-08-07 17:24:26.377005', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.386930', '2016-08-07 17:24:26.386930', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.386930', '2016-08-07 17:24:26.386930', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.398263', '2016-08-07 17:24:26.398263', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.398263', '2016-08-07 17:24:26.398263', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.408293', '2016-08-07 17:24:26.408293', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.408293', '2016-08-07 17:24:26.408293', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.418126', '2016-08-07 17:24:26.418126', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.418126', '2016-08-07 17:24:26.418126', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.428213', '2016-08-07 17:24:26.428213', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.428213', '2016-08-07 17:24:26.428213', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.438313', '2016-08-07 17:24:26.438313', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.438313', '2016-08-07 17:24:26.438313', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.448178', '2016-08-07 17:24:26.448178', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.448178', '2016-08-07 17:24:26.448178', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.460832', '2016-08-07 17:24:26.460832', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.460832', '2016-08-07 17:24:26.460832', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.470232', '2016-08-07 17:24:26.470232', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.470232', '2016-08-07 17:24:26.470232', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.478893', '2016-08-07 17:24:26.478893', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.478893', '2016-08-07 17:24:26.478893', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.487891', '2016-08-07 17:24:26.487891', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.487891', '2016-08-07 17:24:26.487891', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.496565', '2016-08-07 17:24:26.496565', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.496565', '2016-08-07 17:24:26.496565', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.505612', '2016-08-07 17:24:26.505612', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.505612', '2016-08-07 17:24:26.505612', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.514343', '2016-08-07 17:24:26.514343', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.514343', '2016-08-07 17:24:26.514343', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.523278', '2016-08-07 17:24:26.523278', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.523278', '2016-08-07 17:24:26.523278', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.532836', '2016-08-07 17:24:26.532836', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.532836', '2016-08-07 17:24:26.532836', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.541537', '2016-08-07 17:24:26.541537', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.541537', '2016-08-07 17:24:26.541537', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.550582', '2016-08-07 17:24:26.550582', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.550582', '2016-08-07 17:24:26.550582', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.559195', '2016-08-07 17:24:26.559195', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.559195', '2016-08-07 17:24:26.559195', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.568312', '2016-08-07 17:24:26.568312', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.568312', '2016-08-07 17:24:26.568312', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.577034', '2016-08-07 17:24:26.577034', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.577034', '2016-08-07 17:24:26.577034', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.586324', '2016-08-07 17:24:26.586324', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.586324', '2016-08-07 17:24:26.586324', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.595449', '2016-08-07 17:24:26.595449', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.595449', '2016-08-07 17:24:26.595449', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.604099', '2016-08-07 17:24:26.604099', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.604099', '2016-08-07 17:24:26.604099', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.613136', '2016-08-07 17:24:26.613136', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.613136', '2016-08-07 17:24:26.613136', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.623278', '2016-08-07 17:24:26.623278', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.623278', '2016-08-07 17:24:26.623278', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.632565', '2016-08-07 17:24:26.632565', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.632565', '2016-08-07 17:24:26.632565', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.641724', '2016-08-07 17:24:26.641724', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.641724', '2016-08-07 17:24:26.641724', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.651553', '2016-08-07 17:24:26.651553', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.651553', '2016-08-07 17:24:26.651553', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.660751', '2016-08-07 17:24:26.660751', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.660751', '2016-08-07 17:24:26.660751', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.669550', '2016-08-07 17:24:26.669550', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.669550', '2016-08-07 17:24:26.669550', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.678315', '2016-08-07 17:24:26.678315', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.678315', '2016-08-07 17:24:26.678315', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.687428', '2016-08-07 17:24:26.687428', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.687428', '2016-08-07 17:24:26.687428', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.707672', '2016-08-07 17:24:26.707672', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.707672', '2016-08-07 17:24:26.707672', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.717721', '2016-08-07 17:24:26.717721', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.717721', '2016-08-07 17:24:26.717721', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.726675', '2016-08-07 17:24:26.726675', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.726675', '2016-08-07 17:24:26.726675', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.737569', '2016-08-07 17:24:26.737569', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.737569', '2016-08-07 17:24:26.737569', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.746397', '2016-08-07 17:24:26.746397', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.746397', '2016-08-07 17:24:26.746397', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.755322', '2016-08-07 17:24:26.755322', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.755322', '2016-08-07 17:24:26.755322', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.763809', '2016-08-07 17:24:26.763809', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.763809', '2016-08-07 17:24:26.763809', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.772747', '2016-08-07 17:24:26.772747', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.772747', '2016-08-07 17:24:26.772747', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.781192', '2016-08-07 17:24:26.781192', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.781192', '2016-08-07 17:24:26.781192', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.790142', '2016-08-07 17:24:26.790142', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.790142', '2016-08-07 17:24:26.790142', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.800068', '2016-08-07 17:24:26.800068', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.800068', '2016-08-07 17:24:26.800068', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.808441', '2016-08-07 17:24:26.808441', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.808441', '2016-08-07 17:24:26.808441', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.817238', '2016-08-07 17:24:26.817238', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.817238', '2016-08-07 17:24:26.817238', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.826897', '2016-08-07 17:24:26.826897', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.826897', '2016-08-07 17:24:26.826897', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.835913', '2016-08-07 17:24:26.835913', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.835913', '2016-08-07 17:24:26.835913', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.844544', '2016-08-07 17:24:26.844544', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.844544', '2016-08-07 17:24:26.844544', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.852966', '2016-08-07 17:24:26.852966', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.852966', '2016-08-07 17:24:26.852966', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.866094', '2016-08-07 17:24:26.866094', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.866094', '2016-08-07 17:24:26.866094', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.875598', '2016-08-07 17:24:26.875598', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.875598', '2016-08-07 17:24:26.875598', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.3ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.884670', '2016-08-07 17:24:26.884670', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.884670', '2016-08-07 17:24:26.884670', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.894011', '2016-08-07 17:24:26.894011', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.894011', '2016-08-07 17:24:26.894011', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.903463', '2016-08-07 17:24:26.903463', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.903463', '2016-08-07 17:24:26.903463', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.912407', '2016-08-07 17:24:26.912407', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.912407', '2016-08-07 17:24:26.912407', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.922305', '2016-08-07 17:24:26.922305', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.922305', '2016-08-07 17:24:26.922305', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.932018', '2016-08-07 17:24:26.932018', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.932018', '2016-08-07 17:24:26.932018', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.941665', '2016-08-07 17:24:26.941665', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.941665', '2016-08-07 17:24:26.941665', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.950228', '2016-08-07 17:24:26.950228', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.950228', '2016-08-07 17:24:26.950228', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.959090', '2016-08-07 17:24:26.959090', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.959090', '2016-08-07 17:24:26.959090', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.967771', '2016-08-07 17:24:26.967771', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.967771', '2016-08-07 17:24:26.967771', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.976554', '2016-08-07 17:24:26.976554', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.976554', '2016-08-07 17:24:26.976554', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixture Delete (0.2ms)[0m  [1m[31mDELETE FROM "mol_biol_chemicals"[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.985046', '2016-08-07 17:24:26.985046', 980190962)[0m
+  [1m[36mFixture Insert (0.1ms)[0m  [1m[32mINSERT INTO "mol_biol_chemicals" ("name", "producer", "catalogue_number", "quantity", "delivery_date", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', NULL, '2016-08-07 17:24:26.985046', '2016-08-07 17:24:26.985046', 298486374)[0m
+  [1m[36mFixture Delete (0.1ms)[0m  [1m[31mDELETE FROM "vectors"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
