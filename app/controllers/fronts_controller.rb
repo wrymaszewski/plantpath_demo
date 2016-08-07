@@ -12,10 +12,10 @@ class FrontsController < ApplicationController
     @responsibilities_pending = Responsibility.where({done: false})
   end
   def select_regular_chemicals
-    @regular_chemicals_empty = RegularChemical.where('state IS NOT "full"')
+    @regular_chemicals_empty = RegularChemical.where("state IS NOT 'full'")
   end
    def select_molecular_chemicals
-    @mol_biol_chemicals_empty = MolBiolChemical.where('state IS NOT "full"')
+    @mol_biol_chemicals_empty = MolBiolChemical.where("state IS NOT 'full'")
   end
 
   private
