@@ -1,10 +1,13 @@
 User.destroy_all
 RegularChemical.destroy_all
-Primer.destroy_all
-Sequence.destroy_all
-BacterialStock.destroy_all
-MolBiolChemical.destroy_all
+VectorAttachment.destroy_all
 Vector.destroy_all
+MolBiolChemical.destroy_all
+Primer.destroy_all
+SequenceAttachment.destroy_all
+BacterialStock.destroy_all
+CompetentCell.destroy_all
+Sequence.destroy_all
 
 
 users = User.create! [
