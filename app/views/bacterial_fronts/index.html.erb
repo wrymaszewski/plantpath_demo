@@ -1,0 +1,10 @@
+<div class="container">
+	<h1 class = "text-center">Bacterial stocks</h1>
+
+	<% @bacterial_stocks.uniq.pluck(:species).each do |bac| %>
+	  <span class = "button_array"><%= button_to "#{bac}", {:controller => 'bacterial_fronts',
+	  :action => 'filter_species', :species => bac}, {:method => :post} %></span>
+	<%end%>
+	<span class = "button_array"><%=button_to "Competent cells", {:controller => 'competent_cells',
+		:action => "index"}, {:method => :get} %></span>
+</div>

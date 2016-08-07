@@ -1,0 +1,2 @@
+module CompetentCellsHelper
+end

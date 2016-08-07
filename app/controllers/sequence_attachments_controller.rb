@@ -1,16 +1,11 @@
 class SequenceAttachmentsController < ApplicationController
-  before_action :set_sequence, only: [:show, :edit, :update, :destroy, :new, :create, :index]
-  before_action :set_sequence_attachment, only: [:show, :edit, :update, :destroy]
+  before_action :set_sequence, only: [:show, :edit, :update, :destroy, :new, :create, :index, :download_file, :view_file]
+  before_action :set_sequence_attachment, only: [:show, :edit, :update, :destroy, :download_file, :view_file]
 
   # GET /sequence_attachments/new
   def new
     @sequence_attachment = @sequence.sequence_attachments.new
   end
-
-  # GET /sequence_attachments/1/edit
-  def edit
-  end
-
   # POST /sequence_attachments
   # POST /sequence_attachments.json
   def create
@@ -27,29 +22,17 @@ class SequenceAttachmentsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /sequence_attachments/1
-  # PATCH/PUT /sequence_attachments/1.json
-  def update
-    respond_to do |format|
-      if @sequence_attachment.update(sequence_attachment_params)
-        format.html { redirect_to @sequence, notice: 'Sequence file was successfully uploaded.' }
-      end
-    end
-  end
-
   # DELETE /sequence_attachments/1
   # DELETE /sequence_attachments/1.json
   def destroy
     @sequence_attachment.destroy
     respond_to do |format|
-      format.html { redirect_to @sequence, notice: 'Sequence attachment was successfully destroyed.' }
+      format.html { redirect_to @sequence, notice: 'Sequence attachment was successfully deleted.' }
       format.json { head :no_content }
     end
   end
 
   def download_file
-    @sequence = Sequence.find(params[:sequence_id])
-    @sequence_attachment = SequenceAttachment.find(params[:id])
     send_file(@sequence_attachment.file.path,
           :disposition => 'attachment',
           :url_based_filename => false,
@@ -57,8 +40,6 @@ class SequenceAttachmentsController < ApplicationController
    end
 
    def view_file
-    @sequence = Sequence.find(params[:sequence_id])
-    @sequence_attachment = SequenceAttachment.find(params[:id])
     send_file(@sequence_attachment.file.path,
           :disposition => 'inline',
           :url_based_filename => false,

@@ -5,145 +5,135 @@
   <span class = "sequence_name" ><%= @sequence.name %></span>
 </h1>
 
-<% if @sequence.sequence_attachments.first %>
-<h2 class="text-center">Sequence files</h2>
-  <table id = "sequence_attachments", class = "display">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Comment</th>
-        <th>View</th>
-        <th>Download</th>
-        <% if current_user.username == 'admin' %>
-         <th>Delete</th>
-        <%end%>
-      </tr>
-    </thead>
 
-    <tbody>
-      <% @sequence.sequence_attachments.each do |sequence_attachment| %>
-        <tr>
-          <td><%= sequence_attachment.sequence_type %></td>
-          <td><%= sequence_attachment.comment %></td>
-          <td><%= link_to :controller => 'sequence_attachments',
-          :action => :view_file, :id =>sequence_attachment.id, :sequence_id =>sequence_attachment.sequence.id do %>
-            <i class = "glyphicon glyphicon-eye-open"></i><%end%></td> 
-
-          <td><%= link_to :controller => 'sequence_attachments',
-          :action => :download_file, :id =>sequence_attachment.id, :sequence_id =>sequence_attachment.sequence.id do %>
-            <i class = "glyphicon glyphicon-floppy-save"></i><%end%></td>
-          <% if current_user.username == 'admin' %>
-            <td><%= link_to [@sequence, sequence_attachment], method: :delete, data: { confirm: 'Are you sure?' } do %>
-              <i class = "glyphicon glyphicon-floppy-remove"></i><%end%></td> 
-          <%end%>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-<%end%>
-<%= button_to 'Create sequence attachment', new_sequence_sequence_attachment_path(@sequence), :method => :get %>
-<br><hr>
-
-<%if @sequence.primers.first %>
-  <h2 class="text-center">Primers</h2>
-
-  <table id="primers_s", class="display">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Sequence (5'-3')</th>
-        <th>Direction</th>
-        <th>Length</th>
-        <th>Tm</th>
-        <th>5' position</th>
-        <th>Comments</th>
-        <% if current_user.username == 'admin' %>
-          <th>Edit</th>
-          <th>Delete</th>
-        <%end%>
-      </tr>
-    </thead>
-    <tbody>
-          <% @sequence.primers.each do |primer| %>
+<div class="container">
+  <% if @sequence.sequence_attachments.first %>
+    <h2 class="text-center">Sequence attachments</h2>
+      <table id = "sequence_attachments", class = "display">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Comment</th>
+            <th>View/Download</th>
+            <% if current_user.username == 'admin' %>
+             <th>Modify</th>
+            <%end%>
+          </tr>
+        </thead>
+        <tbody>
+          <% @sequence.sequence_attachments.each do |sequence_attachment| %>
             <tr>
-              <td><%= primer.name %></td>
-              <td><%= primer.p_sequence %></td>
-              <td><%= primer.direction %></td>
-              <td><%= primer.length %></td>
-              <td><%= primer.Tm.round(1) %></td>
-              <td><%= primer.position %></td>
-              <td><%= primer.comments %></td>
+              <td><%= sequence_attachment.sequence_type %></td>
+              <td><%= sequence_attachment.comment %></td>
+              <td><%= link_to :controller => 'sequence_attachments',
+              :action => :view_file, :id =>sequence_attachment.id, :sequence_id =>sequence_attachment.sequence.id do %>
+                <i class = "glyphicon glyphicon-eye-open ikona"></i><%end%>
+                <%= link_to :controller => 'sequence_attachments',
+              :action => :download_file, :id =>sequence_attachment.id, :sequence_id =>sequence_attachment.sequence.id do %>
+                <i class = "glyphicon glyphicon-floppy-save ikona"></i><%end%></td>
               <% if current_user.username == 'admin' %>
-                <td><%= link_to edit_sequence_primer_path(@sequence, primer),
-                 class: "btn btn-link" do %>
-                  <i class = "glyphicon glyphicon-edit"></i><%end%></td>
-                <td><%= link_to [@sequence, primer], method: :delete, data: { confirm: 'Are you sure?' },
-                 class: "btn btn-link" do %>
-                <i class = "glyphicon glyphicon-floppy-remove"></i><%end%></td> 
+              <td><%= link_to [@sequence, sequence_attachment], method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td> 
               <%end%>
-              <% form_for @sequence, url: {action: "checked"} , :method => :put do %>
-                <td><%= check_box_tag "primer_ids[]", primer.id %></td>
             </tr>
-            <%= submit_tag "Choose primer pair" %>
-              <% end %>
-             <% end %>
-    </tbody>
-  </table><br>
-  <%end%>
-<div class = "button"><%= button_to 'Create primer', new_sequence_primer_path(@sequence), :method => :get %></div><br><hr>
+          <% end %>
+        </tbody>
+      </table>
+      <br>
+    <%end%>
+    <%= button_to 'Create sequence attachment', new_sequence_sequence_attachment_path(@sequence), :method => :get %>
+    <br><hr>
+</div>
 
-<%if @sequence.bacterial_stocks.first %>
-  <h2 class="text-center">Bacterial Stocks</h2>
+<div class="container">
+    <%if @sequence.primers.first %>
+      <h2 class="text-center">Primers</h2>
+      <table id="primers_s", class="display">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Sequence (5'-3')</th>
+            <th>Direction</th>
+            <th>Length</th>
+            <th>Tm</th>
+            <th>5' position</th>
+            <th>Comments</th>
+            <% if current_user.username == 'admin' %>
+              <th>Modify</th>
+            <%end%>
+          </tr>
+        </thead>
+        <tbody>
+              <% @sequence.primers.each do |primer| %>
+                <tr>
+                  <td><%= primer.name %></td>
+                  <td><%= primer.p_sequence %></td>
+                  <td><%= primer.direction %></td>
+                  <td><%= primer.length %></td>
+                  <td><%= primer.Tm.round(1) %></td>
+                  <td><%= primer.position %></td>
+                  <td><%= primer.comments %></td>
+                  <% if current_user.username == 'admin' %>
+                    <td><%= link_to edit_sequence_primer_path(@sequence, primer) do %>
+                      <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
+                        <%= link_to [@sequence, primer], method: :delete, data: { confirm: 'Are you sure?' } do %>
+                    <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td> 
+                  <%end%>
+                <%end%>
+        </tbody>
+      </table><br>
+      <%end%>
+    <div class = "button"><%= button_to 'Create primer', new_sequence_primer_path(@sequence), :method => :get %></div><br><hr>
+</div>
 
-  <table id="bacterial_stocks_s" class="display">
-    <thead>
-      <tr>
-        <th>Number</th>
-        <th>Insert</th>
-        <th>Plasmid</th>
-        <th>Tag</th>
-        <th>Species</th>
-        <th>Strain</th>
-        <th>Antibiotic resistance</th>
-        <th>Methods of cloning</th>
-        <th>Source</th>
-        <th>Comments</th>
-        <% if current_user.username == 'admin' %>
-          <th>Edit</th>
-          <th>Delete</th>
-        <%end%>
-      </tr>
-    </thead>
 
-    <tbody>
-      <% @sequence.bacterial_stocks.each do |bacterial_stock| %>
-        <tr>
-          <td><%= bacterial_stock.number %></td>
-          <td><%= bacterial_stock.wstawka %></td>
-          <td><%= bacterial_stock.plasmid %></td>
-          <td><%= bacterial_stock.tag %></td>
-          <td><%= bacterial_stock.species %></td>
-          <td><%= bacterial_stock.strain %></td>
-          <td><%= bacterial_stock.antibiotic_resistance %></td>
-          <td><%= bacterial_stock.methods_of_cloning %></td>
-          <td><%= bacterial_stock.source %></td>
-          <td><%= bacterial_stock.comments %></td>
-          <% if current_user.username == 'admin' %>
-                <td><%= link_to edit_sequence_bacterial_stock_path(@sequence, bacterial_stock),
-                 class: "btn btn-link" do %>
-                  <i class = "glyphicon glyphicon-edit"></i><%end%></td>
-                <td><%= link_to [@sequence, bacterial_stock], method: :delete, data: { confirm: 'Are you sure?' },
-                 class: "btn btn-link" do %>
-                <i class = "glyphicon glyphicon-floppy-remove"></i><%end%></td> 
-              <%end%>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-<%else%>
-  <p>No bacterial stocks added</p>
-<%end%>
-  <br>
+<div class="container">
+    <%if @sequence.bacterial_stocks.first %>
+      <h2 class="text-center">Bacterial Stocks</h2>
 
-<div class="button"><%= button_to 'Create bacterial stock', new_sequence_bacterial_stock_path(@sequence), :method => :get %></div>
+      <table id="bacterial_stocks_s" class="display">
+        <thead>
+          <tr>
+            <th>Stock number</th>
+            <th>Insert</th>
+            <th>Plasmid</th>
+            <th>Tag</th>
+            <th>Species</th>
+            <th>Strain</th>
+            <th>Antibiotic resistance</th>
+            <th>Methods of cloning</th>
+            <th>Source</th>
+            <th>Comments</th>
+            <% if current_user.username == 'admin' %>
+              <th>Modify</th>
+            <%end%>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @sequence.bacterial_stocks.each do |bacterial_stock| %>
+            <tr>
+              <td><%= bacterial_stock.number %></td>
+              <td><%= bacterial_stock.wstawka %></td>
+              <td><%= bacterial_stock.plasmid %></td>
+              <td><%= bacterial_stock.tag %></td>
+              <td><%= bacterial_stock.species %></td>
+              <td><%= bacterial_stock.strain %></td>
+              <td><%= bacterial_stock.antibiotic_resistance %></td>
+              <td><%= bacterial_stock.methods_of_cloning %></td>
+              <td><%= bacterial_stock.source %></td>
+              <td><%= bacterial_stock.comments %></td>
+              <% if current_user.username == 'admin' %>
+                    <td><%= link_to edit_sequence_bacterial_stock_path(@sequence, bacterial_stock) do %>
+                      <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
+                        <%= link_to [@sequence, bacterial_stock], method: :delete, data: { confirm: 'Are you sure?' } do %>
+                    <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td> 
+                  <%end%>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    <%end%>
+     <br>
+  <div class="button"><%= button_to 'Create bacterial stock', new_sequence_bacterial_stock_path(@sequence), :method => :get %></div>
+</div>

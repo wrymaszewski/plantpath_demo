@@ -1,46 +1,43 @@
 <p id="notice"><%= notice %></p>
+<h1 class = "text-center"><%= @regular_chemicals.first.rodzaj %></h1>
 
-<h1 class = "text-center">Regular Chemicals</h1>
-
-<table id="regular_chemicals" class="display">
-  <thead>
-    <tr>
-      <th>Short name</th>
-      <th>Full name</th>
-      <th>Formula</th>
-      <th>Producer</th>
-      <th>Catalogue number</th>
-      <th>Delivery date</th>
-      <th>Place</th>
-      <th>Comments</th>
-      <% if current_user.username == 'admin' %>
-          <th>Edit</th>
-          <th>Delete</th>
-      <%end%>
-     </tr>
-  </thead>
-
-  <tbody>
-    <% @regular_chemicals.each do |regular_chemical| %>
+<div class="container">
+  <table id="regular_chemicals" class="display">
+    <thead>
       <tr>
-        <td><%= regular_chemical.short_name %></td>
-        <td><%= regular_chemical.full_name %></td>
-        <td><%= regular_chemical.formula %></td>
-        <td><%= regular_chemical.producer %></td>
-        <td><%= regular_chemical.catalogue_number %></td>
-        <td><%= regular_chemical.delivery_date %></td>
-        <td><%= regular_chemical.place %></td>
-        <td><%= regular_chemical.comments %></td>
-        <% if current_user.username == 'admin' %>
-          <td><%= link_to edit_regular_chemical_path(regular_chemical), class: "btn btn-link" do %>
-            <i class = "glyphicon glyphicon-edit"></i><%end%></td> 
-          <td><%= link_to regular_chemical, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" do %>
-             <i class = "glyphicon glyphicon-floppy-remove"></i><%end%></td> 
-        <%end%>
+        <th>Short name</th>
+        <th>Full name</th>
+        <th>Formula</th>
+        <th>Producer</th>
+        <th>Catalogue number</th>
+        <th>Delivery date</th>
+        <th>Place</th>
+        <th>Comments</th>
+        <th>Modify</th>
       </tr>
-    <% end %>
-  </tbody>
-</table><br>
+    </thead>
 
-<div class="button"><%= button_to 'New regular chemical', new_regular_chemical_path, :method => :get %>
+    <tbody>
+      <% @regular_chemicals.each do |regular_chemical| %>
+        <tr class = <%= regular_chemical.state %>>
+          <td><%= regular_chemical.short_name %></td>
+          <td><%= regular_chemical.full_name %></td>
+          <td><%= regular_chemical.formula %></td>
+          <td><%= regular_chemical.producer %></td>
+          <td><%= regular_chemical.catalogue_number %></td>
+          <td><%= regular_chemical.delivery_date %></td>
+          <td><%= regular_chemical.place %></td>
+          <td><%= regular_chemical.comments %></td>
+          <td><%= link_to edit_regular_chemical_path(regular_chemical) do %>
+              <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
+          <% if current_user.username == 'admin' %>          
+            <%= link_to regular_chemical, method: :delete, data: { confirm: 'Are you sure?' } do %><i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%>
+          <%end%></td> 
+        </tr>
+      <%end%>
+    </tbody>
+  </table><br>
+  <div class="button"><%= button_to 'New regular chemical', new_regular_chemical_path, :method => :get %></div>
+  <div class="button"><%= button_to 'Download CSV', regular_chemicals_path(format: "csv"), :method => :get %></div>
 </div>
+

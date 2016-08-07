@@ -9,8 +9,8 @@ class CreatePrimers < ActiveRecord::Migration
       t.float :Tm
       t.string :gene_sequence
       t.text :comments
+      t.string :place
       t.references :sequence, foreign_key: true
-      t.boolean :checked, default: false
 
       t.timestamps null: false
     end

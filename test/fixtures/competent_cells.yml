@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  place: MyString
+  species: MyString
+  strain: MyString
+  antibiotic_resistance: MyString
+  usage: MyString
+  comments: MyText
+
+two:
+  place: MyString
+  species: MyString
+  strain: MyString
+  antibiotic_resistance: MyString
+  usage: MyString
+  comments: MyText

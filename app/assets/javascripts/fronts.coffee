@@ -5,3 +5,12 @@ jQuery ->
   $('#pending_resp').dataTable
     sPaginationType: "full_numbers"
     bJQueryUI: true
+jQuery ->
+  $('#regular_chem').dataTable
+    sPaginationType: "full_numbers"
+    bJQueryUI: true
+jQuery ->
+  $('#mol_biol_chem').dataTable
+    sPaginationType: "full_numbers"
+    bJQueryUI: true
+

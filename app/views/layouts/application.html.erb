@@ -24,11 +24,11 @@
       </li>
       <li class=<%='active' if params[:controller] == 'sequences' %>><%=link_to "Sequences",sequences_path %></li>
       <li class=<%='active' if params[:controller] == 'primers' %>><%=link_to "Primers",primers_path %></li> 
-      <li class=<%='active' if params[:controller] == 'bacterial_stocks' %>><%=link_to "Bacterial stocks", bacterial_stocks_path %></li> 
-      <li class=<%='active' if params[:controller] == 'regular_chemicals' %>><%=link_to "Regular chemicals", regular_chemicals_path %></li> 
-      <li class=<%='active' if params[:controller] == 'mol_biol_chemicals' %>><%=link_to "Molecular biology chemicals", mol_biol_chemicals_path %></li>
+      <li class=<%='active' if params[:controller] == 'bacterial_stocks' %>><%=link_to "Bacterial stocks", bacterial_fronts_path %></li> 
+      <li class=<%='active' if params[:controller] == 'mol_biol_chemicals' or params[:controller] == 'mol_front' or params[:controller] == 'regular_chemicals' %>><%=link_to "Chemicals", mol_front_index_path %></li>
       <li class=<%='active' if params[:controller] == 'responsibilities' %>><%=link_to "Responsibilities", responsibilities_path %></li>
       <li class=<%='active' if params[:controller] == 'manuals' %>><%=link_to "Manuals", manuals_path %></li>
+      <li class=<%='active' if params[:controller] == 'vectors' %>><%=link_to "Vectors", vectors_path %></li>
       <li id = "loadImage"><%= image_tag("loading_new.gif", :size => 40) %></li>
     </ul>
 
@@ -48,7 +48,7 @@
     </div>
 		
 </nav>
- <div id ="loadDiv"></div>
+ <div id ="loadDiv container-fluid"></div>
 <%= yield %>
 <body>
 </body>

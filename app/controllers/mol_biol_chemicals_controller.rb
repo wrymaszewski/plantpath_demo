@@ -4,15 +4,15 @@ class MolBiolChemicalsController < ApplicationController
   # GET /mol_biol_chemicals
   # GET /mol_biol_chemicals.json
   def index
-    @mol_biol_chemicals = MolBiolChemical.all
+    @mol_biol_chemicals = MolBiolChemical.where({rodzaj: params[:rodzaj]})
+    @mol_biol_chemicals_all = MolBiolChemical.all
+    respond_to do |format|
+      format.html
+      format.csv {send_data @mol_biol_chemicals_all.to_csv}
+    end
   end
 
-  # GET /mol_biol_chemicals/1
-  # GET /mol_biol_chemicals/1.json
-  def show
-  end
-
-  # GET /mol_biol_chemicals/new
+    # GET /mol_biol_chemicals/new
   def new
     @mol_biol_chemical = MolBiolChemical.new
   end
@@ -28,7 +28,7 @@ class MolBiolChemicalsController < ApplicationController
 
     respond_to do |format|
       if @mol_biol_chemical.save
-        format.html { redirect_to mol_biol_chemicals_path, notice: 'Mol biol chemical was successfully created.' }
+        format.html { redirect_to mol_front_index_path, notice: 'Molecular biology chemical was successfully created.' }
         format.json { render :show, status: :created, location: @mol_biol_chemical }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class MolBiolChemicalsController < ApplicationController
   def update
     respond_to do |format|
       if @mol_biol_chemical.update(mol_biol_chemical_params)
-        format.html { redirect_to @mol_biol_chemical, notice: 'Mol biol chemical was successfully updated.' }
+        format.html { redirect_to mol_front_index_path, notice: 'Molecular biology chemical was successfully updated.' }
         format.json { render :show, status: :ok, location: @mol_biol_chemical }
       else
         format.html { render :edit }
@@ -56,10 +56,10 @@ class MolBiolChemicalsController < ApplicationController
   def destroy
     @mol_biol_chemical.destroy
     respond_to do |format|
-      format.html { redirect_to mol_biol_chemicals_url, notice: 'Mol biol chemical was successfully destroyed.' }
+      format.html { redirect_to mol_biol_chemicals_url, notice: 'Molecular biology chemical was successfully deleted.' }
       format.json { head :no_content }
     end
-  end
+  end 
 
   private
     # Use callbacks to share common setup or constraints between actions.
@@ -69,6 +69,7 @@ class MolBiolChemicalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def mol_biol_chemical_params
-      params.require(:mol_biol_chemical).permit(:name, :producer, :catalogue_number, :quantity, :delivery_date)
+      params.require(:mol_biol_chemical).permit(:name, :producer, :catalogue_number,
+       :quantity, :delivery_date, :rodzaj, :state)
     end
 end

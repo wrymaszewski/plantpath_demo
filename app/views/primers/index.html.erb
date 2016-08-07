@@ -2,32 +2,35 @@
 
 <h1 class="text-center">Primers</h1>
 
-<table id="primers" class="display">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Sequence (5'-3')</th>
-      <th>Direction</th>
-      <th>Length</th>
-      <th>Tm</th>
-      <th>5' Position</th>
-      <th>Gene</th>
-      <th>Comments</th>
-     </tr>
-  </thead>
-
-  <tbody>
-    <% @primers.each do |primer| %>
+<div class="container">
+  <table id="primers" class="display">
+    <thead>
       <tr>
-        <td><%= primer.name %></td>
-        <td><%= primer.p_sequence %></td>
-        <td><%= primer.direction %></td>
-        <td><%= primer.length %></td>
-        <td><%= primer.Tm.round(1) %></td>
-        <td><%= primer.position %></td>
-        <td><%= link_to primer.gene_sequence, Sequence.find(primer.sequence_id) %></td>
-        <td><%= primer.comments %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+        <th>Name</th>
+        <th>Sequence (5'-3')</th>
+        <th>Direction</th>
+        <th>Length</th>
+        <th>Tm</th>
+        <th>5' Position</th>
+        <th>Source sequence</th>
+        <th>Comments</th>
+       </tr>
+    </thead>
+
+    <tbody>
+      <% @primers.each do |primer| %>
+        <tr>
+          <td><%= primer.name %></td>
+          <td><%= primer.p_sequence %></td>
+          <td><%= primer.direction %></td>
+          <td><%= primer.length %></td>
+          <td><%= primer.Tm.round(1) %></td>
+          <td><%= primer.position %></td>
+          <td><%= link_to primer.gene_sequence, Sequence.find(primer.sequence_id) %></td>
+          <td><%= primer.comments %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="button"><%= button_to 'Download CSV', primers_path(format: "csv"), :method => :get %></div>
+</div>

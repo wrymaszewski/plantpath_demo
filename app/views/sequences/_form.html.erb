@@ -13,7 +13,7 @@
 <%= form_for(@sequence, :html =>{:multipart => true}) do |f| %>
   <% if @sequence.errors.any? %>
 
-    <div id="error_explanation">
+    <div id="error_explanation" class="container">
       <h2><%= pluralize(@sequence.errors.count, "error") %> 
         prohibited this sequence from being saved:</h2>
 
@@ -31,14 +31,8 @@
     <div class="row">
       <span class = "form_label">Organism</span><span class = "form_field"><%= f.text_field :organism%></span>
     </div><br>
-    <div class="row">
-      <%= f.fields_for :sequence_attachments do |s| %>
-      <span class = "form_label">Sequence attachment</span><span class = "attachment_field"><%= s.file_field  :file, :multiple => false, name: "sequence_attachments[file][]" %></span>
-      <%end%>
-    </div><br>
     <div class="actions submit_button form_submit">
-      <%= f.submit "Create " %>
+      <%= f.submit "Submit" %>
     </div>
   <% end %>
 </div>
-

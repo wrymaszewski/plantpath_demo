@@ -1,7 +1,6 @@
 class Sequence < ActiveRecord::Base
 	has_many :bacteria
 	has_many :primers
-	# accepts_nested_attributes_for :sequence_attachments
 	has_many :sequence_attachments	
 	has_many :bacterial_stocks
 	validates :name, presence: true
@@ -36,6 +35,4 @@ class Sequence < ActiveRecord::Base
 			stock.save
 		end
 	end
-
-
 end

@@ -1,6 +1,4 @@
 class PrimersController < ApplicationController
-  
-  
   before_action :set_all_sequences, only: [:index, :edit]
   before_action :set_sequence, only: [:show, :edit, :update, :destroy, :new, :create]
   before_action :set_primer, only: [:show, :edit, :update, :destroy]
@@ -10,6 +8,10 @@ class PrimersController < ApplicationController
   # GET /primers.json
   def index
     @primers = Primer.all
+    respond_to do |format|
+      format.html
+      format.csv {send_data @primers.to_csv}
+    end
   end
 
   # GET /primers/new
@@ -65,7 +67,7 @@ class PrimersController < ApplicationController
   def destroy
     @primer.destroy
     respond_to do |format|
-      format.html { redirect_to @sequence, notice: 'Primer was successfully destroyed.' }
+      format.html { redirect_to @sequence, notice: 'Primer was successfully deleted.' }
       format.json { head :no_content }
     end
   end

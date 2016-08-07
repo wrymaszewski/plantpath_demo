@@ -12,7 +12,7 @@
   </style>
 <%= form_for [@sequence, @sequence_attachment] do |f| %>
   <% if @sequence_attachment.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="container">
       <h2><%= pluralize(@sequence_attachment.errors.count, "error") %> prohibited this sequence_attachment from being saved:</h2>
 
       <ul>

@@ -1,32 +1,104 @@
 <p id="notice"><%= notice %></p>
 
-<% if current_user.username == "admin" %>
-	<div class="button"><%=button_to "Create new user", new_user_path, :method => :get %></div>
-	<div class="button"><%=button_to "Manage accounts", users_path, :method => :get %></div>
-<br><hr><%end%>
+<div class="container">
+	<% if current_user.username == "admin" %>
+		<div class="button"><%=button_to "Manage user accounts", users_path, :method => :get %></div>
+	<br><%end%>
 
-<% if @responsibilities_pending.first %>
-	<h1 class = "text-center">Pending responsibilities</h1>
-	<table id = "pending_resp" class = "display">
+	<% if @responsibilities_pending.first %>
+	<h1 class = "text-center">Responsibilities (pending)</h1>
+		<table id = "pending_resp" class = "display">
+		  <thead>
+		    <tr>
+		      <th>First name</th>
+		      <th>Last name</th>
+		      <th>Action</th>
+		      <th>Date of action</th>
+		      <th>Comments</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+		    <% @responsibilities_pending.each do |responsibility| %>
+		      <tr>
+		        <td><%= responsibility.first_name %></td>
+		        <td><%= responsibility.last_name %></td>
+		        <td><%= responsibility.action %></td>
+		        <td><%= responsibility.date_of_action %></td>
+		        <td><%= responsibility.comments %></td>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+	<%end%>
+</div>
+
+
+<div class="container">
+	<hr>
+	<% if @regular_chemicals_empty.first %>
+		<h1 class = "text-center">Regular chemicals (low stock)</h1>
+	<table id="regular_chem" class="display">
 	  <thead>
 	    <tr>
-	      <th>First name</th>
-	      <th>Last name</th>
-	      <th>Action</th>
-	      <th>Date of action</th>
+	      <th>Short name</th>
+	      <th>Full name</th>
+	      <th>Formula</th>
+	      <th>Producer</th>
+	      <th>Catalogue number</th>
+	      <th>Delivery date</th>
+	      <th>Place</th>
 	      <th>Comments</th>
-	    </tr>
+	     </tr>
 	  </thead>
+
 	  <tbody>
-	    <% @responsibilities_pending.each do |responsibility| %>
-	      <tr>
-	        <td><%= responsibility.first_name %></td>
-	        <td><%= responsibility.last_name %></td>
-	        <td><%= responsibility.action %></td>
-	        <td><%= responsibility.date_of_action %></td>
-	        <td><%= responsibility.comments %></td>
-	      </tr>
+	    <% @regular_chemicals_empty.each do |regular_chemical| %>
+	      <tr class = <%= regular_chemical.state %>>
+	        <td><%= regular_chemical.short_name %></td>
+	        <td><%= regular_chemical.full_name %></td>
+	        <td><%= regular_chemical.formula %></td>
+	        <td><%= regular_chemical.producer %></td>
+	        <td><%= regular_chemical.catalogue_number %></td>
+	        <td><%= regular_chemical.delivery_date %></td>
+	        <td><%= regular_chemical.place %></td>
+	        <td><%= regular_chemical.comments %></td>
+	       </tr>
 	    <% end %>
 	  </tbody>
 	</table>
-<%end%>
+	<%end%>
+</div>
+
+<% if @mol_biol_chemicals_empty.first %>
+	<hr>
+	<div class="container">
+		<h1 class = "text-center">Molecular biology chemicals (low stock)</h1>
+		  <table id ="mol_biol_chem" class = "display">
+		    <thead>
+		      <tr>
+		        <th>Name</th>
+		        <th>Producer</th>
+		        <th>Catalogue number</th>
+		        <th>Quantity</th>
+		        <th>Delivery date</th>
+		        <th>Place</th>
+		        <th>Comments</th>
+		      </tr>
+		    </thead>
+
+		    <tbody>
+		      <% @mol_biol_chemicals_empty.each do |mol_biol_chemical| %>
+		        <tr class = <%=mol_biol_chemical.state %>>
+		          <td><%= mol_biol_chemical.name %></td>
+		          <td><%= mol_biol_chemical.producer %></td>
+		          <td><%= mol_biol_chemical.catalogue_number %></td>
+		          <td><%= mol_biol_chemical.quantity %></td>
+		          <td><%= mol_biol_chemical.delivery_date %></td>
+		          <td><%= mol_biol_chemical.place %></td>
+		          <td><%= mol_biol_chemical.comments %></td>
+		        </tr>
+		      <% end %>
+		    </tbody>
+		  </table>
+	<%end%>
+</div>

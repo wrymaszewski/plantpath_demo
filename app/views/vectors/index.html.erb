@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+    <h1 class = "text-center">Vectors</h1>
+    <table id="vectors", class="display">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Size</th>
+          <th>Antibiotic resistance</th>
+          <th>Copy number</th>
+          <th>Usage</th>
+          <th>Casette</th>
+          <th>Comments</th>
+          <th>Modify</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @vectors.each do |vector| %>
+          <tr>
+            <td><%= vector.name %></td>
+            <td><%= vector.size %></td>
+            <td><%= vector.antibiotic_resistance %></td>
+            <td><%= vector.copy_number %></td>
+            <td><%= vector.usage %></td>
+            <td><%= vector.casette %></td>
+            <td><%= vector.comments %></td>
+            <td><%= link_to vector, :method =>:get  do %>
+              <i class = "glyphicon glyphicon-paperclip ikona"></i><%end%>
+            <% if current_user.username == 'admin' %>
+                <%= link_to edit_vector_path(vector) do %>
+                  <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
+                <%= link_to vector, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
+            <%end%>
+          </tr>
+        <%end%>
+      </tbody>
+    </table>
+    <br>
+    <div class="button"> <%= button_to 'New Vector', new_vector_path, :method =>:get %></div>
+</div>

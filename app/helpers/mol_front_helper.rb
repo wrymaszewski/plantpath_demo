@@ -1,0 +1,2 @@
+module MolFrontHelper
+end

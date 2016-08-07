@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/bogdan/datagrid.git
-  revision: ac9e2c10d6eee154f89d2f5feab39f1878f23e95
-  specs:
-    datagrid (1.4.4)
-      rails (>= 3.2.22.2)
-
-GIT
   remote: git://github.com/rweng/jquery-datatables-rails.git
   revision: b8e6b6fa51e0074ea44b4771a68b1817a14023fc
   specs:
@@ -55,8 +48,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
-    arel (7.1.0)
-    autoprefixer-rails (6.3.7)
+    arel (7.1.1)
+    autoprefixer-rails (6.4.0)
       execjs
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
@@ -82,7 +75,7 @@ GEM
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.7.0)
-    globalid (0.3.6)
+    globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
     jbuilder (2.6.0)
@@ -109,7 +102,7 @@ GEM
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
-    mimemagic (0.3.1)
+    mimemagic (0.3.2)
     mini_portile2 (2.1.0)
     minitest (5.9.0)
     multi_json (1.12.1)
@@ -175,12 +168,12 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.5)
     tilt (2.0.5)
-    turbolinks (5.0.0)
+    turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.0)
+    uglifier (3.0.1)
       execjs (>= 0.3.0, < 3)
     web-console (2.3.0)
       activemodel (>= 4.0)
@@ -202,7 +195,6 @@ DEPENDENCIES
   byebug
   carrierwave
   coffee-rails (~> 4.1.0)
-  datagrid!
   jbuilder (~> 2.0)
   jquery-datatables-rails!
   jquery-rails

@@ -17,7 +17,6 @@ class SequencesController < ApplicationController
   # GET /sequences/new
   def new
     @sequence = Sequence.new
-    @sequence_attachment = @sequence.sequence_attachments.build
   end
 
   # GET /sequences/1/edit
@@ -65,32 +64,10 @@ class SequencesController < ApplicationController
   def destroy
     @sequence.destroy
     respond_to do |format|
-      format.html { redirect_to sequences_url, notice: 'Sequence was successfully destroyed.' }
+      format.html { redirect_to sequences_url, notice: 'Sequence was successfully deleted.' }
       format.json { head :no_content }
     end
   end
-
-  # def toggle(primer_id, bool)
-  #   @primer = @sequences.primers.find_by_id(primer_id)
-
-  #   if @primer != nil?
-  #     @primer.update_attributes(:checked => bool)
-  #   else
-  #     set_flash "Error, please try again"
-  #   end
-  # end
-
-  def checked
-    redirect_to @sequence
-  end
-
-  # def download_file
-  #   @sequence_attachment = @sequence.sequence_attachment.find(params[:att_id])
-  #   send_file(@sequence_attachment.file.path,
-  #          :disposition => 'attachment',
-  #          :url_based_filename => false)
-  #  end
-
 
   private
     # Use callbacks to share common setup or constraints between actions.

@@ -1,0 +1,2 @@
+module BacterialFrontsHelper
+end

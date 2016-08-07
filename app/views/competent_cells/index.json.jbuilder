@@ -1,0 +1,1 @@
+json.array! @competent_cells, partial: 'competent_cells/competent_cell', as: :competent_cell

@@ -4,14 +4,13 @@ class RegularChemicalsController < ApplicationController
   # GET /regular_chemicals
   # GET /regular_chemicals.json
   def index
-    @regular_chemicals = RegularChemical.all
+    @regular_chemicals = RegularChemical.where({rodzaj: params[:rodzaj]})
+    @regular_chemicals_all = RegularChemical.all
+    respond_to do |format|
+      format.html
+      format.csv {send_data @regular_chemicals_all.to_csv}
+    end
   end
-
-  # GET /regular_chemicals/1
-  # GET /regular_chemicals/1.json
-  def show
-  end
-
   # GET /regular_chemicals/new
   def new
     @regular_chemical = RegularChemical.new
@@ -28,7 +27,7 @@ class RegularChemicalsController < ApplicationController
 
     respond_to do |format|
       if @regular_chemical.save
-        format.html { redirect_to regular_chemicals_path, notice: 'Regular chemical was successfully created.' }
+        format.html { redirect_to mol_front_index_path, notice: 'Regular chemical was successfully created.' }
         format.json { render :show, status: :created, location: @regular_chemical }
       else
         format.html { render :new }
@@ -42,7 +41,7 @@ class RegularChemicalsController < ApplicationController
   def update
     respond_to do |format|
       if @regular_chemical.update(regular_chemical_params)
-        format.html { redirect_to regular_chemicals_path, notice: 'Regular chemical was successfully updated.' }
+        format.html { redirect_to mol_front_index_path, notice: 'Regular chemical was successfully updated.' }
         format.json { render :show, status: :ok, location: @regular_chemical }
       else
         format.html { render :edit }
@@ -56,7 +55,7 @@ class RegularChemicalsController < ApplicationController
   def destroy
     @regular_chemical.destroy
     respond_to do |format|
-      format.html { redirect_to regular_chemicals_url, notice: 'Regular chemical was successfully destroyed.' }
+      format.html { redirect_to regular_chemicals_url, notice: 'Regular chemical was successfully deleted.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +68,7 @@ class RegularChemicalsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def regular_chemical_params
-      params.require(:regular_chemical).permit(:short_name, :full_name, :formula, :producer, :catalogue_number, :delivery_date, :comments)
+      params.require(:regular_chemical).permit(:short_name, :full_name, :formula,
+       :producer, :catalogue_number, :delivery_date, :comments, :state, :rodzaj)
     end
 end

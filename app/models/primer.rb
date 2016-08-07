@@ -2,6 +2,7 @@ class Primer < ActiveRecord::Base
 	belongs_to :sequence
   validates :name, presence: true
   validates :p_sequence, presence: true
+  validates :gene_sequence, presence: true
 
 	def calculate_tm
 		seq = self.p_sequence
@@ -44,24 +45,13 @@ class Primer < ActiveRecord::Base
  		self.save
   end
 
-    
-
- #    def calculate_product_size
- #    	if self.where({checked: true}).count==2
-	#     	if self.where({checked: true, direction: 'reverse'}).count==1 && 
-	#     		self.where({checked: true, direction: 'forward'}).count==1
-	#     		forward_pos = self.where({checked: true, direction: 'forward'}).position
-	#     		reverse_pos = self.where({checked: true, direction: 'reverse'}).position
-	#     		sum = forward_pos+reverse_pos
-	#     		return "Amplicon size is: #{sum} bp"
-	#     	else
-	#     		return "Select one forward and one reverse primer"
-	#     	end
-	#     elsif self.where({checked: true}).count>2
-	#     	return "To many primers selected"
-	#     else
-	#     	return "Select primers"
-	#     end
-	# end
-
+  def self.to_csv
+      attributes = %w{name p_sequence direction length position Tm gene_sequence comments}
+      CSV.generate(headers: true) do |csv|
+        csv << attributes
+        all.each do |r|
+          csv << attributes.map {|attr| r.send(attr)}
+        end
+      end
+  end
 end

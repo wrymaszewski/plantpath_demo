@@ -1,49 +1,46 @@
 <p id="notice"><%= notice %></p>
+<h1 class = "text-center"><%= @mol_biol_chemicals.first.rodzaj %></h1>
 
-<h1 class = "text-center">Molecular biology chemicals</h1>
-
-<table id ="mol_biol_chemicals" class = "display">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Type</th>
-      <th>Producer</th>
-      <th>Catalogue number</th>
-      <th>Quantity</th>
-      <th>Delivery date</th>
-      <th>Place</th>
-      <th>Comments</th>
-      <% if current_user.username == 'admin' %>
-        <th>Edit</th>
-        <th>Delete</th>
-      <%end%>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @mol_biol_chemicals.each do |mol_biol_chemical| %>
+<div class="container">
+  <table id ="mol_biol_chemicals" class = "display">
+    <thead>
       <tr>
-        <td><%= mol_biol_chemical.name %></td>
-        <td><%= mol_biol_chemical.rodzaj %></td>
-        <td><%= mol_biol_chemical.producer %></td>
-        <td><%= mol_biol_chemical.catalogue_number %></td>
-        <td><%= mol_biol_chemical.quantity %></td>
-        <td><%= mol_biol_chemical.delivery_date %></td>
-        <td><%= mol_biol_chemical.place %></td>
-        <td><%= mol_biol_chemical.comments %></td>
-        <% if current_user.username == 'admin' %>
-          <td><%= link_to edit_mol_biol_chemical_path(mol_biol_chemical),
-           class: "btn btn-link" do %>
-            <i class = "glyphicon glyphicon-edit"></i><%end%></td>
-          <td><%= link_to mol_biol_chemical, method: :delete, data: { confirm: 'Are you sure?' },
-           class: "btn btn-link" do %>
-          <i class = "glyphicon glyphicon-floppy-remove"></i><%end%></td> 
-        <%end%>
+        <th>Name</th>
+        <th>Producer</th>
+        <th>Catalogue number</th>
+        <th>Quantity</th>
+        <th>Delivery date</th>
+        <th>Place</th>
+        <th>Comments</th>
+        <th>Modify</th>
       </tr>
-    <% end %>
-  </tbody>
-</table><br>
+    </thead>
 
-<div class = "button"><%= button_to 'New molecular biology chemical', new_mol_biol_chemical_path,
- :method => :get %></div>
+    <tbody>
+      <% @mol_biol_chemicals.each do |mol_biol_chemical| %>
+        <tr class = <%=mol_biol_chemical.state %>>
+          <td><%= mol_biol_chemical.name %></td>
+          <td><%= mol_biol_chemical.producer %></td>
+          <td><%= mol_biol_chemical.catalogue_number %></td>
+          <td><%= mol_biol_chemical.quantity %></td>
+          <td><%= mol_biol_chemical.delivery_date %></td>
+          <td><%= mol_biol_chemical.place %></td>
+          <td><%= mol_biol_chemical.comments %></td>
+          <td><%= link_to edit_mol_biol_chemical_path(mol_biol_chemical) do %>
+              <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
+          <% if current_user.username == 'admin' %>
+            <%= link_to mol_biol_chemical, method: :delete, data: { confirm: 'Are you sure?' } do %>
+            <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%>
+          <%end%></td> 
+        </tr>
+      <% end %>
+    </tbody>
+  </table><br>
+  <div class = "button"><%= button_to 'New molecular biology chemical', new_mol_biol_chemical_path,
+   :method => :get %></div>
+   <div class="button"><%= button_to 'Download CSV', mol_biol_chemicals_path(format: "csv"), :method => :get %></div>
+ </div>
+
+
+
 

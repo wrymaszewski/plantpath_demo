@@ -19,10 +19,13 @@
       background: #fff;
       font-size: 120%;
     }
+    #state > select {
+      width: 100% ;
+    }
   </style>
 <%= form_for(regular_chemical) do |f| %>
   <% if regular_chemical.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="container">
       <h2><%= pluralize(regular_chemical.errors.count, "error") %> prohibited this regular_chemical from being saved:</h2>
 
       <ul>
@@ -43,6 +46,9 @@
       <span class = "form_label">Formula</span><span class = "form_field"><%= f.text_field :formula %></span>
     </div><br>
     <div class="row">
+      <span class = "form_label">Type</span><span class = "form_field"><%= f.text_field :rodzaj %></span>
+    </div><br>
+    <div class="row">
       <span class = "form_label">Producer</span><span class = "form_field"><%= f.text_field :producer %></span>
     </div><br>
     <div class="row">
@@ -50,6 +56,9 @@
     </div><br>
     <div class="row">
       <span class = "form_label">Delivery date</span><span class = "form_field"><%= f.date_select :delivery_date %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Stock</span><span class = "form_field" id = "state"><%= f.select :state, options_for_select([["full","full"], ["almost empty", "almost_empty"], ["empty", "empty"]],:selected => f.object.state) %></span>
     </div><br>
     <div class="row">
       <span class = "form_label">Comments</span><span class = "form_field"><%= f.text_area :comments %></span>

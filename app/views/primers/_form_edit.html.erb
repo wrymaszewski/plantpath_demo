@@ -36,13 +36,13 @@
       <span class = "form_label">5' position</span><span class = "form_field"><%= f.number_field :position %></span>
     </div><br>
     <div class="row">
-      <span class = "form_label">Change sequence</span><span class = "form_field"><%= f.select :sequence_id, options_from_collection_for_select(@sequences, 'id', 'name') %></span>
+      <span class = "form_label">Sequence</span><span class = "form_field"><%= f.select :sequence_id, options_from_collection_for_select(@sequences, 'id', 'name', @sequence.id) %></span>
     </div><br>
     <div class="row">
       <span class = "form_label">Comments</span><span class = "form_field"><%= f.text_area :comments %></span>
     </div><br>
     <div class="actions submit_button form_submit">
-      <%= f.submit "Create primer" %>
+      <%= f.submit "Submit" %>
     </div>
   <% end %>
 </div>

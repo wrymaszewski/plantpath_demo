@@ -9,10 +9,9 @@
       <th>Title</th>
       <th>Author</th>
       <th>Comments</th>
-      <th>Download</th>
+      <th>View/Download</th>
       <% if current_user.username == 'admin' %>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th>Modify</th>
       <%end%>
     </tr>
   </thead>
@@ -23,14 +22,11 @@
         <td><%= manual.title %></td>
         <td><%= manual.author %></td>
         <td><%= manual.comments %></td>
-        <td><%= link_to :controller => 'manuals', :action => 'download_file',
-         :id =>manual.id, class: "btn btn-link" do %>
-          <i class="glyphicon glyphicon-floppy-save"></i><%end%></td>
-        <% if current_user.username == "admin" %>
-          <td><%= link_to edit_manual_path(manual), class: "btn btn-link" do %>
-            <i class = "glyphicon glyphicon-edit"></i><%end%></td>
-          <td><%= link_to manual, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link"  do %>
-            <i class = "glyphicon glyphicon-floppy-remove"></i><%end%></td>
+        <td><%= link_to :controller => 'manuals', :action => 'view_file', :id => manual.id, class: "btn btn-link" do %><i class = "glyphicon glyphicon-eye-open ikona"></i><%end%>
+          <%= link_to :controller => 'manuals', :action => 'download_file', :id => manual.id, class: "btn btn-link" do %><i class="glyphicon glyphicon-floppy-save ikona"></i><%end%></td>
+          <% if current_user.username == "admin" %>
+            <td><%= link_to manual, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link"  do %>
+              <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
         <%end%>
       </tr>
     <% end %>

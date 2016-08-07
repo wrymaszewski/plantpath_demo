@@ -1,40 +1,42 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="text-center">Bacterial Stocks</h1>
+<h1 class="text-center"><%= @bacterial_stocks.first.species %></h1>
 
-<table id="bacterial_stocks" class="display">
+<div class="container">
+  <table id="bacterial_stocks" class="display">
+    <thead>
+      <tr>
+        <th>Stock number</th>
+        <th>Insert</th>
+        <th>Sequence</th>
+        <th>Plasmid</th>
+        <th>Tag</th>
+        <th>Species</th>
+        <th>Strain</th>
+        <th>Antibiotic resistance</th>
+        <th>Methods of cloning</th>
+        <th>Source</th>
+        <th>Comments</th>
+      </tr>
+    </thead>
 
-  <thead>
-    <tr>
-      <th>Number</th>
-      <th>Insert</th>
-      <th>Sequence</th>
-      <th>Plasmid</th>
-      <th>Tag</th>
-      <th>Species</th>
-      <th>Strain</th>
-      <th>Antibiotic resistance</th>
-      <th>Methods of cloning</th>
-      <th>Source</th>
-      <th>Comments</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @bacterial_stocks.each do |bacterial_stock| %>
-    <tr>
-      <td><%= bacterial_stock.number %></td>
-      <td><%= bacterial_stock.wstawka %></td>
-      <td><%= link_to bacterial_stock.sequence_name, Sequence.find(bacterial_stock.sequence_id) %></td>
-      <td><%= bacterial_stock.plasmid %></td>
-      <td><%= bacterial_stock.tag %></td>
-      <td><%= bacterial_stock.species %></td>
-      <td><%= bacterial_stock.strain %></td>
-      <td><%= bacterial_stock.antibiotic_resistance %></td>
-      <td><%= bacterial_stock.methods_of_cloning %></td>
-      <td><%= bacterial_stock.source %></td>
-      <td><%= bacterial_stock.comments %></td>
-    </tr>
-    <%end%>
-  </tbody>
-</table>
+    <tbody>
+      <% @bacterial_stocks.each do |bacterial_stock| %>
+      <tr>
+        <td><%= bacterial_stock.number %></td>
+        <td><%= bacterial_stock.wstawka %></td>
+        <td><%= link_to bacterial_stock.sequence_name, Sequence.find(bacterial_stock.sequence_id) %></td>
+        <td><%= bacterial_stock.plasmid %></td>
+        <td><%= bacterial_stock.tag %></td>
+        <td><%= bacterial_stock.species %></td>
+        <td><%= bacterial_stock.strain %></td>
+        <td><%= bacterial_stock.antibiotic_resistance %></td>
+        <td><%= bacterial_stock.methods_of_cloning %></td>
+        <td><%= bacterial_stock.source %></td>
+        <td><%= bacterial_stock.comments %></td>
+      </tr>
+      <%end%>
+    </tbody>
+  </table>
+  <div class="button"><%= button_to 'Download CSV', bacterial_stocks_path(format: "csv"), :method => :get %></div> 
+</div>

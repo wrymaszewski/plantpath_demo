@@ -22,7 +22,7 @@
   </style>
 <%= form_for(responsibility) do |f| %>
   <% if responsibility.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="container">
       <h2><%= pluralize(responsibility.errors.count, "error") %> prohibited this responsibility from being saved:</h2>
 
       <ul>

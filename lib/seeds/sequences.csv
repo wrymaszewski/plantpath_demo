@@ -1,42 +1,57 @@
 seq,organism
-YFP,unknown
-unknown,unknown
-SV40,unknown
-SIPK,"Arabidopsis thaliana"
+14-3-3a,"Nicotiana tabacum"
+14-3-3c,"Nicotiana tabacum"
+Amber,unknown
 AtSGT1,"Arabidopsis thaliana"
+AtSGT1b,"Arabidopsis thaliana"
+AureoQ,unknown
+AvrB,unknown
+AvrPto,unknown
+CFP,unknown
+Citrine,unknown
+CPK,unknown
+CPK3,unknown
+Cyc-71,unknown
+Dendra2,unknown
+EF1,unknown
+GFP,unknown
+gN,unknown
+gN,unknown
+GUS,unknown
+HA,unknown
+HopAv1,"Pseudomonas syringae"
+hpSGT1,unknown
+Mai2,unknown
+MAPKKKa,unknown
+mCherry,unknown
+MEK2,"Arabidopsis thaliana"
+MPK6,"Arabidopsis thaliana"
+MYB30,unknown
+Myc,unknown
+N-HA,unknown
+NLS-SV40,SV40
+N-myc,unknown
 NtSGT1,"Nicotiana tabacum"
-sequencing,unknown
-Roc1,unknown
+p19,unknown
+p50,unknown
+pGWB,unknown
+Phusion,unknown
+Physco,unknown
+HopQ1,"Pseudomonas syringae"
+PVY,PVY
+R18,unknown
+RAR1,unknown
+RFP,unknown
+RihA,unknown
 ripB,unknown
 RipB,unknown
-RihA,"Arabidopsis thaliana"
-RFP,unknown
-R18,unknown
-PVY,PVY
-PsHopQ1,"Pseudomonas syringae"
-Physco,unknown
-Phusion,unknown
-pGWB,unknown
-MPK6,"Arabidopsis thaliana"
-MKK4,unknown
-MEK2,"Nicotiana tabacum"
-mCherry,unknown
-MAPKKKa,unknown
-Mai2,unknown
-HopQ1,unknown
-HopAv1,unknown
-GUS,unknown
-GFP,unknown
-EF1,"Solanum tuberosum"
-Dendra2,unknown
-Cyc-71,unknown
-CPK3,unknown
-CPK,unknown
-CFP,unknown
-AvrPto,unknown
-AvrB,unknown
-AureoQ,unknown
-Amber,unknown
-14-3-3c,unknown
-14-3-3a,"Arabidopsis thaliana"
-14-3-3,unknown
+RipB,unknown
+Roc1,unknown
+ROC3,unknown
+Rx,unknown
+sequencing,unknown
+SIPK,"Nicotiana tabacum"
+SUMO,unknown
+SV40,SV40
+unknown,unknown
+YFP,unknown

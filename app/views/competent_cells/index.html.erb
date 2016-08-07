@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+    <h1 class = "text-center">Competent Cells</h1>
+    <table id ="competent_cells" class = "display">
+    <thead>
+    <tr>
+      <th>Stock numbers</th>
+      <th>Species</th>
+      <th>Strain</th>
+      <th>Genotype</th>
+      <th>Antibiotic resistance</th>
+      <th>Usage</th>
+      <th>Comments</th>
+      <% if current_user.username == 'admin' %>
+        <th>Modify</th>
+      <%end%>
+    </tr>
+  </thead>
+      <tbody>
+        <% @competent_cells.each do |competent_cell| %>
+          <tr>
+            <td><%= competent_cell.place %></td>
+            <td><%= competent_cell.species %></td>
+            <td><%= competent_cell.strain %></td>
+            <td><%= competent_cell.genotype %></td>
+            <td><%= competent_cell.antibiotic_resistance %></td>
+            <td><%= competent_cell.usage %></td>
+            <td><%= competent_cell.comments %></td>
+            <% if current_user.username == 'admin' %>
+              <td><%= link_to edit_competent_cell_path(competent_cell) do %>
+                <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
+                  <%= link_to competent_cell, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                 <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td> 
+            <%end%>
+          </tr>
+        <% end %>
+      </tbody>
+    </table><br>
+  <div class="button"><%= button_to 'Create competent cells stock', new_competent_cell_path, :method => :get %></div>
+  <div class="button"><%= button_to 'Download CSV', competent_cells_path(format: "csv"), :method => :get %></div> 
+
+</div>

@@ -5,12 +5,6 @@ class ResponsibilitiesController < ApplicationController
   def index
    @responsibilities = Responsibility.all
   end
-
-  # GET /responsibilities/1
-  # GET /responsibilities/1.json
-  def show
-  end
-
   # GET /responsibilities/new
   def new
     @responsibility = Responsibility.new
@@ -55,7 +49,7 @@ class ResponsibilitiesController < ApplicationController
   def destroy
     @responsibility.destroy
     respond_to do |format|
-      format.html { redirect_to responsibilities_url, notice: 'Responsibility was successfully destroyed.' }
+      format.html { redirect_to responsibilities_url, notice: 'Responsibility was successfully deleted.' }
       format.json { head :no_content }
     end
   end

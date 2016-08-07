@@ -1,558 +1,713 @@
-number,insert,sequence,plasmid,TAG,species,strain,"antibiotics resistance","methods of cloning",source,comments
-70,"YFP-NES-2 (aa: 371-384) z HopQ1",HopQ1,pGWB442,N-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-76,"YFP-NES-1 z HopQ1 (aa: 144-157)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-30,YFP,YFP,pGWB441-empty,,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-141,YFP,YFP,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-189,"TTSS z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens Y331/A",Physco,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-250,"TTSS z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens Y331/A",Physco,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-252,"TTSS z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens Y331/A",Physco,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gn10,"Restriction sites: BamHI, NdeI, XhoI",PPR,
-190,"TTSS z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens del. (48-57 w fiasku!!!)",Physco,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-251,"TTSS z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens del. (48-57 w fiasku!!!)",Physco,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gn10,"Restriction sites: BamHI, NdeI, XhoI",PPR,
-213,"tonoplast-CFP marker",unknown,pBIN23,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",
-41,SlMai2,Mai2,pQ11,,"Agrobacterium tumefaciens",?,"Rf,Km",?,"Greg Martin",
-47,"SIPKwt N. tabacum 17",SIPK,pET28a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NcoI-XhoI",LPP,"brak ekspresji"
-46,"SIPKwt N. tabacum 16",SIPK,pET28a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NcoI-XhoI",LPP,"brak ekspresji"
-22,"SIPK N. tabacum",SIPK,pGEX-2,N-GST,"Escherichia coli","BL-21 Rosetta","Ap, Cm",?,LPP,
-94,SIPK-AF,SIPK,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-96,SIPK-AF,SIPK,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-98,SIPK-AF,SIPK,pGWB455,N-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-110,SIPK-AF,SIPK,pGWB445,N-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-129,SIPK-AF,SIPK,pGWB442,N-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-155,SipK-AF,SIPK,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-24,SIPK,SIPK,pGWB408,C-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-25,SIPK,SIPK,,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-26,SIPK,SIPK,,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-27,SIPK,SIPK,pGWB444,C-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-28,SIPK,SIPK,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-8,SIPK,SIPK,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-16,SIPK,SIPK,pGWB441,C-YFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-17,SIPK,SIPK,pGWB451,C-CFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-18,SIPK,SIPK,pGWB408,6xHIS,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-19,SIPK,SIPK,pGWBX,2xSTREP-6xHIS,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-20,SIPK,SIPK,pGWBX,2xSTREP-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-143,"ROC3 A. thaliana",ROC3,pUNI,,"Escherichia coli",DH5α,Km25,,TAIR,
-234,Roc1(cyclophilin),Roc1,pASK3,Strep-tag,"Escherichia coli",DH5α,Amp,Gateway,PPR,
-235,Roc1(cyclophilin),Roc1,pASK7,Strep-tag,"Escherichia coli",DH5α,Amp,Gateway,PPR,
-236,Roc1(cyclophilin),Roc1,pDEST,N-GST,"Escherichia coli",DH5α,Amp,Gateway,PPR,
-237,Roc1(cyclophilin),Roc1,pDEST,N-HIS,"Escherichia coli",DH5α,Amp,Gateway,PPR,
-238,Roc1(cyclophilin),Roc1,pASK3,"no TAG (stop codon inserted)","Escherichia coli",DH5α,Amp,Gateway,PPR,
-94,"ROC1 A. thaliana",Roc1,pSD-D-TOPO,,"Escherichia coli",DH5α,Km,Gateway,TAIR,
-25,"Roc1 A.thaliana",Roc1,pASK7-GW,C-STREP,"Escherichia coli","BL-21 Rosetta","Ap, Cm",Gateway,LPP,
-26,"Roc1 A.thaliana",Roc1,pDEST17,N-6xHIS,"Escherichia coli","BL-21 Rosetta","Ap, Cm",Gateway,LPP,
-27,"Roc1 A.thaliana",Roc1,pDEST15,N-GST,"Escherichia coli","BL-21 Rosetta","Ap, Cm",Gateway,LPP,
-81,RipB-wt,RipB,,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-82,RipB-wt,RipB,,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-93,RipB-wt,RipB,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-102,RipB-wt,RipB,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-152,"RipB R. solanacearum IPO1609+STOP",RipB,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-43,"RipB R. solanacearum IPO1609",RipB,pDEST17,N-6xHis,"Escherichia coli","BL-21 Rosetta","Ap, Cm",Gateway,LPP,
-67,"RipB R. solanacearum IPO1609",RipB,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-91,"RipB R. solanacearum IPO1609",RipB,CloneJet,,"Escherichia coli",DH5α,Ap,,PPR,
-129,"RipB R. solanacearum IPO1609",RipB,pGEMT-Easy,,"Escherichia coli",DH5α,Ap,,PPR,
-140,"RipB R. solanacearum IPO1609",RipB,CloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:BamHI, XhoI",PPR,
-141,"RipB R. solanacearum IPO1609",RipB,pBBRMCS2-pTAC,C-6xHis,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-191,RihA-wt,RihA,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites:NcoI, XhoI",PPR,
-45,"RihA-D10/G, G12/D",RihA,pET28a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NcoI-XhoI",LPP,
-192,"RihA-D10/G, G12/D",RihA,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites:NcoI, XhoI",PPR,
-151,R18-STOP,R18,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-35,"R18 peptide (14-3-3 inhibitor)",R18,pGWB420,C-10xMyc,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-119,"R18 peptide (14-3-3 inhibitor)",R18,pGWB444,N-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-121,"R18 peptide (14-3-3 inhibitor)",R18,pGWB402,-,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-135,"R18 peptide (14-3-3 inhibitor)",R18,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-140,"R18 peptide (14-3-3 inhibitor)",R18,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-150,R18,R18,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-228,Qwt-Dendra,HopQ1,pGWB414,C-3xHA-Dendra,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-32,"Qwt +14-3-3C",HopQ1,"pET30a(+), pASK3","C-6xHIS, C-STREP","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,
-31,"Qwt + 14-3-3A",HopQ1,"pET30a(+), pASK3","C-6xHIS, C-STREP","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,
-229,"Q51S/51A - Dendra",HopQ1,pGWB414,C-3xHA-Dendra,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-230,Q2a-Dendra,HopQ1,pGWB414,C-3xHA-Dendra,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-224,"Puste Agro, stock na kompetentne",unknown,,,"Agrobacterium tumefaciens",GV3101,"Rf, Gn",,,
-213,PstHopR1,HopQ1,pGWB412,N-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-199,"PstHopQ1-1 (wt)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-200,"PstHopQ1-1 (S87L, L91R)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-10,"pROK empty vector",unknown,pROK,6xHIS-STREP,"Escherichia coli",DH5α,Km,"Restriction sites:?????????????",PPR,
-51,pROKempty,unknown,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km",,LPP,
-212,PphHopR1,HopQ1,pGWB412,N-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-194,"PphHopQ1 (wt)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-201,"PphHopQ1 (wt)",HopQ1,pGWB544,C-ECFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-198,"PphHopQ1 (V31A)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-196,"PphHopQ1 (L19S, S72A)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-197,"PphHopQ1 (L19S, G155E)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-195,"PphHopQ1 (L19S)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-214,PphHopAV1,HopAv1,pGWB412,N-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-210,"PM-CFP marker",unknown,pBIN20,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",
-216,plastid-CFP,unknown,pBIN26,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",
-269,"Physco - FULL (Phypa_168432) wg nowej wersji genomu P. patens",Physco,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-219,"Phusion DNA polymerase without TAG",Phusion,pETDuet,"No tag","Escherichia coli",DH5α,Carb50,AfII/NcoI,"from Gitta","Ekspresja niesprawdzona"
-220,"Phusion DNA polymerase without TAG",Phusion,pETDuet,"No tag","Escherichia coli",DH5α,Carb50,AfII/NcoI,"from Gitta","Ekspresja niesprawdzona"
-218,"pGWB414 + Dendra2",unknown,pGWB414,"C-3xHA, Dendra2","Escherichia coli",Survival,Sp,Eco47III-SacI,PPR,
-1,"pET30a(+) empty vector",unknown,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,,,
-214,"peroxisome-CFP marker",unknown,pBIN24,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",
-15,pBBRMCS2-pTAC,unknown,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites: SacI, BamHI",PPR,"vector pBBRMCS1 with pTAC promoter cloned from pGBT30 vector (PCR), additional sites in the fragment"
-223,"pBBR1 MCS5 ccdB 3xflag",unknown,pBBRMCS5,3xFLAG,"Escherichia coli",Survival,Gen10,Gateway,"from Gitta",
-224,"pBBR1 MCS5 ccdB 3xflag",unknown,pBBRMCS5,3xFLAG,"Escherichia coli",Survival,Gen10,Gateway,"from Gitta",
-196,"Nucleoside hydrolase 2 P. patens",unknown,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-170,"Nucleoside Hydrolase 2 from P. patens",unknown,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-195,"Nucleoside hydrolase 1 P. patens",unknown,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-169,"Nucleoside Hydrolase 1 from P. patens",unknown,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-107,"NTS z HopQ1 (wt)-GUS",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-72,"nts z HopQ1 wt (aa: 15-29)-GUS",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-132,"nts z HopQ1 wt (aa: 15-29)-GUS",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-127,"nts z HopQ1 wt (aa: 15-29) EPE-GUS",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-126,"nts z HopQ1 wt (aa: 15-29) EPA-GUS",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-124,"nts z HopQ1 wt (aa: 15-29) APA-GUS",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-105,"NTS z HopQ1 (EPE)-GUS",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-131,"nts z HopQ1 EPE (aa: 15-29)-GUS",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-108,"NTS z HopQ1 (EPA)-GUS",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-109,"NTS z HopQ1 (APE)-GUS",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-111,"NTS z HopQ1 (APA)-GUS",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-92,"nts z HopQ1 APA (aa: 15-29)-GUS",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-55,Nt14-3-3c,14-3-3c,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-75,"Nt 14-3-3c",14-3-3c,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-85,"Nt 14-3-3c",14-3-3c,pGWB414,3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-91,"Nt 14-3-3c",14-3-3c,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-113,"Nt 14-3-3c",14-3-3c,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-187,"Nt 14-3-3a-R59,63/A(2A, Domina) dominant negative",14-3-3a,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-188,"Nt 14-3-3a-R59,63/A(2A, Domina) dominant negative",14-3-3a,pGWB414,C-3xHA-NES-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-208,"Nt 14-3-3a-R59,63/A (2A, Domina) dominant negative",14-3-3a,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-240,"Nt 14-3-3a-R 59, 63/A",14-3-3a,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-56,Nt14-3-3a,14-3-3a,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-64,"Nt 14-3-3a",14-3-3a,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-74,"Nt 14-3-3a",14-3-3a,pGWB444,C-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-78,"Nt 14-3-3a",14-3-3a,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-92,"Nt 14-3-3a",14-3-3a,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-126,"Nt 14-3-3a",14-3-3a,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-186,"Nt 14-3-3a",14-3-3a,pGWB414,C-3xHA-NES-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-221,"npro::AvrB-3XFLAG pBBR1 MCS5",AvrB,pBBRMCS5,3xFLAG,"Escherichia coli",DH5α,Gen10,Gateway,"from Gitta","clone 965 with native promoter AvrB flipped into it"
-222,"npro::AvrB-3XFLAG pBBR1 MCS5",AvrB,pBBRMCS5,3xFLAG,"Escherichia coli",DH5α,Gen10,Gateway,"from Gitta","clone 965 with native promoter AvrB flipped into it"
-157,NLS-YFP,YFP,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-198,NLS-YFP,YFP,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: AfeI",PPR,
-202,NLS-YFP,YFP,pGWB414,"C-3xHA, YFP","Escherichia coli",Survival,"Sp, Cm","Restriction sites: Eco47III",PPR,
-123,"NLS RPS SV40-YFP",SV40,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-124,"nls RPS SV40-YFP",SV40,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-247,nls_GUS,GUS,pGWB414,nes-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-248,NLS_GUS,GUS,pGWB414,NES_Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-245,nls_Amber,Amber,pGWB414,nes-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-246,NLS_Amber,Amber,pGWB414,NES_Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-217,NLS,unknown,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-218,nls,unknown,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-134,"Nitrate reductase-2 A. thaliana",unknown,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-139,NES-YFP,YFP,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-197,NES-YFP,YFP,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: AfeI",PPR,
-204,NES-YFP,YFP,pGWB414,"C-3xHA, YFP","Escherichia coli",Survival,"Sp, Cm","Restriction sites: Eco47III",PPR,
-226,NES-eCFP,CFP,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: AfeI",PPR,
-227,NES-eCFP,CFP,pGWB414,"C-3xHA, CFP","Escherichia coli",Survival,"Sp, Cm","Restriction sites: Eco47III",PPR,
-79,"NES-2 z HopQ1-YFP",HopQ1,pGWB442,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-215,NES,unknown,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-216,nes,unknown,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-163,N-CFP-SIPK,SIPK,pGWB445,N-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-205,mutnls-YFP,YFP,pGWB414,"C-3xHA, YFP","Escherichia coli",Survival,"Sp, Cm","Restriction sites: Eco47III",PPR,
-82,mutnes-YFP,YFP,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-130,mutnes-YFP,YFP,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-203,mutnes-YFP,YFP,pGWB414,"C-3xHA, YFP","Escherichia coli",Survival,"Sp, Cm","Restriction sites: Eco47III",PPR,
-199,mnls-YFP,YFP,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: AfeI",PPR,
-200,mnes-YFP,YFP,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: AfeI",PPR,
-24,"MKK4 ?",MKK4,pGEX-2,N-GST,"Escherichia coli","BL-21 Rosetta","Ap, Cm",?,?,
-215,"mitochondria-CFP marker",unknown,pBIN25,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",
-9,MEK-KR,MEK2,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-34,"MEKDD N. tabacum DEX inducible",MEK2,pDEX,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km",?,?,
-32,"MEKDD N. tabacum",MEK2,pGWB420,C-10xMyc,"Agrobacterium tumefaciens",?,"Rf, Ap,Km",,?,
-33,"MEKDD N. tabacum",MEK2,pGWB408,C-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Ap,Km",Gateway,LPP,
-185,"MEK2-KR under dex inducibule promotor",MEK2,pDEX,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km",Gateway,LPP,
-231,MEK2-KR,MEK2,pENTR-D/Topo,"bez stop kodonu","Escherichia coli",DH5α,Km,Gateway,PPR,
-232,MEK2-DD,MEK2,pENTR-D/Topo,"bez stop kodonu","Escherichia coli",DH5α,Km,Gateway,PPR,
-233,MEK2-DD,MEK2,pGWB444," ","Escherichia coli",DH5α,Sp,Gateway,PPR,
-96,mCherry,mCherry,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-123,mCherry,mCherry,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-168,mCherry,mCherry,pGEMT-Easy,,"Escherichia coli",DH5α,Ap,,PPR,
-201,mCherry,mCherry,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,
-39,"Mai2-R131/A,Y132/A",Mai2,pBTX,C-Flag,"Agrobacterium tumefaciens",?,"Rf,Km",?,"Greg Martin",
-38,Mai2,Mai2,pBTX,C-Flag,"Agrobacterium tumefaciens",?,"Rf,Km",?,"Greg Martin",
-40,LeMAPKKKa,MAPKKKa,pER8,C-2xHA?,"Agrobacterium tumefaciens",?,"Rf,Sp",?,"Greg Martin",
-73,"Kozak-nts z HopQ1-APE(aa: 15-29)-GUS",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-68,"Kozak-nts z HopQ1-APA(aa: 15-29)-GUS",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-149,"KIM z HopQ1-YFP",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-112,"KIM sequence from HopQ1-YFP",HopQ1,pGWB442,N-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-31,"KIM sequence from HopQ1",HopQ1,?,N-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-239,"KIM motif from HopQ1 + YFP",HopQ1,pGWB408,C-HIS,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-44,HopQwt,HopQ1,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,
-42,HopQ1-Y383/A,HopQ1,pET28a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-138,HopQ1-Y383/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-170,HopQ1-Y383/A,HopQ1,CloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,
-53,"HopQ1-Y283/A ",HopQ1,pGWB,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3102,"Rf, Gn,Sp",Gateway,LPP,
-69,"HopQ1-wt zaqmiast tego Q2a-ha!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",HopQ1,pGWB,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-30,"HopQ1wt + SIPK pGEX-2",HopQ1,"pET30a(+), pGEX-2","C-6xHIS, N-GST","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,
-33,"HopQ1wt + Roc1",HopQ1,"pET30a(+), pDEST17","C-6xHIS, N-HIS","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,
-34,"HopQ1wt + Roc1",HopQ1,"pET30a(+), pASK7GW","C-6xHIS, C-STREP","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,
-35,"HopQ1wt + Roc1",HopQ1,"pET30a(+), pDEST15","C-6xHIS, N-GST","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,
-24,"HopQ1wt plants codon usage",HopQ1,,,"Escherichia coli",DH5α,Ap,,Invitrogen,
-25,"HopQ1wt plants codon usage",HopQ1,pDONR221,,"Escherichia coli",DH5α,Km,Gateway,Invitrogen,
-255,HopQ1-wt-GW-3xHA-NLS-2xSTOP,HopQ1,pJET1.2,3xHA,"Escherichia coli",DH5α,Amp,"Restriction sites: BamHI, XhoI",PPR,
-253,HopQ1-wt-GW-3xHA-NES-2xSTOP,HopQ1,pJET1.2,3xHA,"Escherichia coli",DH5α,Amp,"Restriction sites: BglII, XhoI",PPR,
-256,HopQ1-wt-GW-3xHA-mutnls-2xSTOP,HopQ1,pJET1.2,3xHA,"Escherichia coli",DH5α,Amp,"Restriction sites: BglII, XhoI",PPR,
-254,HopQ1-wt-GW-3xHA-mutnes-2xSTOP,HopQ1,pJET1.2,3xHA,"Escherichia coli",DH5α,Amp,"Restriction sites: BglII, XhoI",PPR,
-181,"HopQ1-wt GUS (CARGO)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI, Gateway",PPR,
-153,HopQ1-wt-GUS,HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-28,"HopQ1wt + empty pGEX-2",HopQ1,"pET30a(+), pGEX-2",C-6xHIS,"Escherichia coli","BL-21 Rosetta","Ap, Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-29,"HopQ1wt + CPK3 pGEX-2",HopQ1,"pET30a(+), pGEX-2","C-6xHIS, N-GST","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,
-57,HopQ1-wt,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-65,HopQ1-wt,HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-80,HopQ1-wt,HopQ1,,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-89,HopQ1-wt,HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-148,HopQ1-wt,HopQ1,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-172,HopQ1-wt,HopQ1,pGWB414,C-3xHA-NLS-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-173,HopQ1-wt,HopQ1,pGWB414,C-3xHA-mutnls-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-174,HopQ1-wt,HopQ1,pGWB414,C-3xHA-NES-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-175,HopQ1-wt,HopQ1,pGWB414,C-3xHA-mutnes-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-211,HopQ1-wt,HopQ1,,C-3xHA-NES-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-207,HopQ1-wt,HopQ1,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gm,"Restriction sites:BamHI, XhoI",PPR,
-102,"HopQ1 wt",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-105,"HopQ1 wt",HopQ1,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-1,HopQ1wt,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-11,HopQ1wt,HopQ1,pGWB408,C-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-23,HopQ1wt,HopQ1,,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-1,HopQ1wt,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-12,HopQ1wt,HopQ1,pGEX-2,N-GST,"Escherichia coli",BL-21,Ap,"Restrictions sites BamHI-XhoI",LPP,
-14,HopQ1wt,HopQ1,pET28a(+),C-6xHIS,"Escherichia coli",BL-21,Km,"Restrictions sites NcoI-XhoI",LPP,
-16,HopQ1wt,HopQ1,pET30a(+),"C-6xHIS Tev site","Escherichia coli",BL-21,Km,?,LPP,
-2,HopQ1wt,HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,
-11,HopQ1wt,HopQ1,pROK,6xHIS-STREP,"Escherichia coli",DH5α,Km,"Restriction sites:?????????????",PPR,
-26,HopQ1wt,HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-37,HopQ1wt,HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,
-61,HopQ1wt,HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,
-138,"HopQ1-T25/E, S27/E, S51/A, S301/E, S303/E",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-146,"HopQ1-T25/E, S27/E, S51/A, S301/E, S303/E",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-139,"HopQ1-T25/E, S27/E, S301/E, S303/E",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-145,"HopQ1-T25/E, S27/E, S301/E, S303/E",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-78,"HopQ1-T25/E, S27/E (EPE)",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-87,"HopQ1-T25/E, S27/E (EPE)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-174,"HopQ1-T25/E, S27/E",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-161,"HopQ1-T25/E, S27/A, S51/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-117,"HopQ1-T25/E, S27/A (EPA)",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-73,"HopQ1-T25/E, S27/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-164,"HopQ1 T25/E, S27/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-72,"HopQ1-T25/A, S51/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-162,"HopQ1-T25/A, S27/E, S51/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-79,"HopQ1-T25/A, S27/E",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-81,"HopQ1 T25/A, S27/E",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-104,"HopQ1 T25/A, S27/E",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-125,"HopQ1-T25/A, S27/A, S51/A, S301/E, S303/E",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-136,"HopQ1-T25/A, S27/A, S51/A, S301/A, S303/A",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-148,"HopQ1-T25/A, S27/A, S51/A, S301/A, S303/A",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-71,"HopQ1-T25/A, S27/A, S51/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-169,"HopQ1-T25/A, S27/A, S51/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-137,"HopQ1-T25/A, S27/A, S301/A, S303/A",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-147,"HopQ1-T25/A, S27/A, S301/A, S303/A",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-70,"HopQ1-T25/A, S27/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-84,"HopQ1-T25/A, S27/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-74,"HopQ1-T25/A, S27/A",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-80,"HopQ1-T25/A, S27/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-98,"HopQ1-T25/A, S27/A",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-115,"HopQ1-T25/A, S27/A",HopQ1,pGWB454,C-mRFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-172,"HopQ1-T25/A, S27/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-135,"HopQ1-T25/A S27,51/A, ",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-83,HopQ1-T25/A,HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-171,HopQ1-T25/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-107,"HopQ1 T25/A",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-165,"HopQ1 T25/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-9,"HopQ1-S51S/A, R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB444,C-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-10,"HopQ1-S51S/A, R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-52,"HopQ1-S51S/A, R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3102,"Rf, Gn,Sp",Gateway,LPP,
-8,HopQ1-S51/D,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-35,HopQ1-S51/D,HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-45,HopQ1-S51/D,HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,
-62,HopQ1-S51/D,HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,
-130,"HopQ1-S51/A, T27/E, S27/E",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-131,"HopQ1-S51/A, T27/E, S27/A",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-97,"HopQ1-S51/A, T25/A, S-27/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-6,"HopQ1-S51/A, S27/A",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-17,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-22,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,,PPR,
-33,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-44,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,
-52,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,cloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,"without STOP codon"
-59,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,
-63,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-10,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,"insoluble protein"
-30,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-41,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,
-50,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,cloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,"without STOP codon"
-56,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,
-103,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-95,"HopQ1-S51/A del aa 25-27",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-183,HopQ1-S51/A-3XHA-Dendra2,HopQ1,pGWB441,C-3XHA-Dendra3,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-2,HopQ1-S51/A,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-12,HopQ1-S51/A,HopQ1,pGWB408,C-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-59,HopQ1-S51/A,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-77,HopQ1-S51/A,HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-90,HopQ1-S51/A,HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-176,HopQ1-S51/A,HopQ1,pGWB414,C-3xHA-NES-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-181,HopQ1-S51/A,HopQ1,pGWB414,C-3xHA-NLS-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-2,HopQ1-S51/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-3,HopQ1-S51/A,HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,
-12,HopQ1-S51/A,HopQ1,pROK,6xHIS-STREP,"Escherichia coli",DH5α,Km,"Restriction sites:?????????????",PPR,
-27,HopQ1-S51/A,HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-38,HopQ1-S51/A,HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,
-53,HopQ1-S51/A,HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,
-77,HopQ1-S51/A,HopQ1,pGWB454,C-mRFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-109,HopQ1-S51/A,HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-112,HopQ1-S51/A,HopQ1,pGWB441,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-163,HopQ1-S51/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-99,HopQ1-S51A,HopQ1,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-223,"HopQ1 S51A",HopQ1,pGWB414,C-2xStrep-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn, Sp",Gateway,LPP,
-18,"HopQ1-S49/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-23,"HopQ1- S49/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,,PPR,
-34,"HopQ1- S49/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-60,"HopQ1- S49/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,
-15,"HopQ1S49/A,L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-62,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-31,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-42,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,
-57,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,
-86,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-136,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-13,HopQ1-S49/A,HopQ1,pGWB408,C-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-60,HopQ1-S49/A,HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-3,HopQ1-S49/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-4,HopQ1-S49/A,HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,
-13,HopQ1-S49/A,HopQ1,pROK,6xHIS-STREP,"Escherichia coli",DH5α,Km,"Restriction sites:?????????????",PPR,
-28,HopQ1-S49/A,HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-39,HopQ1-S49/A,HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,
-54,HopQ1-S49/A,HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,
-118,HopQ1-S49/A,HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-120,HopQ1-S49/A,HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-159,HopQ1-S49/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-95,HopQ1-S49A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-7,"HopQ1-S33/A, S49A",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-7,"HopQ1-S33/A, S49A",HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,
-5,HopQ1-S33/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-5,HopQ1-S33/A,HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,
-114,"HopQ1-S27/A, S51/A",HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-122,"HopQ1-S27/A, S51/A",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-101,HopQ1-S27/A,HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-103,HopQ1-S27/A,HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-132,HopQ1-S27/A,HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-133,HopQ1-S27/A,HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-4,HopQ1-S27/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-6,HopQ1-S27/A,HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,
-86,"HopQ1 R278/L, K279L",HopQ1,pGWB411,FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-87,"HopQ1 R278/L, K279L",HopQ1,pGWB414,3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-88,"HopQ1 R278/L, K279L",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-22,"HopQ1- R278/E, K279/E",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-39,"HopQ1- R278/E, K279/E",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-3,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-7,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB444,C-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-8,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-16,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-11,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,"insoluble protein"
-21,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,,PPR,
-32,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-43,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,
-51,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,cloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,"without STOP codon"
-58,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,
-268,"HopQ1 P. syringae pv. morsprunorum ""720""  szczep 100 (r. 1) kon 8",HopQ1,pBBR1MCS5,,"Escherichia coli",DH5α,Gn10,"Restriction sites: BamHI, XhoI",PPR,
-267,"HopQ1 P. syringae pv. morsprunorum ""720""  szczep 100 (r. 1) klon 5",HopQ1,pBBR1MCS5,,"Escherichia coli",DH5α,Gn10,"Restriction sites: BamHI, XhoI",PPR,
-266,"HopQ1 P. syringae pv. morsprunorum ""720""  szczep 100 (r. 1)",HopQ1,pJET1.2,,"Escherichia coli",DH5α,Amp,"Restriction sites: BamHI, XhoI",PPR,
-264,"HopQ1 P. syringae pv. morsprunorum ""100""  szczep 732 (r. 2)",HopQ1,pJET1.2,,"Escherichia coli",DH5α,Amp,"Restriction sites: BamHI, XhoI",PPR,
-265,"HopQ1 P. syringae pv. morsprunorum ""100""  szczep 732 (r. 2)",HopQ1,pBBR1MCS5,,"Escherichia coli",DH5α,Gn10,"Restriction sites: BamHI, XhoI",PPR,
-206,HopQ1-NLS,HopQ1,,C-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-207,HopQ1-NLS,HopQ1,,C-StrepII-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-210,HopQ1-NES,HopQ1,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3102,"Rf, Gn,Sp",,,
-142,"HopQ1-N103/D, D105/G",HopQ1,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-143,"HopQ1-N103/D, D105/G",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-44,"HopQ1-N103/D, D105/G",HopQ1,pET30a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-14,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-47,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,
-61,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-100,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-9,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,"insoluble protein"
-29,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-40,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,
-49,"HopQ1-L285/A, L287/A (KIM)",HopQ1,cloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,"without STOP codon"
-55,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,
-101,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-128,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-160,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-89,"HopQ1 L285/A, L287/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-176,"HopQ1 KIM-KNR (KIM naśladujący ralstonię) K509/R, A510/V",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-99,"HopQ1-KIM KNR (KIM naśladujący ralstonię)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-83,"HopQ1-KIM KNR (KIM naśladujący ralstonię)",HopQ1,pBBRMCS2-pTAC,C-6xHis,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-106,"HopQ1-KIM KNR (KIM naśladujący ralstonię)",HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-54,"HopQ1-invitrogen for plant expresion",HopQ1,pGWB,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3103,"Rf, Gn,Sp",Gateway,LPP,
-177,"HopQ1 DXDXXXDD (Rysiek)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-110,"HopQ1-d.TPS (aa: 25-27)",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-18,"HopQ1 (domena hydrolaz)",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,"insoluble protein"
-19,"HopQ1 (domena hydrolaz)",HopQ1,pET28a(+),N-6xHIS-SUMOtag,"Escherichia coli","BL-21 Rosetta","Km, Cm",?,LPP,"insoluble protein"
-133,"HopQ1 d. NES-2 (aa: 371-384)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-144,"HopQ1 d. NES-2 (aa: 371-384)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-75,"HopQ1-dNES1 (aa: 144-157)",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-88,"HopQ1 d. NES-1 (aa: 144-157)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-208,"HopQ1 delta 1-97 (without tail)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-76,"HopQ1 del. T25-S27",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-128,"HopQ1 del. NES-2 (aa: 371-384)",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-127,"HopQ1 del. NES-1 (aa: 144-157)",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-179,"HopQ1-del 3-98",HopQ1,GWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-180,"HopQ1-del 3-98",HopQ1,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-175,"HopQ1-d.25-27, S51/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-166,"HopQ1 d.25-27, S51/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-58,"HopQ1-D107/A, D108/A (2A)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-177,"HopQ1-D107/A, D108/A (2A)",HopQ1,pGWB414,C-3xHA-NES-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-178,"HopQ1-D107/A, D108/A (2A)",HopQ1,pGWB414,C-3xHA-NLS-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
+number,insert,sequence,plasmid,TAG,species,strain,"antibiotics resistance","methods of cloning",source,comments,place
+70,"YFP-NES-2 (aa: 371-384) z HopQ1",HopQ1,pGWB442,N-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+76,"YFP-NES-1 z HopQ1 (aa: 144-157)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+30,YFP,YFP,pGWB441-empty,,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+141,YFP,YFP,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+189,"TTSS z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens Y331/A",Physco,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+250,"TTSS z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens Y331/A",Physco,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+252,"TTSS z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens Y331/A",Physco,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gn10,"Restriction sites: BamHI, NdeI, XhoI",PPR,,"nowe Revco 209"
+190,"TTSS z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens del. (48-57 w fiasku!!!)",Physco,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+251,"TTSS z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens del. (48-57 w fiasku!!!)",Physco,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gn10,"Restriction sites: BamHI, NdeI, XhoI",PPR,,"nowe Revco 209"
+213,"tonoplast-CFP marker",unknown,pBIN23,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",,"nowe Revco 209"
+41,SlMai2,Mai2,pQ11,,"Agrobacterium tumefaciens",?,"Rf,Km",?,"Greg Martin",,"nowe Revco 209"
+47,"SIPKwt N. tabacum 17",SIPK,pET28a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NcoI-XhoI",LPP,"brak ekspresji","nowe Revco 209"
+46,"SIPKwt N. tabacum 16",SIPK,pET28a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NcoI-XhoI",LPP,"brak ekspresji","nowe Revco 209"
+22,"SIPK N. tabacum",SIPK,pGEX-2,N-GST,"Escherichia coli","BL-21 Rosetta","Ap, Cm",?,LPP,,"nowe Revco 209"
+94,SIPK-AF,SIPK,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+96,SIPK-AF,SIPK,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+98,SIPK-AF,SIPK,pGWB455,N-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+110,SIPK-AF,SIPK,pGWB445,N-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+129,SIPK-AF,SIPK,pGWB442,N-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+155,SipK-AF,SIPK,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+24,SIPK,SIPK,pGWB408,C-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+25,SIPK,SIPK,,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+26,SIPK,SIPK,,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+27,SIPK,SIPK,pGWB444,C-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+28,SIPK,SIPK,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+8,SIPK,SIPK,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+16,SIPK,SIPK,pGWB441,C-YFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+17,SIPK,SIPK,pGWB451,C-CFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+18,SIPK,SIPK,pGWB408,6xHIS,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+19,SIPK,SIPK,pGWBX,2xSTREP-6xHIS,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+20,SIPK,SIPK,pGWBX,2xSTREP-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+143,"ROC3 A. thaliana",ROC3,pUNI,,"Escherichia coli",DH5α,Km25,,TAIR,,"nowe Revco 209"
+234,Roc1(cyclophilin),Roc1,pASK3,Strep-tag,"Escherichia coli",DH5α,Amp,Gateway,PPR,,"nowe Revco 209"
+235,Roc1(cyclophilin),Roc1,pASK7,Strep-tag,"Escherichia coli",DH5α,Amp,Gateway,PPR,,"nowe Revco 209"
+236,Roc1(cyclophilin),Roc1,pDEST,N-GST,"Escherichia coli",DH5α,Amp,Gateway,PPR,,"nowe Revco 209"
+237,Roc1(cyclophilin),Roc1,pDEST,N-HIS,"Escherichia coli",DH5α,Amp,Gateway,PPR,,"nowe Revco 209"
+238,Roc1(cyclophilin),Roc1,pASK3,"no TAG (stop codon inserted)","Escherichia coli",DH5α,Amp,Gateway,PPR,,"nowe Revco 209"
+94,"ROC1 A. thaliana",Roc1,pSD-D-TOPO,,"Escherichia coli",DH5α,Km,Gateway,TAIR,,"nowe Revco 209"
+25,"Roc1 A.thaliana",Roc1,pASK7-GW,C-STREP,"Escherichia coli","BL-21 Rosetta","Ap, Cm",Gateway,LPP,,"nowe Revco 209"
+26,"Roc1 A.thaliana",Roc1,pDEST17,N-6xHIS,"Escherichia coli","BL-21 Rosetta","Ap, Cm",Gateway,LPP,,"nowe Revco 209"
+27,"Roc1 A.thaliana",Roc1,pDEST15,N-GST,"Escherichia coli","BL-21 Rosetta","Ap, Cm",Gateway,LPP,,"nowe Revco 209"
+81,RipB-wt,RipB,,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+82,RipB-wt,RipB,,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+93,RipB-wt,RipB,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+102,RipB-wt,RipB,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+152,"RipB R. solanacearum IPO1609+STOP",RipB,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+43,"RipB R. solanacearum IPO1609",RipB,pDEST17,N-6xHis,"Escherichia coli","BL-21 Rosetta","Ap, Cm",Gateway,LPP,,"nowe Revco 209"
+67,"RipB R. solanacearum IPO1609",RipB,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+91,"RipB R. solanacearum IPO1609",RipB,CloneJet,,"Escherichia coli",DH5α,Ap,,PPR,,"nowe Revco 209"
+129,"RipB R. solanacearum IPO1609",RipB,pGEMT-Easy,,"Escherichia coli",DH5α,Ap,,PPR,,"nowe Revco 209"
+140,"RipB R. solanacearum IPO1609",RipB,CloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+141,"RipB R. solanacearum IPO1609",RipB,pBBRMCS2-pTAC,C-6xHis,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+191,RihA-wt,RihA,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites:NcoI, XhoI",PPR,,"nowe Revco 209"
+45,"RihA-D10/G, G12/D",RihA,pET28a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NcoI-XhoI",LPP,,"nowe Revco 209"
+192,"RihA-D10/G, G12/D",RihA,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites:NcoI, XhoI",PPR,,"nowe Revco 209"
+151,R18-STOP,R18,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+35,"R18 peptide (14-3-3 inhibitor)",R18,pGWB420,C-10xMyc,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+119,"R18 peptide (14-3-3 inhibitor)",R18,pGWB444,N-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+121,"R18 peptide (14-3-3 inhibitor)",R18,pGWB402,-,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+135,"R18 peptide (14-3-3 inhibitor)",R18,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+140,"R18 peptide (14-3-3 inhibitor)",R18,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+150,R18,R18,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+228,Qwt-Dendra,HopQ1,pGWB414,C-3xHA-Dendra,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+32,"Qwt +14-3-3C",HopQ1,"pET30a(+), pASK3","C-6xHIS, C-STREP","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,,"nowe Revco 209"
+31,"Qwt + 14-3-3A",HopQ1,"pET30a(+), pASK3","C-6xHIS, C-STREP","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,,"nowe Revco 209"
+229,"Q51S/51A - Dendra",HopQ1,pGWB414,C-3xHA-Dendra,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+230,Q2a-Dendra,HopQ1,pGWB414,C-3xHA-Dendra,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+224,"Puste Agro, stock na kompetentne",unknown,,,"Agrobacterium tumefaciens",GV3101,"Rf, Gn",,,,"nowe Revco 209"
+213,PstHopR1,HopQ1,pGWB412,N-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+199,"PstHopQ1-1 (wt)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+200,"PstHopQ1-1 (S87L, L91R)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+10,"pROK empty vector",unknown,pROK,6xHIS-STREP,"Escherichia coli",DH5α,Km,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+51,pROKempty,unknown,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km",,LPP,,"nowe Revco 209"
+212,PphHopR1,HopQ1,pGWB412,N-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+194,"PphHopQ1 (wt)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+201,"PphHopQ1 (wt)",HopQ1,pGWB544,C-ECFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+198,"PphHopQ1 (V31A)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+196,"PphHopQ1 (L19S, S72A)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+197,"PphHopQ1 (L19S, G155E)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+195,"PphHopQ1 (L19S)",HopQ1,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+214,PphHopAV1,HopAv1,pGWB412,N-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+210,"PM-CFP marker",unknown,pBIN20,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",,"nowe Revco 209"
+216,plastid-CFP,unknown,pBIN26,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",,"nowe Revco 209"
+269,"Physco - FULL (Phypa_168432) wg nowej wersji genomu P. patens",Physco,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+219,"Phusion DNA polymerase without TAG",Phusion,pETDuet,"No tag","Escherichia coli",DH5α,Carb50,AfII/NcoI,"from Gitta","Ekspresja niesprawdzona","nowe Revco 209"
+220,"Phusion DNA polymerase without TAG",Phusion,pETDuet,"No tag","Escherichia coli",DH5α,Carb50,AfII/NcoI,"from Gitta","Ekspresja niesprawdzona","nowe Revco 209"
+218,"pGWB414 + Dendra2",unknown,pGWB414,"C-3xHA, Dendra2","Escherichia coli",Survival,Sp,Eco47III-SacI,PPR,,"nowe Revco 209"
+1,"pET30a(+) empty vector",unknown,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,,,,"nowe Revco 209"
+214,"peroxisome-CFP marker",unknown,pBIN24,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",,"nowe Revco 209"
+15,pBBRMCS2-pTAC,unknown,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites: SacI, BamHI",PPR,"vector pBBRMCS1 with pTAC promoter cloned from pGBT30 vector (PCR), additional sites in the fragment","nowe Revco 209"
+223,"pBBR1 MCS5 ccdB 3xflag",unknown,pBBRMCS5,3xFLAG,"Escherichia coli",Survival,Gen10,Gateway,"from Gitta",,"nowe Revco 209"
+224,"pBBR1 MCS5 ccdB 3xflag",unknown,pBBRMCS5,3xFLAG,"Escherichia coli",Survival,Gen10,Gateway,"from Gitta",,"nowe Revco 209"
+196,"Nucleoside hydrolase 2 P. patens",unknown,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+170,"Nucleoside Hydrolase 2 from P. patens",unknown,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+195,"Nucleoside hydrolase 1 P. patens",unknown,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+169,"Nucleoside Hydrolase 1 from P. patens",unknown,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+107,"NTS z HopQ1 (wt)-GUS",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+72,"nts z HopQ1 wt (aa: 15-29)-GUS",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+132,"nts z HopQ1 wt (aa: 15-29)-GUS",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+127,"nts z HopQ1 wt (aa: 15-29) EPE-GUS",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+126,"nts z HopQ1 wt (aa: 15-29) EPA-GUS",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+124,"nts z HopQ1 wt (aa: 15-29) APA-GUS",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+105,"NTS z HopQ1 (EPE)-GUS",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+131,"nts z HopQ1 EPE (aa: 15-29)-GUS",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+108,"NTS z HopQ1 (EPA)-GUS",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+109,"NTS z HopQ1 (APE)-GUS",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+111,"NTS z HopQ1 (APA)-GUS",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+92,"nts z HopQ1 APA (aa: 15-29)-GUS",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+55,Nt14-3-3c,14-3-3c,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+75,"Nt 14-3-3c",14-3-3c,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+85,"Nt 14-3-3c",14-3-3c,pGWB414,3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+91,"Nt 14-3-3c",14-3-3c,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+113,"Nt 14-3-3c",14-3-3c,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+187,"Nt 14-3-3a-R59,63/A(2A, Domina) dominant negative",14-3-3a,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+188,"Nt 14-3-3a-R59,63/A(2A, Domina) dominant negative",14-3-3a,pGWB414,C-3xHA-NES-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+208,"Nt 14-3-3a-R59,63/A (2A, Domina) dominant negative",14-3-3a,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+240,"Nt 14-3-3a-R 59, 63/A",14-3-3a,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+56,Nt14-3-3a,14-3-3a,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+64,"Nt 14-3-3a",14-3-3a,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+74,"Nt 14-3-3a",14-3-3a,pGWB444,C-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+78,"Nt 14-3-3a",14-3-3a,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+92,"Nt 14-3-3a",14-3-3a,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+126,"Nt 14-3-3a",14-3-3a,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+186,"Nt 14-3-3a",14-3-3a,pGWB414,C-3xHA-NES-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+221,"npro::AvrB-3XFLAG pBBR1 MCS5",AvrB,pBBRMCS5,3xFLAG,"Escherichia coli",DH5α,Gen10,Gateway,"from Gitta","clone 965 with native promoter AvrB flipped into it","nowe Revco 209"
+222,"npro::AvrB-3XFLAG pBBR1 MCS5",AvrB,pBBRMCS5,3xFLAG,"Escherichia coli",DH5α,Gen10,Gateway,"from Gitta","clone 965 with native promoter AvrB flipped into it","nowe Revco 209"
+157,NLS-YFP,YFP,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+198,NLS-YFP,YFP,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: AfeI",PPR,,"nowe Revco 209"
+202,NLS-YFP,YFP,pGWB414,"C-3xHA, YFP","Escherichia coli",Survival,"Sp, Cm","Restriction sites: Eco47III",PPR,,"nowe Revco 209"
+123,"NLS RPS SV40-YFP",SV40,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+124,"nls RPS SV40-YFP",SV40,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+247,nls_GUS,GUS,pGWB414,nes-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+248,NLS_GUS,GUS,pGWB414,NES_Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+245,nls_Amber,Amber,pGWB414,nes-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+246,NLS_Amber,Amber,pGWB414,NES_Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+217,NLS,unknown,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+218,nls,unknown,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+134,"Nitrate reductase-2 A. thaliana",unknown,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+139,NES-YFP,YFP,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+197,NES-YFP,YFP,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: AfeI",PPR,,"nowe Revco 209"
+204,NES-YFP,YFP,pGWB414,"C-3xHA, YFP","Escherichia coli",Survival,"Sp, Cm","Restriction sites: Eco47III",PPR,,"nowe Revco 209"
+226,NES-eCFP,CFP,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: AfeI",PPR,,"nowe Revco 209"
+227,NES-eCFP,CFP,pGWB414,"C-3xHA, CFP","Escherichia coli",Survival,"Sp, Cm","Restriction sites: Eco47III",PPR,,"nowe Revco 209"
+79,"NES-2 z HopQ1-YFP",HopQ1,pGWB442,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+215,NES,unknown,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+216,nes,unknown,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+163,N-CFP-SIPK,SIPK,pGWB445,N-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+205,mutnls-YFP,YFP,pGWB414,"C-3xHA, YFP","Escherichia coli",Survival,"Sp, Cm","Restriction sites: Eco47III",PPR,,"nowe Revco 209"
+82,mutnes-YFP,YFP,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+130,mutnes-YFP,YFP,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+203,mutnes-YFP,YFP,pGWB414,"C-3xHA, YFP","Escherichia coli",Survival,"Sp, Cm","Restriction sites: Eco47III",PPR,,"nowe Revco 209"
+199,mnls-YFP,YFP,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: AfeI",PPR,,"nowe Revco 209"
+200,mnes-YFP,YFP,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: AfeI",PPR,,"nowe Revco 209"
+24,"MKK4 ?",MKK4,pGEX-2,N-GST,"Escherichia coli","BL-21 Rosetta","Ap, Cm",?,?,,"nowe Revco 209"
+215,"mitochondria-CFP marker",unknown,pBIN25,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",,"nowe Revco 209"
+9,MEK-KR,MEK2,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+34,"MEKDD N. tabacum DEX inducible",MEK2,pDEX,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km",?,?,,"nowe Revco 209"
+32,"MEKDD N. tabacum",MEK2,pGWB420,C-10xMyc,"Agrobacterium tumefaciens",?,"Rf, Ap,Km",,?,,"nowe Revco 209"
+33,"MEKDD N. tabacum",MEK2,pGWB408,C-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Ap,Km",Gateway,LPP,,"nowe Revco 209"
+185,"MEK2-KR under dex inducibule promotor",MEK2,pDEX,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km",Gateway,LPP,,"nowe Revco 209"
+231,MEK2-KR,MEK2,pENTR-D/Topo,"bez stop kodonu","Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+232,MEK2-DD,MEK2,pENTR-D/Topo,"bez stop kodonu","Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+233,MEK2-DD,MEK2,pGWB444," ","Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+96,mCherry,mCherry,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+123,mCherry,mCherry,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+168,mCherry,mCherry,pGEMT-Easy,,"Escherichia coli",DH5α,Ap,,PPR,,"nowe Revco 209"
+201,mCherry,mCherry,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,,"nowe Revco 209"
+39,"Mai2-R131/A,Y132/A",Mai2,pBTX,C-Flag,"Agrobacterium tumefaciens",?,"Rf,Km",?,"Greg Martin",,"nowe Revco 209"
+38,Mai2,Mai2,pBTX,C-Flag,"Agrobacterium tumefaciens",?,"Rf,Km",?,"Greg Martin",,"nowe Revco 209"
+40,LeMAPKKKa,MAPKKKa,pER8,C-2xHA?,"Agrobacterium tumefaciens",?,"Rf,Sp",?,"Greg Martin",,"nowe Revco 209"
+73,"Kozak-nts z HopQ1-APE(aa: 15-29)-GUS",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+68,"Kozak-nts z HopQ1-APA(aa: 15-29)-GUS",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+149,"KIM z HopQ1-YFP",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+112,"KIM sequence from HopQ1-YFP",HopQ1,pGWB442,N-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+31,"KIM sequence from HopQ1",HopQ1,?,N-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+239,"KIM motif from HopQ1 + YFP",HopQ1,pGWB408,C-HIS,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+44,HopQwt,HopQ1,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,,"nowe Revco 209"
+42,HopQ1-Y383/A,HopQ1,pET28a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+138,HopQ1-Y383/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+170,HopQ1-Y383/A,HopQ1,CloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,,"nowe Revco 209"
+53,"HopQ1-Y283/A ",HopQ1,pGWB,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3102,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+69,"HopQ1-wt zaqmiast tego Q2a-ha!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!",HopQ1,pGWB,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+30,"HopQ1wt + SIPK pGEX-2",HopQ1,"pET30a(+), pGEX-2","C-6xHIS, N-GST","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,,"nowe Revco 209"
+33,"HopQ1wt + Roc1",HopQ1,"pET30a(+), pDEST17","C-6xHIS, N-HIS","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,,"nowe Revco 209"
+34,"HopQ1wt + Roc1",HopQ1,"pET30a(+), pASK7GW","C-6xHIS, C-STREP","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,,"nowe Revco 209"
+35,"HopQ1wt + Roc1",HopQ1,"pET30a(+), pDEST15","C-6xHIS, N-GST","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,,"nowe Revco 209"
+24,"HopQ1wt plants codon usage",HopQ1,,,"Escherichia coli",DH5α,Ap,,Invitrogen,,"nowe Revco 209"
+25,"HopQ1wt plants codon usage",HopQ1,pDONR221,,"Escherichia coli",DH5α,Km,Gateway,Invitrogen,,"nowe Revco 209"
+255,HopQ1-wt-GW-3xHA-NLS-2xSTOP,HopQ1,pJET1.2,3xHA,"Escherichia coli",DH5α,Amp,"Restriction sites: BamHI, XhoI",PPR,,"nowe Revco 209"
+253,HopQ1-wt-GW-3xHA-NES-2xSTOP,HopQ1,pJET1.2,3xHA,"Escherichia coli",DH5α,Amp,"Restriction sites: BglII, XhoI",PPR,,"nowe Revco 209"
+256,HopQ1-wt-GW-3xHA-mutnls-2xSTOP,HopQ1,pJET1.2,3xHA,"Escherichia coli",DH5α,Amp,"Restriction sites: BglII, XhoI",PPR,,"nowe Revco 209"
+254,HopQ1-wt-GW-3xHA-mutnes-2xSTOP,HopQ1,pJET1.2,3xHA,"Escherichia coli",DH5α,Amp,"Restriction sites: BglII, XhoI",PPR,,"nowe Revco 209"
+181,"HopQ1-wt GUS (CARGO)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI, Gateway",PPR,,"nowe Revco 209"
+153,HopQ1-wt-GUS,HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+28,"HopQ1wt + empty pGEX-2",HopQ1,"pET30a(+), pGEX-2",C-6xHIS,"Escherichia coli","BL-21 Rosetta","Ap, Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+29,"HopQ1wt + CPK3 pGEX-2",HopQ1,"pET30a(+), pGEX-2","C-6xHIS, N-GST","Escherichia coli","BL-21 Rosetta","Ap, Km, Cm",,LPP,,"nowe Revco 209"
+57,HopQ1-wt,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+65,HopQ1-wt,HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+80,HopQ1-wt,HopQ1,,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+89,HopQ1-wt,HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+148,HopQ1-wt,HopQ1,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+172,HopQ1-wt,HopQ1,pGWB414,C-3xHA-NLS-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+173,HopQ1-wt,HopQ1,pGWB414,C-3xHA-mutnls-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+174,HopQ1-wt,HopQ1,pGWB414,C-3xHA-NES-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+175,HopQ1-wt,HopQ1,pGWB414,C-3xHA-mutnes-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+211,HopQ1-wt,HopQ1,,C-3xHA-NES-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+207,HopQ1-wt,HopQ1,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gm,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+102,"HopQ1 wt",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+105,"HopQ1 wt",HopQ1,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+1,HopQ1wt,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+11,HopQ1wt,HopQ1,pGWB408,C-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+23,HopQ1wt,HopQ1,,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+1,HopQ1wt,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+12,HopQ1wt,HopQ1,pGEX-2,N-GST,"Escherichia coli",BL-21,Ap,"Restrictions sites BamHI-XhoI",LPP,,"nowe Revco 209"
+14,HopQ1wt,HopQ1,pET28a(+),C-6xHIS,"Escherichia coli",BL-21,Km,"Restrictions sites NcoI-XhoI",LPP,,"nowe Revco 209"
+16,HopQ1wt,HopQ1,pET30a(+),"C-6xHIS Tev site","Escherichia coli",BL-21,Km,?,LPP,,"nowe Revco 209"
+2,HopQ1wt,HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,,"nowe Revco 209"
+11,HopQ1wt,HopQ1,pROK,6xHIS-STREP,"Escherichia coli",DH5α,Km,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+26,HopQ1wt,HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+37,HopQ1wt,HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+61,HopQ1wt,HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+138,"HopQ1-T25/E, S27/E, S51/A, S301/E, S303/E",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+146,"HopQ1-T25/E, S27/E, S51/A, S301/E, S303/E",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+139,"HopQ1-T25/E, S27/E, S301/E, S303/E",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+145,"HopQ1-T25/E, S27/E, S301/E, S303/E",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+78,"HopQ1-T25/E, S27/E (EPE)",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+87,"HopQ1-T25/E, S27/E (EPE)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+174,"HopQ1-T25/E, S27/E",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+161,"HopQ1-T25/E, S27/A, S51/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+117,"HopQ1-T25/E, S27/A (EPA)",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+73,"HopQ1-T25/E, S27/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+164,"HopQ1 T25/E, S27/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+72,"HopQ1-T25/A, S51/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+162,"HopQ1-T25/A, S27/E, S51/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+79,"HopQ1-T25/A, S27/E",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+81,"HopQ1 T25/A, S27/E",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+104,"HopQ1 T25/A, S27/E",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+125,"HopQ1-T25/A, S27/A, S51/A, S301/E, S303/E",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+136,"HopQ1-T25/A, S27/A, S51/A, S301/A, S303/A",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+148,"HopQ1-T25/A, S27/A, S51/A, S301/A, S303/A",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+71,"HopQ1-T25/A, S27/A, S51/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+169,"HopQ1-T25/A, S27/A, S51/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+137,"HopQ1-T25/A, S27/A, S301/A, S303/A",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+147,"HopQ1-T25/A, S27/A, S301/A, S303/A",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+70,"HopQ1-T25/A, S27/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+84,"HopQ1-T25/A, S27/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+74,"HopQ1-T25/A, S27/A",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+80,"HopQ1-T25/A, S27/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+98,"HopQ1-T25/A, S27/A",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+115,"HopQ1-T25/A, S27/A",HopQ1,pGWB454,C-mRFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+172,"HopQ1-T25/A, S27/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+135,"HopQ1-T25/A S27,51/A, ",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+83,HopQ1-T25/A,HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+171,HopQ1-T25/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+107,"HopQ1 T25/A",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+165,"HopQ1 T25/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+9,"HopQ1-S51S/A, R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB444,C-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+10,"HopQ1-S51S/A, R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+52,"HopQ1-S51S/A, R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3102,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+8,HopQ1-S51/D,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+35,HopQ1-S51/D,HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+45,HopQ1-S51/D,HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+62,HopQ1-S51/D,HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+130,"HopQ1-S51/A, T27/E, S27/E",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+131,"HopQ1-S51/A, T27/E, S27/A",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+97,"HopQ1-S51/A, T25/A, S-27/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+6,"HopQ1-S51/A, S27/A",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+17,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+22,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+33,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+44,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+52,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,cloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,"without STOP codon","nowe Revco 209"
+59,"HopQ1-S51/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+63,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+10,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,"insoluble protein","nowe Revco 209"
+30,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+41,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+50,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,cloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,"without STOP codon","nowe Revco 209"
+56,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+103,"HopQ1-S51/A, L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+95,"HopQ1-S51/A del aa 25-27",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+183,HopQ1-S51/A-3XHA-Dendra2,HopQ1,pGWB441,C-3XHA-Dendra3,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+2,HopQ1-S51/A,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+12,HopQ1-S51/A,HopQ1,pGWB408,C-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+59,HopQ1-S51/A,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+77,HopQ1-S51/A,HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+90,HopQ1-S51/A,HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+176,HopQ1-S51/A,HopQ1,pGWB414,C-3xHA-NES-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+181,HopQ1-S51/A,HopQ1,pGWB414,C-3xHA-NLS-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+2,HopQ1-S51/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+3,HopQ1-S51/A,HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,,"nowe Revco 209"
+12,HopQ1-S51/A,HopQ1,pROK,6xHIS-STREP,"Escherichia coli",DH5α,Km,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+27,HopQ1-S51/A,HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+38,HopQ1-S51/A,HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+53,HopQ1-S51/A,HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+77,HopQ1-S51/A,HopQ1,pGWB454,C-mRFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+109,HopQ1-S51/A,HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+112,HopQ1-S51/A,HopQ1,pGWB441,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+163,HopQ1-S51/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+99,HopQ1-S51A,HopQ1,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+223,"HopQ1 S51A",HopQ1,pGWB414,C-2xStrep-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn, Sp",Gateway,LPP,,"nowe Revco 209"
+18,"HopQ1-S49/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+23,"HopQ1- S49/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+34,"HopQ1- S49/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+60,"HopQ1- S49/A,R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+15,"HopQ1S49/A,L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+62,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+31,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+42,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+57,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+86,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+136,"HopQ1-S49/A, L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+13,HopQ1-S49/A,HopQ1,pGWB408,C-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+60,HopQ1-S49/A,HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+3,HopQ1-S49/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+4,HopQ1-S49/A,HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,,"nowe Revco 209"
+13,HopQ1-S49/A,HopQ1,pROK,6xHIS-STREP,"Escherichia coli",DH5α,Km,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+28,HopQ1-S49/A,HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+39,HopQ1-S49/A,HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+54,HopQ1-S49/A,HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+118,HopQ1-S49/A,HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+120,HopQ1-S49/A,HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+159,HopQ1-S49/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+95,HopQ1-S49A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+7,"HopQ1-S33/A, S49A",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+7,"HopQ1-S33/A, S49A",HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,,"nowe Revco 209"
+5,HopQ1-S33/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+5,HopQ1-S33/A,HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,,"nowe Revco 209"
+114,"HopQ1-S27/A, S51/A",HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+122,"HopQ1-S27/A, S51/A",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+101,HopQ1-S27/A,HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+103,HopQ1-S27/A,HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+132,HopQ1-S27/A,HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+133,HopQ1-S27/A,HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+4,HopQ1-S27/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+6,HopQ1-S27/A,HopQ1,pET30a(+),6xHIS,"Escherichia coli",DH5α,Km,"Restriction sites: NdeI, XhoI",PPR,,"nowe Revco 209"
+86,"HopQ1 R278/L, K279L",HopQ1,pGWB411,FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+87,"HopQ1 R278/L, K279L",HopQ1,pGWB414,3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+88,"HopQ1 R278/L, K279L",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+22,"HopQ1- R278/E, K279/E",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+39,"HopQ1- R278/E, K279/E",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+3,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+7,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB444,C-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+8,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB454,C-mRFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+16,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+11,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,"insoluble protein","nowe Revco 209"
+21,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+32,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+43,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+51,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,cloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,"without STOP codon","nowe Revco 209"
+58,"HopQ1-R278/A, K279E, L285/A, L287/A, I289/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+268,"HopQ1 P. syringae pv. morsprunorum ""720""  szczep 100 (r. 1) kon 8",HopQ1,pBBR1MCS5,,"Escherichia coli",DH5α,Gn10,"Restriction sites: BamHI, XhoI",PPR,,"nowe Revco 209"
+267,"HopQ1 P. syringae pv. morsprunorum ""720""  szczep 100 (r. 1) klon 5",HopQ1,pBBR1MCS5,,"Escherichia coli",DH5α,Gn10,"Restriction sites: BamHI, XhoI",PPR,,"nowe Revco 209"
+266,"HopQ1 P. syringae pv. morsprunorum ""720""  szczep 100 (r. 1)",HopQ1,pJET1.2,,"Escherichia coli",DH5α,Amp,"Restriction sites: BamHI, XhoI",PPR,,"nowe Revco 209"
+264,"HopQ1 P. syringae pv. morsprunorum ""100""  szczep 732 (r. 2)",HopQ1,pJET1.2,,"Escherichia coli",DH5α,Amp,"Restriction sites: BamHI, XhoI",PPR,,"nowe Revco 209"
+265,"HopQ1 P. syringae pv. morsprunorum ""100""  szczep 732 (r. 2)",HopQ1,pBBR1MCS5,,"Escherichia coli",DH5α,Gn10,"Restriction sites: BamHI, XhoI",PPR,,"nowe Revco 209"
+206,HopQ1-NLS,HopQ1,,C-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+207,HopQ1-NLS,HopQ1,,C-StrepII-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+210,HopQ1-NES,HopQ1,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3102,"Rf, Gn,Sp",,,,"nowe Revco 209"
+142,"HopQ1-N103/D, D105/G",HopQ1,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+143,"HopQ1-N103/D, D105/G",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+44,"HopQ1-N103/D, D105/G",HopQ1,pET30a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+14,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+47,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,,"nowe Revco 209"
+61,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+100,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+9,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,"insoluble protein","nowe Revco 209"
+29,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+40,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+49,"HopQ1-L285/A, L287/A (KIM)",HopQ1,cloneJet,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",PPR,"without STOP codon","nowe Revco 209"
+55,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pGEM,,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+101,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+128,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+160,"HopQ1-L285/A, L287/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+89,"HopQ1 L285/A, L287/A (KIM)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+176,"HopQ1 KIM-KNR (KIM naśladujący ralstonię) K509/R, A510/V",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+99,"HopQ1-KIM KNR (KIM naśladujący ralstonię)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+83,"HopQ1-KIM KNR (KIM naśladujący ralstonię)",HopQ1,pBBRMCS2-pTAC,C-6xHis,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+106,"HopQ1-KIM KNR (KIM naśladujący ralstonię)",HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+54,"HopQ1-invitrogen for plant expresion",HopQ1,pGWB,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3103,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+177,"HopQ1 DXDXXXDD (Rysiek)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+110,"HopQ1-d.TPS (aa: 25-27)",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+18,"HopQ1 (domena hydrolaz)",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,"insoluble protein","nowe Revco 209"
+19,"HopQ1 (domena hydrolaz)",HopQ1,pET28a(+),N-6xHIS-SUMOtag,"Escherichia coli","BL-21 Rosetta","Km, Cm",?,LPP,"insoluble protein","nowe Revco 209"
+133,"HopQ1 d. NES-2 (aa: 371-384)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+144,"HopQ1 d. NES-2 (aa: 371-384)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+75,"HopQ1-dNES1 (aa: 144-157)",HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+88,"HopQ1 d. NES-1 (aa: 144-157)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+208,"HopQ1 delta 1-97 (without tail)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+76,"HopQ1 del. T25-S27",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+128,"HopQ1 del. NES-2 (aa: 371-384)",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+127,"HopQ1 del. NES-1 (aa: 144-157)",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+179,"HopQ1-del 3-98",HopQ1,GWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+180,"HopQ1-del 3-98",HopQ1,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+175,"HopQ1-d.25-27, S51/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+166,"HopQ1 d.25-27, S51/A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+58,"HopQ1-D107/A, D108/A (2A)",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+177,"HopQ1-D107/A, D108/A (2A)",HopQ1,pGWB414,C-3xHA-NES-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+178,"HopQ1-D107/A, D108/A (2A)",HopQ1,pGWB414,C-3xHA-NLS-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
 193,"HopQ1-D107/A, D108/A (2A)",HopQ1,"
-",C-StrepII-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-204,"HopQ1-D107/A, D108/A (2A)",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-100,"HopQ1-D107/A, D108/A (2A)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-114,"HopQ1-D107/A, D108/A (2A)",HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-90,"HopQ1- D107/A, D108/A (2A)",HopQ1,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-37,"HopQ1- D107/A, D108/A",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-13,"HopQ1- D107/A, D108/A",HopQ1,pGEX-2,N-GST,"Escherichia coli",BL-21,Ap,"Restrictions sites BamHI-XhoI",LPP,
-14,"HopQ1- D107/A, D108/A",HopQ1,pROK,6xHIS-STREP,"Escherichia coli",DH5α,Km,"Restriction sites:?????????????",PPR,
-36,"HopQ1- D107/A, D108/A",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-46,"HopQ1- D107/A, D108/A",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,
-63,"HopQ1- D107/A, D108/A",HopQ1,pGEX-2,N-GST,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,
-15,"HopQ1-D107/A, 108D/A",HopQ1,pET28a(+),C-6xHIS,"Escherichia coli",BL-21,Km,"Restrictions sites NcoI-XhoI",LPP,
-17,"HopQ1-D107/A, 108D/A",HopQ1,pET30a(+),"C-6xHIS Tev site","Escherichia coli",BL-21,Km,?,LPP,
-68,"HopQ1-C70/A, C230/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-151,"HopQ1-C70/A, C230/A",HopQ1,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-38,"HopQ1-C70/A, C230/A",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-249,"HopQ1-C70/A, C230A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-4,HopQ1-C70/A,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-19,HopQ1-C70/A,HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-66,HopQ1-C70/A,HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-191,HopQ1-C70/A,HopQ1,pGWB414,C-3xHA-NLS-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-36,HopQ1-C70/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-247,HopQ1-C70/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-6,"HopQ1-c270/A, C230/A",HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-21,"HopQ1-c270/A, C230/A",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-5,HopQ1-C230/A,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-20,HopQ1-C230/A,HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-67,HopQ1-C230/A,HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-192,HopQ1-C230/A,HopQ1,pGWB414,C-3xHA-NLS-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-37,HopQ1-C230/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-248,HopQ1-C230/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-48,"HopQ1-51S/A-L285/A, L287/A (KIM)",HopQ1,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,
-45,HopQ1-51S/A,HopQ1,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,
-46,HopQ1-49S/A,HopQ1,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,
-261,HopQ1-3xHA-NLS,HopQ1,pBBRMCS2-pTAC,3xHA,"Escherichia coli",DH5α,Km,"Restriction sites: BglII, XhoI",PPR,
-257,HopQ1-3xHA-NES,HopQ1,pBBRMCS2-pTAC,3xHA,"Escherichia coli",DH5α,Km,"Restriction sites: BglII, XhoI",PPR,
-262,HopQ1-3xHA-mutnls,HopQ1,pBBRMCS5-pTAC,3xHA,"Escherichia coli",DH5α,Gn10,"Restriction sites: BglII, XhoI",PPR,
-260,HopQ1-3xHA-mutnes,HopQ1,pBBRMCS5-pTAC,3xHA,"Escherichia coli",DH5α,Gn10,"Restriction sites: BglII, XhoI",PPR,
-182,HopQ1-3HA-Dendra2,HopQ1,pGWB441,C-3XHA-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-184,HopQ1-2A-3XHA-Dendra2,HopQ1,pGWB441,C-3XHA-Dendra4,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-168,HopQ1-1-NLS,HopQ1,pEarleyGate103,C-GFP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km",Gateway,"Gitta L. Coaker",
-167,HopQ1-1-NES,HopQ1,pEarleyGate103,C-GFP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km",Gateway,"Gitta L. Coaker",
-167,HopQ1-1,HopQ1,pEarleyGate103,N-GFP-6xHis,"Escherichia coli",DH5α,Km,Gateway,"Gitta L. Coaker",
-173,HopQ1-1,HopQ1,pMDC49,C-GFP,"Escherichia coli",DH5α,Km,???,PPR,
-71,HopQ1,HopQ1,pGWB454,C-mRFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-121,HopQ1,HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-122,HopQ1,HopQ1,pBBRMCS2-pTAC,C-6xHis,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,
-231,"GUS NTS WT",HopQ1,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-221,GUS-NLS,GUS,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-222,GUS-nls,GUS,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-219,GUS-NES,GUS,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-220,GUS-nes,GUS,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-233,"GUS EPE",HopQ1,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-113,"GUS E.coli",GUS,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-125,"GUS E.coli",GUS,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-232,"GUS APA",HopQ1,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-106,GUS,GUS,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-230,GUS,GUS,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-40,GST-R18,R18,pDEST15,N-GST,"Escherichia coli","BL-21 Rosetta","Ap, Cm",Gateway,LPP,
-212,"Golgi-CFP marker",unknown,pBIN22,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",
-29,GFP,GFP,pGWB405-empty,,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-104,GFP,GFP,pGWB405??,C-GFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-209,freeDendra2,Dendra2,pGWB441,C-3XHA-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,"bez toksyny"
-164,FLAG-STOP,unknown,pGWB442,N-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-165,FLAG-STOP,unknown,pGWB445,N-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-190,FLAG-2xSTOP,unknown,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-185,"Fiasko (PHYPADRAFT_168432) P. patens-FLAG-2xSTOP",Physco,invitrogen,,"Escherichia coli",DH5α,Ap,"Restriction sites: NdeI, XhoI, XbaI",PPR,
-41,"Fiasko (PHYPADRAFT_168432) P. patens bacterial codon usage",Physco,pET30a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,
-142,"Fiasko (PHYPADRAFT_168432) P. patens bacterial codon usage",Physco,invitrogen,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",invitrogen,
-246,"Fiasko (PHYPADRAFT_168432) P. patens-2xSTOP Y331/A",Physco,invitrogen,,"Escherichia coli",DH5α,Amp,"Restriction sites:NdeI, XhoI",PPR,
-241,"Fiasko (PHYPADRAFT_168432) P. patens-2xSTOP del. (48-57)",Physco,invitrogen,,"Escherichia coli",DH5α,Amp,"Restriction sites:NdeI, XhoI",PPR,
-179,"Fiasko (PHYPADRAFT_168432) P. patens-2xSTOP",Physco,invitrogen,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",invitrogen,
-115,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-116,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-117,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-65,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-66,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,"GWB-Strep2-FLAG od Kufli",C-Strep2-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-137,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-156,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-249,"Fiasko FULL sequence (PHYPA_168432) P. patens",Physco,,Strep2-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-250,"Fiasko FULL sequence (PHYPA_168432) P. patens",Physco,pGWB441,c-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-166,eYFP,YFP,pGWB444,C-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-202,eYFP,YFP,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-189,eYFP,YFP,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-211,"ER-CFP marker",unknown,pBIN21,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",
-217,Dendra2-pJet,Dendra2,pJET1.2,,"Escherichia coli",DH5α,Amp,Eco47III-SacI,PPR,
-205,Dendra2,Dendra2,pGWB441,C-3XHA-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-209,Dendra2,Dendra2,pDendra2,Dendra2,"Escherichia coli",DH5α,Ap,,"Clontech ( from E. Schmelzer)",
-150,D107/A,HopQ1,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-158,"Cyc-71 A. thaliana",Cyc-71,pUNI,,"Escherichia coli",DH5α,Km25,Gateway,TAIR,
-153,"CPK3 A. thaliana",CPK3,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-23,"CPK3 A.thaliana",CPK3,pGEX-2,N-GST,"Escherichia coli","BL-21 Rosetta","Ap, Cm",?,LPP,
-118,CFP,CFP,pGWB444,N-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-152,CFP,CFP,pGWB444,"pusty wektor","Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-178,"BamHI/XhoI-GUS E.coli",GUS,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-203,AvrPto,AvrPto,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-144,AureoQ-full,AureoQ,pgwb411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-145,AureoQ-full,AureoQ,pGWB414,c-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-146,AureoQ-full,AureoQ,pGWB,2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-147,AureoQ-full,AureoQ,pGWB,2xSTREP-HIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-158,Aureo-Domain2,AureoQ,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-159,Aureo-Domain2,AureoQ,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-160,Aureo-Domain2,AureoQ,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-161,Aureo-Domain2,AureoQ,,C-2xSTREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-154,Aureo-Domain1,AureoQ,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-155,Aureo-Domain1,AureoQ,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-156,Aureo-Domain1,AureoQ,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-157,Aureo-Domain1,AureoQ,,C-2xSTREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-182,Aureococcus-full,AureoQ,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-184,Aureococcus-domain2,AureoQ,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-183,Aureococcus-domain1,AureoQ,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-42,"AtMAPKKKa-KD ",unknown,pXVE,N-2xHA?,"Agrobacterium tumefaciens",?,"Rf,Sp",?,"Greg Martin",
-43,AtMAP3KKKa,unknown,pQ11,,"Agrobacterium tumefaciens",?,"Rf,Km",?,"Greg Martin",
-243,AtMAP3kalpha,unknown,pENTR-SD/Topo,,"Escherichia coli",DH5α,Km,Gateway,ABRC,
-235,ATG-Flag,unknown,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-236,ATG-Flag,unknown,pGWB414,NLS-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-237,ATG-Flag,unknown,pGWB414,nls-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-245,AtCathb3,unknown,pUNI51,,"Escherichia coli",DH5α,Km,,ABRC,
-259,AtCathb3,unknown,pJET1.2,,"Escherichia coli",DH5α,Amp,"Restriction sites: NcoI, XhoI",PPR,
-244,AtCathb2,unknown,pUNI51,,"Escherichia coli",DH5α,Km,,ABRC,
-258,AtCathb2,unknown,pJET1.2,,"Escherichia coli",DH5α,Amp,"Restriction sites: NcoI, XhoI",PPR,
-134,"At3G59020 (imp. 7)",unknown,pGWB408,C-6xHis,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-154,At3G59020,unknown,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-263,"Amber [YFP Y67C]",Amber,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-225,"Amber NLS",Amber,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-226,"Amber nls",Amber,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-227,"Amber NES",Amber,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-228,"Amber nes",Amber,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-229,Amber,Amber,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-234,Amber,Amber,pGWB454,RFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-69,"14-3-3 N. tabacum",14-3-3,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-50,"14-3-3c N. tabacum",14-3-3c,pROK,C-Myc,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,
-21,"14-3-3c N. tabacum",14-3-3c,pASK3,C-STREP,"Escherichia coli","BL-21 Rosetta","Ap, Cm","Restrictions sites XbaI-Eco47III",LPP,
-48,"14-3-3c N. tabacum",14-3-3c,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-85,"14-3-3c N. tabacum",14-3-3c,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-93,"14-3-3c N. tabacum",14-3-3c,pGWB454,C-mRFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-111,"14-3-3c N. tabacum",14-3-3c,pGWB444,C-eCFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-116,"14-3-3c N. tabacum",14-3-3c,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-49,"14-3-3a N. tabacum",14-3-3a,pROK,C-Myc,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,
-20,"14-3-3a N. tabacum",14-3-3a,pASK3,C-STREP,"Escherichia coli","BL-21 Rosetta","Ap, Cm","Restrictions sites XbaI-Eco47III",LPP,
-47,"14-3-3a N. tabacum",14-3-3a,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-64,"14-3-3a N. tabacum",14-3-3a,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-84,"14-3-3a N. tabacum",14-3-3a,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-97,"14-3-3a N. tabacum",14-3-3a,pGWB454,C-mRFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-108,"14-3-3a N. tabacum",14-3-3a,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-119,"14-3-3a N. tabacum",14-3-3a,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,
-36,10xMyc,unknown,"pGWB420 empty",,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",,,
-206,"100 aa z HopQ1-wt-mCherry",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, NdeI, XhoI",PPR,
-193,"100 aa z HopQ1-RihA-wt",HopQ1,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gm,"Restriction sites: BamHI, NcoI, XhoI",PPR,
-194,"100 aa z HopQ1-RihA-D10/G, G12/D",HopQ1,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gm,"Restriction sites: BamHI, NcoI, XhoI",PPR,
-225,"100 aa z HopQ1 mCherry",HopQ1,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gen10,"Restriction sites:BamHI, XhoI",PPR,
-187,"100 aa z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens-FLAG-2xSTOP",Physco,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, NdeI, XhoI, XbaI",PPR,
-242,"100 aa z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens del. (48-57 w fiasku!!!)",Physco,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-180,"100 aa z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens-2xSTOP",Physco,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, NdeI, XhoI",PPR,
-171,"100 aa z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens",Physco,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,
-188,"100 aa z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens",Physco,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,
-186,"100 aa z HopQ1",HopQ1,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: BamHI, NcoI",PPR,
+",C-StrepII-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+204,"HopQ1-D107/A, D108/A (2A)",HopQ1,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+100,"HopQ1-D107/A, D108/A (2A)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+114,"HopQ1-D107/A, D108/A (2A)",HopQ1,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+90,"HopQ1- D107/A, D108/A (2A)",HopQ1,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+37,"HopQ1- D107/A, D108/A",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+13,"HopQ1- D107/A, D108/A",HopQ1,pGEX-2,N-GST,"Escherichia coli",BL-21,Ap,"Restrictions sites BamHI-XhoI",LPP,,"nowe Revco 209"
+14,"HopQ1- D107/A, D108/A",HopQ1,pROK,6xHIS-STREP,"Escherichia coli",DH5α,Km,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+36,"HopQ1- D107/A, D108/A",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+46,"HopQ1- D107/A, D108/A",HopQ1,pBBRMCS2-pTAC,6XHIS,"Escherichia coli",DH5α,Km,,PPR,,"nowe Revco 209"
+63,"HopQ1- D107/A, D108/A",HopQ1,pGEX-2,N-GST,"Escherichia coli",DH5α,Ap,"Restriction sites:?????????????",PPR,,"nowe Revco 209"
+15,"HopQ1-D107/A, 108D/A",HopQ1,pET28a(+),C-6xHIS,"Escherichia coli",BL-21,Km,"Restrictions sites NcoI-XhoI",LPP,,"nowe Revco 209"
+17,"HopQ1-D107/A, 108D/A",HopQ1,pET30a(+),"C-6xHIS Tev site","Escherichia coli",BL-21,Km,?,LPP,,"nowe Revco 209"
+68,"HopQ1-C70/A, C230/A",HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+151,"HopQ1-C70/A, C230/A",HopQ1,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+38,"HopQ1-C70/A, C230/A",HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+249,"HopQ1-C70/A, C230A",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+4,HopQ1-C70/A,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+19,HopQ1-C70/A,HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+66,HopQ1-C70/A,HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+191,HopQ1-C70/A,HopQ1,pGWB414,C-3xHA-NLS-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+36,HopQ1-C70/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+247,HopQ1-C70/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+6,"HopQ1-c270/A, C230/A",HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+21,"HopQ1-c270/A, C230/A",HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+5,HopQ1-C230/A,HopQ1,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+20,HopQ1-C230/A,HopQ1,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+67,HopQ1-C230/A,HopQ1,pGWB441,C-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+192,HopQ1-C230/A,HopQ1,pGWB414,C-3xHA-NLS-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+37,HopQ1-C230/A,HopQ1,pET30a(+),C-6xHIS,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+248,HopQ1-C230/A,HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+48,"HopQ1-51S/A-L285/A, L287/A (KIM)",HopQ1,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,,"nowe Revco 209"
+45,HopQ1-51S/A,HopQ1,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,,"nowe Revco 209"
+46,HopQ1-49S/A,HopQ1,pROK,C-STREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,,"nowe Revco 209"
+261,HopQ1-3xHA-NLS,HopQ1,pBBRMCS2-pTAC,3xHA,"Escherichia coli",DH5α,Km,"Restriction sites: BglII, XhoI",PPR,,"nowe Revco 209"
+257,HopQ1-3xHA-NES,HopQ1,pBBRMCS2-pTAC,3xHA,"Escherichia coli",DH5α,Km,"Restriction sites: BglII, XhoI",PPR,,"nowe Revco 209"
+262,HopQ1-3xHA-mutnls,HopQ1,pBBRMCS5-pTAC,3xHA,"Escherichia coli",DH5α,Gn10,"Restriction sites: BglII, XhoI",PPR,,"nowe Revco 209"
+260,HopQ1-3xHA-mutnes,HopQ1,pBBRMCS5-pTAC,3xHA,"Escherichia coli",DH5α,Gn10,"Restriction sites: BglII, XhoI",PPR,,"nowe Revco 209"
+182,HopQ1-3HA-Dendra2,HopQ1,pGWB441,C-3XHA-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+184,HopQ1-2A-3XHA-Dendra2,HopQ1,pGWB441,C-3XHA-Dendra4,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+168,HopQ1-1-NLS,HopQ1,pEarleyGate103,C-GFP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km",Gateway,"Gitta L. Coaker",,"nowe Revco 209"
+167,HopQ1-1-NES,HopQ1,pEarleyGate103,C-GFP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km",Gateway,"Gitta L. Coaker",,"nowe Revco 209"
+167,HopQ1-1,HopQ1,pEarleyGate103,N-GFP-6xHis,"Escherichia coli",DH5α,Km,Gateway,"Gitta L. Coaker",,"nowe Revco 209"
+173,HopQ1-1,HopQ1,pMDC49,C-GFP,"Escherichia coli",DH5α,Km,???,PPR,,"nowe Revco 209"
+71,HopQ1,HopQ1,pGWB454,C-mRFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+121,HopQ1,HopQ1,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+122,HopQ1,HopQ1,pBBRMCS2-pTAC,C-6xHis,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+231,"GUS NTS WT",HopQ1,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+221,GUS-NLS,GUS,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+222,GUS-nls,GUS,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+219,GUS-NES,GUS,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+220,GUS-nes,GUS,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+233,"GUS EPE",HopQ1,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+113,"GUS E.coli",GUS,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+125,"GUS E.coli",GUS,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+232,"GUS APA",HopQ1,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+106,GUS,GUS,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+230,GUS,GUS,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+40,GST-R18,R18,pDEST15,N-GST,"Escherichia coli","BL-21 Rosetta","Ap, Cm",Gateway,LPP,,"nowe Revco 209"
+212,"Golgi-CFP marker",unknown,pBIN22,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",,"nowe Revco 209"
+29,GFP,GFP,pGWB405-empty,,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+104,GFP,GFP,pGWB405??,C-GFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+209,freeDendra2,Dendra2,pGWB441,C-3XHA-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,"bez toksyny","nowe Revco 209"
+164,FLAG-STOP,unknown,pGWB442,N-YFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+165,FLAG-STOP,unknown,pGWB445,N-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+190,FLAG-2xSTOP,unknown,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+185,"Fiasko (PHYPADRAFT_168432) P. patens-FLAG-2xSTOP",Physco,invitrogen,,"Escherichia coli",DH5α,Ap,"Restriction sites: NdeI, XhoI, XbaI",PPR,,"nowe Revco 209"
+41,"Fiasko (PHYPADRAFT_168432) P. patens bacterial codon usage",Physco,pET30a(+),C-6xHis,"Escherichia coli","BL-21 Rosetta","Km, Cm","Restrictions sites NdeI-XhoI",LPP,,"nowe Revco 209"
+142,"Fiasko (PHYPADRAFT_168432) P. patens bacterial codon usage",Physco,invitrogen,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",invitrogen,,"nowe Revco 209"
+246,"Fiasko (PHYPADRAFT_168432) P. patens-2xSTOP Y331/A",Physco,invitrogen,,"Escherichia coli",DH5α,Amp,"Restriction sites:NdeI, XhoI",PPR,,"nowe Revco 209"
+241,"Fiasko (PHYPADRAFT_168432) P. patens-2xSTOP del. (48-57)",Physco,invitrogen,,"Escherichia coli",DH5α,Amp,"Restriction sites:NdeI, XhoI",PPR,,"nowe Revco 209"
+179,"Fiasko (PHYPADRAFT_168432) P. patens-2xSTOP",Physco,invitrogen,,"Escherichia coli",DH5α,Ap,"Restriction sites:NdeI, XhoI",invitrogen,,"nowe Revco 209"
+115,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,,C-STREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+116,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+117,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,pGWB441,C-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+65,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+66,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,"GWB-Strep2-FLAG od Kufli",C-Strep2-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+137,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+156,"Fiasko (PHYPADRAFT_168432) P. patens",Physco,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+249,"Fiasko FULL sequence (PHYPA_168432) P. patens",Physco,,Strep2-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+250,"Fiasko FULL sequence (PHYPA_168432) P. patens",Physco,pGWB441,c-eYFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+166,eYFP,YFP,pGWB444,C-CFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+202,eYFP,YFP,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+189,eYFP,YFP,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+211,"ER-CFP marker",unknown,pBIN21,CFP,"Escherichia coli",DH5α,Km,"Gitta Coaker","from Gitta",,"nowe Revco 209"
+217,Dendra2-pJet,Dendra2,pJET1.2,,"Escherichia coli",DH5α,Amp,Eco47III-SacI,PPR,,"nowe Revco 209"
+205,Dendra2,Dendra2,pGWB441,C-3XHA-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+209,Dendra2,Dendra2,pDendra2,Dendra2,"Escherichia coli",DH5α,Ap,,"Clontech ( from E. Schmelzer)",,"nowe Revco 209"
+150,D107/A,HopQ1,pGWB444,C-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+158,"Cyc-71 A. thaliana",Cyc-71,pUNI,,"Escherichia coli",DH5α,Km25,Gateway,TAIR,,"nowe Revco 209"
+153,"CPK3 A. thaliana",CPK3,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+23,"CPK3 A.thaliana",CPK3,pGEX-2,N-GST,"Escherichia coli","BL-21 Rosetta","Ap, Cm",?,LPP,,"nowe Revco 209"
+118,CFP,CFP,pGWB444,N-eCFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+152,CFP,CFP,pGWB444,"pusty wektor","Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+178,"BamHI/XhoI-GUS E.coli",GUS,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+203,AvrPto,AvrPto,pGWB511,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+144,AureoQ-full,AureoQ,pgwb411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+145,AureoQ-full,AureoQ,pGWB414,c-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+146,AureoQ-full,AureoQ,pGWB,2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+147,AureoQ-full,AureoQ,pGWB,2xSTREP-HIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+158,Aureo-Domain2,AureoQ,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+159,Aureo-Domain2,AureoQ,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+160,Aureo-Domain2,AureoQ,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+161,Aureo-Domain2,AureoQ,,C-2xSTREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+154,Aureo-Domain1,AureoQ,pGWB411,C-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+155,Aureo-Domain1,AureoQ,pGWB414,C-3xHA,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+156,Aureo-Domain1,AureoQ,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+157,Aureo-Domain1,AureoQ,,C-2xSTREP-6xHIS,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+182,Aureococcus-full,AureoQ,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+184,Aureococcus-domain2,AureoQ,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+183,Aureococcus-domain1,AureoQ,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+42,"AtMAPKKKa-KD ",unknown,pXVE,N-2xHA?,"Agrobacterium tumefaciens",?,"Rf,Sp",?,"Greg Martin",,"nowe Revco 209"
+43,AtMAP3KKKa,unknown,pQ11,,"Agrobacterium tumefaciens",?,"Rf,Km",?,"Greg Martin",,"nowe Revco 209"
+243,AtMAP3kalpha,unknown,pENTR-SD/Topo,,"Escherichia coli",DH5α,Km,Gateway,ABRC,,"nowe Revco 209"
+235,ATG-Flag,unknown,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+236,ATG-Flag,unknown,pGWB414,NLS-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+237,ATG-Flag,unknown,pGWB414,nls-Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+245,AtCathb3,unknown,pUNI51,,"Escherichia coli",DH5α,Km,,ABRC,,"nowe Revco 209"
+259,AtCathb3,unknown,pJET1.2,,"Escherichia coli",DH5α,Amp,"Restriction sites: NcoI, XhoI",PPR,,"nowe Revco 209"
+244,AtCathb2,unknown,pUNI51,,"Escherichia coli",DH5α,Km,,ABRC,,"nowe Revco 209"
+258,AtCathb2,unknown,pJET1.2,,"Escherichia coli",DH5α,Amp,"Restriction sites: NcoI, XhoI",PPR,,"nowe Revco 209"
+134,"At3G59020 (imp. 7)",unknown,pGWB408,C-6xHis,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+154,At3G59020,unknown,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+263,"Amber [YFP Y67C]",Amber,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+225,"Amber NLS",Amber,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+226,"Amber nls",Amber,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+227,"Amber NES",Amber,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+228,"Amber nes",Amber,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+229,Amber,Amber,pGWB414,Dendra2,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+234,Amber,Amber,pGWB454,RFP,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+69,"14-3-3 N. tabacum",14-3-3,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+50,"14-3-3c N. tabacum",14-3-3c,pROK,C-Myc,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,,"nowe Revco 209"
+21,"14-3-3c N. tabacum",14-3-3c,pASK3,C-STREP,"Escherichia coli","BL-21 Rosetta","Ap, Cm","Restrictions sites XbaI-Eco47III",LPP,,"nowe Revco 209"
+48,"14-3-3c N. tabacum",14-3-3c,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+85,"14-3-3c N. tabacum",14-3-3c,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+93,"14-3-3c N. tabacum",14-3-3c,pGWB454,C-mRFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+111,"14-3-3c N. tabacum",14-3-3c,pGWB444,C-eCFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+116,"14-3-3c N. tabacum",14-3-3c,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+49,"14-3-3a N. tabacum",14-3-3a,pROK,C-Myc,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Km","Restrictions sites?",LPP,,"nowe Revco 209"
+20,"14-3-3a N. tabacum",14-3-3a,pASK3,C-STREP,"Escherichia coli","BL-21 Rosetta","Ap, Cm","Restrictions sites XbaI-Eco47III",LPP,,"nowe Revco 209"
+47,"14-3-3a N. tabacum",14-3-3a,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+64,"14-3-3a N. tabacum",14-3-3a,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+84,"14-3-3a N. tabacum",14-3-3a,pGWB441,C-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+97,"14-3-3a N. tabacum",14-3-3a,pGWB454,C-mRFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+108,"14-3-3a N. tabacum",14-3-3a,pGWB411,C-FLAG,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+119,"14-3-3a N. tabacum",14-3-3a,pGWB414,C-3xHA,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
+36,10xMyc,unknown,"pGWB420 empty",,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",,,,"nowe Revco 209"
+206,"100 aa z HopQ1-wt-mCherry",HopQ1,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, NdeI, XhoI",PPR,,"nowe Revco 209"
+193,"100 aa z HopQ1-RihA-wt",HopQ1,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gm,"Restriction sites: BamHI, NcoI, XhoI",PPR,,"nowe Revco 209"
+194,"100 aa z HopQ1-RihA-D10/G, G12/D",HopQ1,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gm,"Restriction sites: BamHI, NcoI, XhoI",PPR,,"nowe Revco 209"
+225,"100 aa z HopQ1 mCherry",HopQ1,pBBRMCS5-pTAC,,"Escherichia coli",DH5α,Gen10,"Restriction sites:BamHI, XhoI",PPR,,"nowe Revco 209"
+187,"100 aa z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens-FLAG-2xSTOP",Physco,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, NdeI, XhoI, XbaI",PPR,,"nowe Revco 209"
+242,"100 aa z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens del. (48-57 w fiasku!!!)",Physco,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+180,"100 aa z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens-2xSTOP",Physco,pBBRMCS2-pTAC,,"Escherichia coli",DH5α,Km,"Restriction sites:BamHI, NdeI, XhoI",PPR,,"nowe Revco 209"
+171,"100 aa z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens",Physco,,C-2xSTREP-FLAG,"Agrobacterium tumefaciens",GV3101,"Rf, Gn,Sp",Gateway,LPP,,"nowe Revco 209"
+188,"100 aa z HopQ1-Fiasko (PHYPADRAFT_168432) P. patens",Physco,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
+186,"100 aa z HopQ1",HopQ1,pJET1.2,,"Escherichia coli",DH5α,Ap,"Restriction sites: BamHI, NcoI",PPR,,"nowe Revco 209"
+1,,unknown,,,"Pseudomonas syringae","CUCPB611 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+2,,unknown,,,"Pseudomonas syringae","CUCPB612 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+3,,unknown,,,"Pseudomonas syringae","CUCPB614 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+4,,unknown,,,"Pseudomonas syringae","CUCPB617 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+5,,unknown,,,"Pseudomonas syringae","CUCPB619 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+6,,unknown,,,"Pseudomonas syringae","CUCPB620 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+7,,unknown,,,"Pseudomonas syringae","CUCPB621 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+8,,unknown,,,"Pseudomonas syringae","CUCPB628 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+9,,unknown,,,"Pseudomonas syringae","CUCPB629 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+10,,unknown,,,"Pseudomonas syringae","CUCPB630 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+11,,unknown,,,"Pseudomonas syringae","CUCPB632 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+12,,unknown,,,"Pseudomonas syringae","CUCPB550 (DC3000)",,"szczegółowy opis w niebieskimn segregatorze","A. Colmer",,"nowe Revco 209"
+13,,unknown,,,"Pseudomonas syringae",,,,,,"nowe Revco 209"
+14,,unknown,,,"Pseudomonas syringae",,,,,,"nowe Revco 209"
+15,,unknown,,,"Pseudomonas syringae",,,,,,"nowe Revco 209"
+16,,unknown,,,"Pseudomonas syringae",,,,,,"nowe Revco 209"
+17,HopQ1wt,HopQ1,"pBBRMCS2- km",,"Pseudomonas syringae","5585(delta28) +HopQ1wt-pBBRMCS2- km","rif, km",,,,"nowe Revco 209"
+18,HopQ1-S51/A,HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae","5585(28) +HopQ1-S51/A-pBBRMCS5- gnt","rif, gnt",,,,"nowe Revco 209"
+19,mcherry,mCherry,"pBBRMCS5- gnt",,"Pseudomonas syringae","5585(delta28) cherry-pBBRMCS5- gnt","rif, gnt",,"A. Colmer",,"nowe Revco 209"
+20,,unknown,,,"Pseudomonas syringae","5585 (delta28) empty",,"P. syringae tomato DC3000 z usuniętymi wszystkimi 28 efektorami",,,"nowe Revco 209"
+21,HopQ1-S51/A,HopQ1,"pBBRMCS2- km",,"Pseudomonas syringae","5585(delta28)+HopQ1 S51/A-km","rif, km",,,,"nowe Revco 209"
+22,mcherry,mCherry,"pBBRMCS2- km",,"Pseudomonas syringae","5585(delta28) cherry-pBBR- km","rif, km",,,,"nowe Revco 209"
+23,HopQ1wt,HopQ1,"pBBRMCS2- km",,"Pseudomonas syringae","DC3000∆HopQ1+HopQ1-pBBR- km","rif, km",,,,"nowe Revco 209"
+24,HopQ1-S51/A,HopQ1,"pBBRMCS2- km",,"Pseudomonas syringae","DC3000∆HopQ1+HopQ1-S51/A-PBBR- km","rif, km",,,,"nowe Revco 209"
+25,mcherry,mCherry,"pBBRMCS2- km",,"Pseudomonas syringae","DC3000∆HopQ1+cherry km","rif, km",,,,"nowe Revco 209"
+26,,unknown,,,"Pseudomonas syringae","CUCPB611 (DC3000)",,,,,"nowe Revco 209"
+27,HopQ1-S51/A,HopQ1,"pBBRMCS2- km",,"Pseudomonas syringae","CUCPB611 + 51 km","rif, km",,,,"nowe Revco 209"
+28,mcherry,mCherry,"pBBRMCS2- km",,"Pseudomonas syringae","CUCPB611 + ch km","rif, km",,,,"nowe Revco 209"
+29,HopQ1wt,HopQ1,"pBBRMCS2- km",,"Pseudomonas syringae","P. syringae maculicola + Qwt km","rif, km",,,,"nowe Revco 209"
+30,HopQ1-S51/A,HopQ1,"pBBRMCS2- km",,"Pseudomonas syringae","P. syringae maculicola + Q51 km","rif, km",,,,"nowe Revco 209"
+31,mcherry,mCherry,"pBBRMCS2- km",,"Pseudomonas syringae","P. syringae maculicola + chery km","rif, km",,,,"nowe Revco 209"
+32,,unknown,,,"Pseudomonas syringae","P. syringae syringae B28A",rif,,,,"nowe Revco 209"
+33,HopQ1wt,HopQ1,"pBBRMCS2- km",,"Pseudomonas syringae","P. syringae syringae B28A+qwty km","rif, km",,,,"nowe Revco 209"
+34,HopQ1-S51/A,HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae","P. syringae syringae B28A+51 gnt","rif, gnt",,,,"nowe Revco 209"
+35,cherry,mCherry,"pBBRMCS5- gnt",,"Pseudomonas syringae","P. syringae syringae B28A + cherry gnt","rif, gnt",,,,"nowe Revco 209"
+36,,unknown,,,"Pseudomonas syringae","P. tabaci","no resistance",,"B. vinatzer",,"nowe Revco 209"
+37,HopQ1wt,HopQ1,"pBBRMCS2- km",,"Pseudomonas syringae","P. tabaci Qwt km"," km",,"B. vinatzer",,"nowe Revco 209"
+38,HopQ1-S51/A,HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae","P.ptabaci Q51 gnt"," gnt",,"B. vinatzer",,"nowe Revco 209"
+39,mcherry,mCherry,"pBBRMCS5- gnt",,"Pseudomonas syringae","P. tabaci mCherry gnt",gnt,,,,"nowe Revco 209"
+40,,unknown,,,"Pseudomonas syringae","P. phaseolicola 1448A ",rif,,,,"nowe Revco 209"
+41,HopQ1wt,HopQ1,"pBBRMCS2- km",6xHIS,"Pseudomonas syringae","P .phaseolicola qwt his km","rif, km",,,,"nowe Revco 209"
+42,,unknown,,,"Pseudomonas syringae","P. syringae syringae B28A ∆hrc",,,,,"nowe Revco 209"
+43,,unknown,,,"Pseudomonas syringae","pseudomonas fluorescens + geny tts3",,,,,"nowe Revco 209"
+42,,unknown,,,"Pseudomonas syringae",,"rif, km",,,,"nowe Revco 209"
+43,,unknown,,,"Pseudomonas syringae","5585(delta28)-100aa z HopQ1 wt-fiasko wt km","rif, km",,,,"nowe Revco 209"
+44,,unknown,,,"Pseudomonas syringae","DC300 delta cluster ii",rif,,"G. Coaker",,"nowe Revco 209"
+45,,unknown,,,"Pseudomonas syringae","DC300 delta cluster iv",rif,,"G. Coaker",,"nowe Revco 209"
+46,,unknown,,,"Pseudomonas syringae","DC3000 delta cluser 9",rif,,"G. Coaker",,"nowe Revco 209"
+47,,unknown,,,"Pseudomonas syringae","DC3000 delta 13 efektorów",rif,,"G. Coaker",,"nowe Revco 209"
+48,,unknown,,,"Pseudomonas syringae","P. maculicoloa ",,,,,"nowe Revco 209"
+49,,unknown,,,"Pseudomonas syringae","P. syringae tomato DC3000",rif,,,,"nowe Revco 209"
+50,avrRPM1,unknown,,,"Pseudomonas syringae","P. syringae tomato DC3000 avrRPM1","rif, km",,,,"nowe Revco 209"
+51,,unknown,,,"Pseudomonas syringae","P. syringae tomato DC3000 delta HopQ1",rif,,,,"nowe Revco 209"
+52,HopQ1wt,HopQ1,"pBBRMCS2- km",6xHIS,"Pseudomonas syringae","P. phaseolicola 1448A + Qwt HIS","rif, km",,,,"nowe Revco 209"
+53,,unknown,,,"Pseudomonas syringae","P. tabaci (phaseolicola (Mass spectrometry)",rif,,,,"nowe Revco 209"
+54,"RihA (E. coli) wt",RihA,"pBBRMCS5- gnt",,"Pseudomonas syringae",D28,"rif, gnt",,,,"nowe Revco 209"
+55,"RihA (E. coli)-D10/G, G12/D",RihA,"pBBRMCS5- gnt",,"Pseudomonas syringae"," ","rif, gnt",,,,"nowe Revco 209"
+56,"HopQ1-N103/D, D105/G",HopQ1,"pBBRMCS2- km",,"Pseudomonas syringae",D28,"rif, km",,,,"nowe Revco 209"
+57,"100 aa z HopQ1 wt-fiasko",HopQ1,"pBBRMCS2- km",FLAG,"Pseudomonas syringae",D28,"rif, km","Prawdopodobnie pv. phaseolicola1448A z mutacją w systemie dwuyskładnikowym powodującą ciągłą aktywację SSTIII",,,"nowe Revco 209"
+58,HopQ1wt,HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae",D28E,"rif, gnt",,,,"nowe Revco 209"
+59,"100 aa z HopQ1 mCherry",HopQ1,"pBBRMCS2- km",,"Pseudomonas syringae",D28E,"rif, km",,,,"nowe Revco 209"
+60,"PphHopQ1 (wt)",HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae","P. syringae pv. tomato D28E + PphHopQ1 (wt)-pTAC-pBBRMCS5- gnt ","rif, gnt",,,,"nowe Revco 209"
+61,"PphHopQ1 (L19S)",HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae","P. syringae pv. tomato D28E + PphHopQ1 (L19S)-pTAC-pBBRMCS5- gnt ","rif, gnt",,,,"nowe Revco 209"
+62,"PphHopQ1 (L19S, S72A)",HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae","P. syringae pv. tomato D28E + PphHopQ1 (L19S, S72A)-pTAC-pBBRMCS5- gnt ","rif, gnt",,,,"nowe Revco 209"
+63,"PphHopQ1 (L19S, G155E)",HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae","P. syringae pv. tomato D28E + PphHopQ1 (L19S, G155E)-pTAC-pBBRMCS5- gnt ","rif, gnt",,,,"nowe Revco 209"
+64,"PphHopQ1 (V31A)",HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae","P. syringae pv. tomato D28E + PphHopQ1 (V31A)-pTAC-pBBRMCS5- gnt ","rif, gnt",,,,"nowe Revco 209"
+65,"PstHopQ1-1 (wt)",HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae","P. syringae pv. tomato D28E+ PstHopQ1-1 (wt)-pTAC-pBBRMCS5- gnt ","rif, gnt",,,,"nowe Revco 209"
+66,"PstHopQ1-1 (S87L, L91R)",HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae","P. syringae pv. tomato D28E + PstHopQ1-1 (S87L, L91R)-pTAC-pBBRMCS5- gnt ","rif, gnt",,,,"nowe Revco 209"
+67,"TTSS z HopQ1-wt Fiasko-Y331/A
+",Physco,"pBBRMCS5- gnt",,"Pseudomonas syringae",D28E,"rif, gnt",,,,"nowe Revco 209"
+68,"TTSS z HopQ1-wt Fiasko-del. (48-57 w fiasku!!!)",Physco,"pBBRMCS5- gnt",,"Pseudomonas syringae",D28E,"rif, gnt",,,,"nowe Revco 209"
+69,HopQ1-NES,HopQ1,"pBBRMCS2- km",3xHA,"Pseudomonas syringae",D28E,"rif, km",,,,"nowe Revco 209"
+70,HopQ1-NLS,HopQ1,"pBBRMCS2- km",3xHA,"Pseudomonas syringae",D28E,"rif, km",,,,"nowe Revco 209"
+71,HopQ1-mutnes,HopQ1,"pBBRMCS5- gnt",3xHA,"Pseudomonas syringae",D28E,"rif, gnt",,,,"nowe Revco 209"
+72,HopQ1-mutnls,HopQ1,"pBBRMCS5- gnt",3xHA,"Pseudomonas syringae",D28E,"rif, gnt",,,,"nowe Revco 209"
+73,"P.syringae pv. morsprunorum race 1 HopQ1 s. 8 ",HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae",D28E,"rif, gnt",,,,"nowe Revco 209"
+74,"P.syringae pv. morsprunorum race 2 HopQ1 s. 2 ",HopQ1,"pBBRMCS5- gnt",,"Pseudomonas syringae",D28E,"rif, gnt",,,,"nowe Revco 209"
+,35S::CFP-NLS-AtSGT1b,AtSGT1,,,"Escherichia coli",DH5alpha,spc,,,"R. Hoser",1A
+,35S::CFP-NES-AtSGT1b,AtSGT1,,,"Escherichia coli",DH5alpha,spc,,,"R. Hoser",2A
+,CFP-AtSGT1b-Ala,AtSGT1,pGWB545,,"Escherichia coli",DH5alpha,spc,,,"R. Hoser",3A
+,CFP-AtSGT1b-Ala,AtSGT1,pGWB545,,"Escherichia coli",DH5alpha,spc,,,"R. Hoser",4A
+,"CFP-AtSGT1b wt",AtSGT1,pGWB545,,"Escherichia coli",DH5alpha,spc,,,"R. Hoser",5A
+,YFP-Rx,Rx,pGWB442,,"Escherichia coli",DH5alpha,spc,,,"R. Hoser",6A
+,MYB30,MYB30,,,"Escherichia coli",BL21,kan,,,"R. Hoser",7A
+,35S::N-Citrine,Citrine,,,"Escherichia coli",DH5alpha,kan,,,"R. Hoser",8A
+,p19,p19,,,"Escherichia coli",DH5alpha,kan,,,"R. Hoser",9A
+,35S::p50-U1-Ob.-Cerulean,p50,,,unknown,?,,,,"R. Hoser",1B
+,35S::p50,p50,,,unknown,?,,,,"R. Hoser",2B
+,35S::N-myc,N-myc,,,unknown,?,,,,"R. Hoser",3B
+,35S::N-HA,N-HA,,,unknown,?,,,,"R. Hoser",4B
+,35S::p50-U1-HA,p50,,,unknown,?,,,,"R. Hoser",5B
+,gN-Citrine-NES,gN,,,unknown,?,,,,"R. Hoser",6B
+,gN-Citrine,gN,,,unknown,?,,,,"R. Hoser",7B
+,"SAE1/2 SCE1 MYB30",MYB30,,,"Escherichia coli",BL21,"kan, cm, spc",,,"R. Hoser",8B
+,YFP-GUS-NLS(KK-AA),GUS,pGWB442,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",1C
+,YFP-GUS-NLS(T-E),GUS,pGWB442,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",2C
+,YFP-GUS-NLS(T-D),GUS,pGWB442,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",3C
+,YFP-GUS-NLS(T-A),GUS,pGWB442,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",4C
+,YFP-GUS-NLS-SV40,GUS,pGWB442,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",5C
+,SIPK-AF,SIPK,pGEX,,"Escherichia coli",BL21,,,,"R. Hoser",6C
+,"SAE1/2 SCE1 MYB30",MYB30,,,"Escherichia coli",BL21,"cm, spc",,,"R. Hoser",7C
+,"YFP-GUS-NLS wt",GUS,pGWB442,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",1D
+,GUS-YFP,GUS,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",2D
+,6xHis-MYB30,MYB30,pET28a,,"Escherichia coli","BL21 Rosetta",,,,"R. Hoser",3D
+,GST-MEK2-DD,MEK2,"pGEX GP-2",,"Escherichia coli","BL21 Rosetta",,,,"R. Hoser",4D
+,GST-MEK2-KR,MEK2,"pGEX GP-2",,"Escherichia coli","BL21 Rosetta",,,,"R. Hoser",5D
+,35S::N-Citrine,Citrine,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",6D
+,35S::p50-U1-Cerulean,p50,,,unknown,?,,,,"R. Hoser",7D
+,gN-TAP,gN,,,unknown,?,,,,"R. Hoser",8D
+,35S::SIPK-Flag,SIPK,,,"Agrobacterium tumefaciens",GV3101,"rif, gm, spc",,,"R. Hoser",9D
+,Rx-HA,Rx,,,unknown,,"rif, km, tet",,,"R. Hoser",1E
+,Rx-HA,Rx,,,unknown,,"rif, km, tet",,,"R. Hoser",2E
+,35S::eYFP-Rx1,Rx,pGWB442,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",3E
+,35S::p50-Cerulean-nls(SV40),p50,pROK,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",4E
+,35S::p50-Cerulean-NLS(SV40),p50,pROK,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",5E
+,35S::p50-Cerulean,p50,pROK,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",6E
+,35S::p50-Cerulean-NES,p50,pROK,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",7E
+,35S::p50-Cerulean-nes,p50,pROK,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",8E
+,35S::p50-Cerulean-NLS,p50,pROK,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",9E
+,35S::p50-U1-HA,p50,,,unknown,?,spc,,,"R. Hoser",1F
+,35S::N-myc,Myc,,,unknown,,"tet, kan",,,"R. Hoser",2F
+,35S::N-HA,HA,,,unknown,,"tet, kan",,,"R. Hoser",3F
+,p19,p19,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",4F
+,AtRAR1-Flag,RAR1,pGWB411,,"Agrobacterium tumefaciens",GV3101,"rif, gm, spc",,,"R. Hoser",5F
+,"gN-Citrine NLS-SV40",NLS-SV40,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",6F
+,35S::myc-nls-AtSGT1b,AtSGT1b,"pROK higr",,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",7F
+,35S::myc-nes-AtSGT1b,AtSGT1b,"pROK higr",,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",8F
+,35S::myc-AtSGT1b,AtSGT1b,"pROK higr",,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",9F
+,35S::myc-NLS(SV40)AtSGT1b,AtSGT1b,"pROK higr",,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",1G
+,Strep-SUMO,SUMO,,,"Escherichia coli",DH5alpha,km,,,"R. Hoser",2G
+,"PstHopQ1-1 S87L, L91R",HopQ1,pENTR,,"Escherichia coli",DH5alpha,,,,"R. Hoser",3G
+,PphHopQ1-6xHis-Strep,HopQ1,pROK,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",4G
+,hpSGT1,hpSGT1,TRV2,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",5G
+,gN-Citrine-nls(SV40),gN,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",6G
+,gN-Citrine-NLS-SLCV,gN,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",7G
+,gN-Citrine-NLS-SV40,gN,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",8G
+,35S::CFP-NES-AtSGT1b,AtSGT1b,pGWB445,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",9G
+,35S::CFP-NLS-AtSGT1b,AtSGT1b,pGWB445,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",1H
+,Flag-SUMO1,SUMO,pGWB412,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",2H
+,Flag-SUMO1deltaGG,SUMO,pGWB412,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",3H
+,"E.coli BL21",unknown,,,unknown,,,,,"R. Hoser",4H
+,35S::p50-U1-Ob.-Cerulean,p50,,,unknown,?,,,,"R. Hoser",5H
+,,unknown,,,unknown,,,,,"R. Hoser",6H
+,,unknown,,,unknown,,,,,"R. Hoser",7H
+,,unknown,,,unknown,,,,,"R. Hoser",8H
+,,unknown,,,unknown,,,,,"R. Hoser",9H
+,gN-Citrine,gN,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",1I
+,gN-Citrine-NES,gN,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",2I
+,gN-Citrine-NESmut,gN,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",3I
+,gN-TAP,gN,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",4I
+,35S::p50-U1-HA,p50,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",5I
+,35S::p50-U1-Cerulean,p50,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",6I
+,35S::p50-U1-Ob-Cerulean,p50,,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",7I
+,NLS(A)-GUS-YFP,GUS,pGWB441,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",8I
+,NLS(A)-GUS-YFP,GUS,pGWB441,,"Agrobacterium tumefaciens",GV3101,,,,"R. Hoser",9I

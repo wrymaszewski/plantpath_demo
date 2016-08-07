@@ -19,10 +19,13 @@
       background: #fff;
       font-size: 120%;
     }
+    #state > select {
+      width: 100% ;
+    }
   </style>
 <%= form_for(mol_biol_chemical) do |f| %>
   <% if mol_biol_chemical.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation" class="container">
       <h2><%= pluralize(mol_biol_chemical.errors.count, "error") %> prohibited this mol_biol_chemical from being saved:</h2>
 
       <ul>
@@ -53,6 +56,9 @@
     </div><br>
     <div class="row">
       <span class = "form_label">Place</span><span class = "form_field"><%= f.text_field :place %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Stock</span><span class = "form_field" id = "state"><%= f.select :state, options_for_select([["full","full"], ["almost empty", "almost_empty"], ["empty", "empty"]],:selected => f.object.state) %></span>
     </div><br>
     <div class="row">
       <span class = "form_label">Comments</span><span class = "form_field"><%= f.text_area :comments %></span>

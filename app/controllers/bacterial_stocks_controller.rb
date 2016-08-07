@@ -4,16 +4,12 @@ class BacterialStocksController < ApplicationController
   before_action :set_bacterial_stock, only: [:show, :edit, :update, :destroy]
 
   def index
-   @bacterial_stocks = BacterialStock.all
-    # respond_to do |format|
-    #   format.html
-    #   format.json { render json: BacterialStocksDatatable.new(view_context) }
-    # end
-  end
-
-  # GET /bacterial_stocks/1
-  # GET /bacterial_stocks/1.json
-  def show
+    @bacterial_stocks = BacterialStock.where({species: params[:species]}) 
+    @bacterial_stocks_all = BacterialStock.all
+    respond_to do |format|
+      format.html
+      format.csv {send_data @bacterial_stocks_all.to_csv}
+    end
   end
 
   # GET /bacterial_stocks/new
@@ -62,7 +58,7 @@ class BacterialStocksController < ApplicationController
   def destroy
     @bacterial_stock.destroy
     respond_to do |format|
-      format.html { redirect_to @sequence, notice: 'Bacterial stock was successfully destroyed.' }
+      format.html { redirect_to @sequence, notice: 'Bacterial stock was successfully deleted.' }
       format.json { head :no_content }
     end
   end

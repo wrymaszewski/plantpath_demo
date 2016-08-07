@@ -11,8 +11,7 @@
       <th>Date</th>
       <th>Comments</th>
       <% if current_user.username == 'admin' %>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th>Modify</th>
       <%end%>
     </tr>
   </thead>
@@ -24,10 +23,10 @@
         <td><%= responsibility.date_of_action %></td>
         <td><%= responsibility.comments %></td>
         <% if current_user.username == "admin" %>
-          <td><%= link_to edit_responsibility_path(responsibility), class: "btn btn-link" do %>
-            <i class = "glyphicon glyphicon-edit"></i><%end%></td>
-          <td><%= link_to responsibility, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link"  do %>
-            <i class = "glyphicon glyphicon-floppy-remove"></i><%end%></td>
+          <td><%= link_to edit_responsibility_path(responsibility) do %>
+            <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
+          <%= link_to responsibility, method: :delete, data: { confirm: 'Are you sure?' }  do %>
+            <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
         <%end%>
       </tr>
     <% end %>

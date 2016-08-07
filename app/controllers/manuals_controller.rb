@@ -1,5 +1,5 @@
 class ManualsController < ApplicationController
-  before_action :set_manual, only: [:show, :edit, :update, :destroy, :download_file]
+  before_action :set_manual, only: [:show, :edit, :update, :destroy, :download_file, :view_file]
 
   # GET /manuals
   # GET /manuals.json
@@ -7,19 +7,13 @@ class ManualsController < ApplicationController
     @manuals = Manual.all
   end
 
-  # GET /manuals/1
-  # GET /manuals/1.json
-  def show
-  end
-
+  
   # GET /manuals/new
   def new
     @manual = Manual.new
   end
 
-  # GET /manuals/1/edit
-  def edit
-  end
+ 
 
   # POST /manuals
   # POST /manuals.json
@@ -37,26 +31,13 @@ class ManualsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /manuals/1
-  # PATCH/PUT /manuals/1.json
-  def update
-    respond_to do |format|
-      if @manual.update(manual_params)
-        format.html { redirect_to manuals_path notice: 'Manual was successfully updated.' }
-        format.json { render :show, status: :ok, location: manuals_path }
-      else
-        format.html { render :edit }
-        format.json { render json: @manual.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
+ 
   # DELETE /manuals/1
   # DELETE /manuals/1.json
   def destroy
     @manual.destroy
     respond_to do |format|
-      format.html { redirect_to manuals_url, notice: 'Manual was successfully destroyed.' }
+      format.html { redirect_to manuals_url, notice: 'Manual was successfully deleted.' }
       format.json { head :no_content }
     end
   end

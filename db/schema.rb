@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160723174121) do
+ActiveRecord::Schema.define(version: 20160807111807) do
 
   create_table "bacterial_stocks", force: :cascade do |t|
     t.integer  "number"
@@ -24,10 +24,23 @@ ActiveRecord::Schema.define(version: 20160723174121) do
     t.string   "methods_of_cloning"
     t.string   "source"
     t.text     "comments"
+    t.string   "place"
     t.integer  "sequence_id"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
     t.index ["sequence_id"], name: "index_bacterial_stocks_on_sequence_id"
+  end
+
+  create_table "competent_cells", force: :cascade do |t|
+    t.string   "place"
+    t.string   "species"
+    t.string   "strain"
+    t.string   "genotype"
+    t.string   "antibiotic_resistance"
+    t.string   "usage"
+    t.text     "comments"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
   create_table "manuals", force: :cascade do |t|
@@ -48,6 +61,7 @@ ActiveRecord::Schema.define(version: 20160723174121) do
     t.date     "delivery_date"
     t.string   "place"
     t.text     "comments"
+    t.string   "state"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
@@ -61,10 +75,10 @@ ActiveRecord::Schema.define(version: 20160723174121) do
     t.float    "Tm"
     t.string   "gene_sequence"
     t.text     "comments"
+    t.string   "place"
     t.integer  "sequence_id"
-    t.boolean  "checked",       default: false
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
 
   create_table "regular_chemicals", force: :cascade do |t|
@@ -77,6 +91,8 @@ ActiveRecord::Schema.define(version: 20160723174121) do
     t.string   "place"
     t.string   "quantity"
     t.text     "comments"
+    t.string   "rodzaj"
+    t.string   "state"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
@@ -115,6 +131,30 @@ ActiveRecord::Schema.define(version: 20160723174121) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+  end
+
+  create_table "vector_attachments", force: :cascade do |t|
+    t.string   "name"
+    t.string   "file_type"
+    t.string   "file"
+    t.text     "comments"
+    t.integer  "vector_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["vector_id"], name: "index_vector_attachments_on_vector_id"
+  end
+
+  create_table "vectors", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "size"
+    t.string   "antibiotic_resistance"
+    t.string   "copy_number"
+    t.string   "usage"
+    t.string   "tag"
+    t.text     "casette"
+    t.text     "comments"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
   end
 
 end
