@@ -19,7 +19,7 @@
 
     <tbody>
       <% @regular_chemicals.each do |regular_chemical| %>
-        <tr class = <%= regular_chemical.state %>>
+        <tr class = <%= regular_chemical.what_state %>>
           <td><%= regular_chemical.short_name %></td>
           <td><%= regular_chemical.full_name %></td>
           <td><%= regular_chemical.formula %></td>

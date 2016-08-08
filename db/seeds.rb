@@ -38,7 +38,7 @@ csvregchem.each do |r|
 	t.place = r["place"]
 	t.comments = r["comments"]
 	t.rodzaj = r["rodzaj"]
-	t.state = "full"
+	t.state = 0
 	t.save
 	puts "Regular chemicals #{t.short_name} added"
 end
@@ -64,7 +64,7 @@ csvmolbiol.each do |m|
 	t.quantity = m["Zapas "]
 	t.delivery_date = m["delivery"]
 	t.rodzaj = m["type"]
-	t.state = "full"
+	t.state = 0
 	t.save
 	puts "Molecular biology chemical #{t.name} added"
 end

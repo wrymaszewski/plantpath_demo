@@ -9,7 +9,7 @@ class CreateMolBiolChemicals < ActiveRecord::Migration[5.0]
       t.date :delivery_date
       t.string :place
       t.text :comments
-      t.string :state
+      t.integer :state
 
       t.timestamps
     end

@@ -18,7 +18,7 @@
 
     <tbody>
       <% @mol_biol_chemicals.each do |mol_biol_chemical| %>
-        <tr class = <%=mol_biol_chemical.state %>>
+        <tr class = <%= mol_biol_chemical.what_state %>>
           <td><%= mol_biol_chemical.name %></td>
           <td><%= mol_biol_chemical.producer %></td>
           <td><%= mol_biol_chemical.catalogue_number %></td>

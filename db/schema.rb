@@ -61,7 +61,7 @@ ActiveRecord::Schema.define(version: 20160807111807) do
     t.date     "delivery_date"
     t.string   "place"
     t.text     "comments"
-    t.string   "state"
+    t.integer  "state"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
@@ -92,7 +92,7 @@ ActiveRecord::Schema.define(version: 20160807111807) do
     t.string   "quantity"
     t.text     "comments"
     t.string   "rodzaj"
-    t.string   "state"
+    t.integer  "state"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

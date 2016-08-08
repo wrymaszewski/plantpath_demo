@@ -11,7 +11,7 @@ class CreateRegularChemicals < ActiveRecord::Migration[5.0]
       t.string :quantity
       t.text :comments
       t.string :rodzaj
-      t.string :state
+      t.integer :state
 
       t.timestamps
     end

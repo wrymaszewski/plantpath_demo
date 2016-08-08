@@ -12,4 +12,12 @@ class MolBiolChemical < ApplicationRecord
       end
   end
 
+  def what_state
+    if self.state == 1
+      return "almost_empty"
+    elsif self.state == 2
+      return "empty"
+    end      
+  end
+
 end
