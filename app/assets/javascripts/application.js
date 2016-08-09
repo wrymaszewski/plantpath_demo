@@ -14,6 +14,7 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require bootstrap-sprockets
+//= require analytics
 //= require dataTables/jquery.dataTables
 //= require_tree .
 $(document).ready(function(){
