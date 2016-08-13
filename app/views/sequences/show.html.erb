@@ -6,15 +6,16 @@
 </h1>
 
 
-<div class="container">
+<div class="container-fluid">
   <% if @sequence.sequence_attachments.first %>
     <h2 class="text-center">Sequence attachments</h2>
       <table id = "sequence_attachments", class = "display">
         <thead>
           <tr>
+            <th>Name</th>
             <th>Type</th>
             <th>Comment</th>
-            <th>View/Download</th>
+            <th>Download</th>
             <% if current_user.username == 'admin' %>
              <th>Modify</th>
             <%end%>
@@ -23,13 +24,10 @@
         <tbody>
           <% @sequence.sequence_attachments.each do |sequence_attachment| %>
             <tr>
+              <td><%= sequence_attachment.name %></td>
               <td><%= sequence_attachment.sequence_type %></td>
               <td><%= sequence_attachment.comment %></td>
-              <td><%= link_to :controller => 'sequence_attachments',
-              :action => :view_file, :id =>sequence_attachment.id, :sequence_id =>sequence_attachment.sequence.id do %>
-                <i class = "glyphicon glyphicon-eye-open ikona"></i><%end%>
-                <%= link_to :controller => 'sequence_attachments',
-              :action => :download_file, :id =>sequence_attachment.id, :sequence_id =>sequence_attachment.sequence.id do %>
+              <td><%= link_to sequence_attachment.file.url do %>
                 <i class = "glyphicon glyphicon-floppy-save ikona"></i><%end%></td>
               <% if current_user.username == 'admin' %>
               <td><%= link_to [@sequence, sequence_attachment], method: :delete, data: { confirm: 'Are you sure?' } do %>
@@ -45,7 +43,7 @@
     <br><hr>
 </div>
 
-<div class="container">
+<div class="container-fluid">
     <%if @sequence.primers.first %>
       <h2 class="text-center">Primers</h2>
       <table id="primers_s", class="display">
@@ -87,7 +85,7 @@
 </div>
 
 
-<div class="container">
+<div class="container-fluid>
     <%if @sequence.bacterial_stocks.first %>
       <h2 class="text-center">Bacterial Stocks</h2>
 

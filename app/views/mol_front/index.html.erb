@@ -1,5 +1,5 @@
 <p id="notice"><%= notice %></p>
-<div class="container">
+<div class="container-fluid">
 	<h1 class = "text-center">Regular chemicals</h1>
 
 	<% @regular_chemicals.uniq.pluck(:rodzaj).each do |reg| %>
@@ -7,7 +7,7 @@
 	  :action => 'filter_regular', :rodzaj => reg}, {:method => :post} %></span>
 	<%end%>
 </div><hr>
-<div class="container">
+<div class="container-fluid">
 	<h1 class = "text-center">Molecular biology chemicals</h1>
 
 	<% @mol_biol_chemicals.uniq.pluck(:rodzaj).each do |mol| %>

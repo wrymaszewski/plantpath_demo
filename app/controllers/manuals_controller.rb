@@ -1,5 +1,5 @@
 class ManualsController < ApplicationController
-  before_action :set_manual, only: [:show, :edit, :update, :destroy, :download_file, :view_file]
+  before_action :set_manual, only: [:show, :edit, :update, :destroy]
 
   # GET /manuals
   # GET /manuals.json
@@ -14,7 +14,6 @@ class ManualsController < ApplicationController
   end
 
  
-
   # POST /manuals
   # POST /manuals.json
   def create
@@ -42,18 +41,6 @@ class ManualsController < ApplicationController
     end
   end
 
-def download_file
-  send_file(@manual.file.path, :disposition => 'attachment',
-   :url_based_filename => false,
-    :filename => @manual.file_identifier.to_s)
-end
-def view_file
-  send_file(@manual.file.path,
-    :disposition => 'inline',
-    :url_based_filename => false,
-    :filename => @manual.file_identifier.to_s)
-end
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_manual
@@ -62,6 +49,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def manual_params
-      params.require(:manual).permit(:title, :author, :file, :comments)
+      params.require(:manual).permit(:name, :author, :file, :comments)
     end
 end

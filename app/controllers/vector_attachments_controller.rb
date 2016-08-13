@@ -1,6 +1,6 @@
 class VectorAttachmentsController < ApplicationController
-  before_action :set_vector, only: [:new, :create, :destroy, :download_file, :view_file]
-  before_action :set_vector_attachment, only: [:edit, :destroy,  :download_file, :view_file]
+  before_action :set_vector, only: [:new, :create, :destroy]
+  before_action :set_vector_attachment, only: [:edit, :destroy]
 
   def new
     @vector_attachment = @vector.vector_attachments.new
@@ -27,20 +27,6 @@ class VectorAttachmentsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-  def download_file
-   send_file(@vector_attachment.file.path,
-          :disposition => 'attachment',
-          :url_based_filename => false,
-          :filename => @vector_attachment.file_identifier.to_s)
-   end
-
-   def view_file
-     send_file(@vector_attachment.file.path,
-          :disposition => 'inline',
-          :url_based_filename => false,
-          :filename => @vector_attachment.file_identifier.to_s)
-   end
 
   private
     # Use callbacks to share common setup or constraints between actions.

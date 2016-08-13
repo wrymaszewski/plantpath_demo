@@ -4,3 +4,4 @@ class SequenceAttachment < ActiveRecord::Base
 	validates :file, presence: true
 	validates :sequence_type, presence: true
 end
+

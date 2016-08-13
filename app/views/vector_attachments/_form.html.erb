@@ -13,7 +13,7 @@
 <%= form_for [@vector, @vector_attachment] do |f| %>
   <% if @vector_attachment.errors.any? %>
     <div id="error_explanation" class="container">
-      <h2><%= pluralize(@Svector_attachment.errors.count, "error") %> prohibited this vector_attachment from being saved:</h2>
+      <h2><%= pluralize(@vector_attachment.errors.count, "error") %> prohibited this vector_attachment from being saved:</h2>
 
       <ul>
       <% @vector_attachment.errors.full_messages.each do |message| %>
@@ -32,7 +32,9 @@
       <span class = "form_label">Type</span><span class = "form_field"><%= f.text_field :file_type %></span>
     </div><br>
     <div class="row">
-      <span class = "form_label">File</span><span class = "btn btn-default btn-file">Browse...<%= f.file_field :file, :multiple => false %></span>
+      <span class = "form_label">File</span><span class = "btn btn-default btn-file">Browse...<%= f.file_field :file %>
+        <%= f.hidden_field(:file_cache) %>
+      </span>
     </div><br>
     
     <div class="row">

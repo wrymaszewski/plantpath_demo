@@ -1,6 +1,6 @@
 class SequenceAttachmentsController < ApplicationController
-  before_action :set_sequence, only: [:show, :edit, :update, :destroy, :new, :create, :index, :download_file, :view_file]
-  before_action :set_sequence_attachment, only: [:show, :edit, :update, :destroy, :download_file, :view_file]
+  before_action :set_sequence, only: [:show, :edit, :update, :destroy, :new, :create, :index]
+  before_action :set_sequence_attachment, only: [:show, :edit, :update, :destroy]
 
   # GET /sequence_attachments/new
   def new
@@ -32,21 +32,6 @@ class SequenceAttachmentsController < ApplicationController
     end
   end
 
-  def download_file
-    send_file(@sequence_attachment.file.path,
-          :disposition => 'attachment',
-          :url_based_filename => false,
-          :filename => @sequence_attachment.file_identifier.to_s)
-   end
-
-   def view_file
-    send_file(@sequence_attachment.file.path,
-          :disposition => 'inline',
-          :url_based_filename => false,
-          :filename => @sequence_attachment.file_identifier.to_s)
-   end
-
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_sequence_attachment
@@ -59,6 +44,6 @@ class SequenceAttachmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sequence_attachment_params
-      params.require(:sequence_attachment).permit(:sequence_id, :sequence_type, :comment, :file)
+      params.require(:sequence_attachment).permit(:name, :sequence_id, :sequence_type, :comment, :file)
     end
 end

@@ -6,7 +6,7 @@
 </h1>
 
 
-<div class="container">
+<div class="container-fluid">
   <% if @vector.vector_attachments.first %>
     <h2 class="text-center">Vector attachments</h2>
       <table id = "sequence_attachments", class = "display">
@@ -27,12 +27,8 @@
               <td><%= vector_attachment.name %></td>
               <td><%= vector_attachment.file_type %></td>
               <td><%= vector_attachment.comments %></td>
-              <td><%= link_to :controller => 'vector_attachments',
-              :action => :view_file, :id =>vector_attachment.id, :vector_id =>vector_attachment.vector.id do %>
-                <i class = "glyphicon glyphicon-eye-open ikona"></i><%end%>
-                <%= link_to :controller => 'vector_attachments',
-              :action => :download_file, :id =>vector_attachment.id, :vector_id =>vector_attachment.vector.id do %>
-                <i class = "glyphicon glyphicon-floppy-save ikona"></i><%end%></td>
+              <td><%= link_to vector_attachment.file.url do %>
+                <i class = "glyphicon glyphicon-floppy-save ikona"><%end%></td>
               <% if current_user.username == 'admin' %>
                   <td><%= link_to [@vector, vector_attachment], method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td> 

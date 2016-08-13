@@ -24,7 +24,12 @@
   <% end %>
 <div class="container form_container">
     <div class="row">
-      <span class = "form_label">File</span><span class = "btn btn-default btn-file">Browse...<%= f.file_field :file, :multiple => false %></span>
+      <span class = "form_label">Name</span><span class = "form_field"><%= f.text_field :name %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">File</span><span class = "btn btn-default btn-file">Browse...<%= f.file_field :file %>
+        <%= f.hidden_field(:file_cache) %>
+      </span>
     </div><br>
     <div class="row">
       <span class = "form_label">Type</span><span class = "form_field"><%= f.text_field :sequence_type %></span>

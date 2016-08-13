@@ -3,13 +3,13 @@ Rails.application.routes.draw do
   resources :competent_cells, except: :show
   resources :vectors do
     resources :vector_attachments, except: [:index, :show] do
-        get 'download_file', :on => :member
-        get 'view_file', :on => :member
+        # get 'download_file', :on => :member
+        # get 'view_file', :on => :member
       end
   end
   resources :manuals, except: [:edit, :show, :update] do
-    get 'download_file', :on => :member
-    get 'view_file', :on => :member
+    # get 'download_file', :on => :member
+    # get 'view_file', :on => :member
   end
 
   resources :users

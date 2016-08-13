@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(version: 20160807111807) do
   end
 
   create_table "manuals", force: :cascade do |t|
-    t.string   "title"
+    t.string   "name"
     t.string   "author"
     t.string   "file"
     t.string   "comments"
@@ -109,6 +109,7 @@ ActiveRecord::Schema.define(version: 20160807111807) do
   end
 
   create_table "sequence_attachments", force: :cascade do |t|
+    t.string   "name"
     t.integer  "sequence_id"
     t.string   "sequence_type"
     t.string   "file"

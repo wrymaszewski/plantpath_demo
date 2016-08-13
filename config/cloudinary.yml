@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: plantpath
+  api_key: '922481882562858'
+  api_secret: H4Wq2Yef_rd5sR6E4JJE1Tm7zJc
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: plantpath
+  api_key: '922481882562858'
+  api_secret: H4Wq2Yef_rd5sR6E4JJE1Tm7zJc
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: plantpath
+  api_key: '922481882562858'
+  api_secret: H4Wq2Yef_rd5sR6E4JJE1Tm7zJc
+  enhance_image_tag: true
+  static_image_support: false
