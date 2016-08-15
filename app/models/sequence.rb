@@ -4,7 +4,7 @@ class Sequence < ActiveRecord::Base
 	has_many :sequence_attachments	
 	has_many :bacterial_stocks
 	validates :name, presence: true
-	default_scope {order :name}
+	# default_scope {order :name}
 
 	def change_names
 		seq_id = self.id

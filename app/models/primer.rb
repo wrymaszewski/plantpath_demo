@@ -3,7 +3,7 @@ class Primer < ActiveRecord::Base
   validates :name, presence: true
   validates :p_sequence, presence: true
   validates :gene_sequence, presence: true
-  default_scope {order :gene_sequence}
+  # default_scope {order :gene_sequence}
 
 	def calculate_tm
 		seq = self.p_sequence
