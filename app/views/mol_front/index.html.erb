@@ -6,14 +6,14 @@
 	  <span class = "button_array"><%= button_to "#{reg}", {:controller => 'mol_front',
 	  :action => 'filter_regular', :rodzaj => reg}, {:method => :post} %></span>
 	<%end%>
+	  <span class = "button_array button_special"><%=button_to "All regular chemicals", regular_chemicals_url, {:method => :get} %></span>
 </div><hr>
 <div class="container-fluid">
 	<h1 class = "text-center">Molecular biology chemicals</h1>
-
 	<% @mol_biol_chemicals.uniq.pluck(:rodzaj).each do |mol| %>
-	  <span class = "button_array"><%= button_to "#{mol}", {:controller => 'mol_front',
-	  :action => 'filter_molecular', :rodzaj => mol}, {:method => :post} %></span>
+  		<span class = "button_array"><%= button_to "#{mol}", {:controller => 'mol_front',:action => 'filter_molecular', :rodzaj => mol}, {:method => :post} %></span>
 	<%end%>
+	<span class = "button_array button_special"><%=button_to "All molecular biology chemicals", mol_biol_chemicals_url, {:method => :get} %></span>
 </div>
 
 

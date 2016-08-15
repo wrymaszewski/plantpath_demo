@@ -1,6 +1,5 @@
 * {
 	box-sizing: border-box; 
-  font-family: "Helvetica";
 }
 
 thead th {
@@ -30,9 +29,7 @@ color: blue;
 }
 
 /*navbar*/
-
 #brand {
-	padding-top: 2px;
 	padding-right: 5px;
 	background-color: transparent;
 }
@@ -180,6 +177,10 @@ span.button_array {
   width: 32.2%;
   margin: 5px;
 }
+span.button_array.button_special > form > input[type="submit"] {
+   background-color: #00cc99
+}
+
 /*coloring empty chemicals*/
 tr.empty {
   color: red;

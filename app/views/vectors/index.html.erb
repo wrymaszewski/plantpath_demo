@@ -12,23 +12,23 @@
           <th>Usage</th>
           <th>Casette</th>
           <th>Comments</th>
-          <th>Modify</th>
+          <% if current_user.username == 'admin' %>
+            <th>Modify</th>
+          <%end%>
         </tr>
       </thead>
       <tbody>
         <% @vectors.each do |vector| %>
           <tr>
-            <td><%= vector.name %></td>
+            <td><%= link_to vector.name, vector %></td>
             <td><%= vector.size %></td>
             <td><%= vector.antibiotic_resistance %></td>
             <td><%= vector.copy_number %></td>
             <td><%= vector.usage %></td>
             <td><%= vector.casette %></td>
             <td><%= vector.comments %></td>
-            <td><%= link_to vector, :method =>:get  do %>
-              <i class = "glyphicon glyphicon-paperclip ikona"></i><%end%>
             <% if current_user.username == 'admin' %>
-                <%= link_to edit_vector_path(vector) do %>
+                <td><%= link_to edit_vector_path(vector) do %>
                   <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
                 <%= link_to vector, method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
@@ -39,4 +39,5 @@
     </table>
     <br>
     <div class="button"> <%= button_to 'New vector', new_vector_path, :method =>:get %></div>
+    <div class="button"><%= button_to 'Download CSV', vectors_path(format: "csv"), :method => :get %></div>
 </div>

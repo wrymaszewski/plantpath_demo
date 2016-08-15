@@ -4,8 +4,14 @@ class MolBiolChemicalsController < ApplicationController
   # GET /mol_biol_chemicals
   # GET /mol_biol_chemicals.json
   def index
-    @mol_biol_chemicals = MolBiolChemical.where({rodzaj: params[:rodzaj]})
     @mol_biol_chemicals_all = MolBiolChemical.all
+    if params[:rodzaj]
+      @mol_biol_chemicals = MolBiolChemical.where({rodzaj: params[:rodzaj]})
+      @selector = true
+    else
+      @mol_biol_chemicals  = @mol_biol_chemicals_all
+      @selector = false
+    end
     respond_to do |format|
       format.html
       format.csv {send_data @mol_biol_chemicals_all.to_csv}

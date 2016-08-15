@@ -3,7 +3,11 @@ class BacterialFrontsController < ApplicationController
 		@bacterial_stocks = BacterialStock.all
 	end
 	def filter_species
-	    filter = params[:species]
-	    redirect_to bacterial_stocks_url(:species => filter)
+	    if params[:species]
+	    	filter = params[:species]
+	    	redirect_to bacterial_stocks_url(:species => filter)
+	    else
+	    	redirect_to bacterial_stocks_url
+	    end
 	end
 end

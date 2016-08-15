@@ -5,12 +5,20 @@ class MolFrontController < ApplicationController
 	end
 
 	def filter_molecular
-	    filter = params[:rodzaj]
-	    redirect_to mol_biol_chemicals_url(:rodzaj => filter)
+		if params[:rodzaj]
+		    filter = params[:rodzaj]
+		    redirect_to mol_biol_chemicals_url(:rodzaj => filter)
+		else
+			redirect_to mol_biol_chemicals_url
+		end
 	end 
 
 	def filter_regular
-	    filter = params[:rodzaj]
-	    redirect_to regular_chemicals_url(:rodzaj => filter)
+		if params[:rodzaj]
+	    	filter = params[:rodzaj]
+	    	redirect_to regular_chemicals_url(:rodzaj => filter)
+		else
+			redirect_to regular_chemicals_url
+		end
 	end
 end

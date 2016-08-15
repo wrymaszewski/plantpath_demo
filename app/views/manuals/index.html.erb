@@ -9,7 +9,6 @@
         <th>Title</th>
         <th>Author</th>
         <th>Comments</th>
-        <th>Download</th>
         <% if current_user.username == 'admin' %>
           <th>Modify</th>
         <%end%>
@@ -19,12 +18,11 @@
     <tbody>
       <% @manuals.each do |manual| %>
         <tr>
-          <td><%= manual.name %></td>
+          <td><%= link_to manual.name, manual.file.url  %></td>
           <td><%= manual.author %></td>
           <td><%= manual.comments %></td>
-          <td><%= link_to manual.file.url do %><i class = "glyphicon glyphicon-floppy-save ikona"></i><%end%></td>
             <% if current_user.username == "admin" %>
-              <td><%= link_to manual, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link"  do %>
+              <td><%= link_to manual, method: :delete, data: { confirm: 'Are you sure?' } do %>
                 <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
           <%end%>
         </tr>

@@ -1,5 +1,10 @@
 <p id="notice"><%= notice %></p>
-<h1 class = "text-center"><%= @mol_biol_chemicals.first.rodzaj %></h1>
+<% if @selector == true %>
+  <h1 class = "text-center"><%= @mol_biol_chemicals.first.rodzaj %></h1>
+<% else %>
+  <h1 class = "text-center">All molecular biology chemicals</h1>
+<% end %>
+
 
 <div class="container-fluid">
   <table id ="mol_biol_chemicals" class = "display">

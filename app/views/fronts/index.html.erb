@@ -10,20 +10,20 @@
 		<table id = "pending_resp" class = "display">
 		  <thead>
 		    <tr>
+		      <th>Date</th>
 		      <th>First name</th>
 		      <th>Last name</th>
 		      <th>Action</th>
-		      <th>Date of action</th>
 		      <th>Comments</th>
 		    </tr>
 		  </thead>
 		  <tbody>
 		    <% @responsibilities_pending.each do |responsibility| %>
-		      <tr>
+		      <tr style = "color: <%= responsibility.color %>">
+		      	<td><%= responsibility.date_of_action %></td>
 		        <td><%= responsibility.first_name %></td>
 		        <td><%= responsibility.last_name %></td>
 		        <td><%= responsibility.action %></td>
-		        <td><%= responsibility.date_of_action %></td>
 		        <td><%= responsibility.comments %></td>
 		      </tr>
 		    <% end %>
@@ -110,5 +110,23 @@
 		      <% end %>
 		    </tbody>
 		  </table>
+		<%end%>
+	</div>
+
+<div class="container-fluid">
+	<% if current_user.username == "admin" %>
+		<h2 class="text-center">Download databases (.csv)</h2>
+		<span class="button_array"><%= button_to 'Competent cells', :controller => :fronts, :action => :competent_cells, format: 'csv', :method => :get %></span>
+		<span class="button_array"><%= button_to 'Bacterial stocks', :controller => :fronts, :action => :bacterial_stocks, format: 'csv', :method => :get %></span>
+		<span class="button_array"><%= button_to 'Primers', :controller => :fronts, :action => :primers, format: 'csv', :method => :get %></span>
+		<span class="button_array"><%= button_to 'Sequences', :controller => :fronts, :action => :sequences, format: 'csv', :method => :get %></span>
+		<span class="button_array"><%= button_to 'Sequence attachments', :controller => :fronts, :action => :sequence_attachments, format: 'csv', :method => :get %></span>
+		<span class="button_array"><%= button_to 'Regular chemicals', :controller => :fronts, :action => :regular_chemicals, format: 'csv', :method => :get %></span>
+		<span class="button_array"><%= button_to 'Molecular biology chemicals', :controller => :fronts, :action => :mol_biol_chemicals, format: 'csv', :method => :get %></span>
+		<span class="button_array"><%= button_to 'Vectors', :controller => :fronts, :action => :vectors, format: 'csv', :method => :get %></span>
+		<span class="button_array"><%= button_to 'Vector attachments', :controller => :fronts, :action => :vector_attachments, format: 'csv', :method => :get %></span>
+		<span class="button_array"><%= button_to 'Responsibilities', :controller => :fronts, :action => :responsibilities, format: 'csv', :method => :get %></span>
+		<span class="button_array"><%= button_to 'Manuals', :controller => :fronts, :action => :manuals, format: 'csv', :method => :get %></span>
+		<span class="button_array"><%= button_to 'Users', :controller => :fronts, :action => :users, format: 'csv', :method => :get %></span>
 	<%end%>
 </div>

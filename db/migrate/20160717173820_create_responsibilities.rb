@@ -7,6 +7,7 @@ class CreateResponsibilities < ActiveRecord::Migration[5.0]
       t.date :date_of_action
       t.text :comments
       t.boolean :done
+      t.string :color
 
       t.timestamps
     end

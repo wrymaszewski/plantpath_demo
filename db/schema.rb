@@ -68,7 +68,7 @@ ActiveRecord::Schema.define(version: 20160807111807) do
 
   create_table "primers", force: :cascade do |t|
     t.string   "name"
-    t.string   "p_sequence"
+    t.text     "p_sequence"
     t.string   "direction"
     t.integer  "length"
     t.integer  "position"
@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(version: 20160807111807) do
     t.date     "date_of_action"
     t.text     "comments"
     t.boolean  "done"
+    t.string   "color"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end
@@ -121,6 +122,7 @@ ActiveRecord::Schema.define(version: 20160807111807) do
   create_table "sequences", force: :cascade do |t|
     t.string   "name"
     t.string   "organism"
+    t.text     "comments"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

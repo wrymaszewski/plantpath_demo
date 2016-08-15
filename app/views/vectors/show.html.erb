@@ -15,7 +15,6 @@
             <th>Name</th>
             <th>Type</th>
             <th>Comments</th>
-            <th>Download</th>
             <% if current_user.username == 'admin' %>
              <th>Change</th>
             <%end%>
@@ -24,11 +23,9 @@
         <tbody>
           <% @vector.vector_attachments.each do |vector_attachment| %>
             <tr>
-              <td><%= vector_attachment.name %></td>
+              <td><%= link_to vector_attachment.name, vector_attachment.file.url%></td>
               <td><%= vector_attachment.file_type %></td>
               <td><%= vector_attachment.comments %></td>
-              <td><%= link_to vector_attachment.file.url do %>
-                <i class = "glyphicon glyphicon-floppy-save ikona"><%end%></td>
               <% if current_user.username == 'admin' %>
                   <td><%= link_to [@vector, vector_attachment], method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td> 
@@ -40,5 +37,4 @@
       <br>
     <%end%>
     <%= button_to 'Create vector attachment', new_vector_vector_attachment_path(@vector), :method => :get %>
-    <br><hr>
 </div>

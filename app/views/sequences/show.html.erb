@@ -15,7 +15,6 @@
             <th>Name</th>
             <th>Type</th>
             <th>Comment</th>
-            <th>Download</th>
             <% if current_user.username == 'admin' %>
              <th>Modify</th>
             <%end%>
@@ -24,11 +23,9 @@
         <tbody>
           <% @sequence.sequence_attachments.each do |sequence_attachment| %>
             <tr>
-              <td><%= sequence_attachment.name %></td>
+              <td><%= link_to sequence_attachment.name, sequence_attachment.file.url %></td>
               <td><%= sequence_attachment.sequence_type %></td>
               <td><%= sequence_attachment.comment %></td>
-              <td><%= link_to sequence_attachment.file.url do %>
-                <i class = "glyphicon glyphicon-floppy-save ikona"></i><%end%></td>
               <% if current_user.username == 'admin' %>
               <td><%= link_to [@sequence, sequence_attachment], method: :delete, data: { confirm: 'Are you sure?' } do %>
                   <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td> 

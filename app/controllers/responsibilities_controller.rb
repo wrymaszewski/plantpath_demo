@@ -28,6 +28,7 @@ class ResponsibilitiesController < ApplicationController
         format.json { render json: @responsibility.errors, status: :unprocessable_entity }
       end
     end
+    @responsibility.default_color
   end
 
   # PATCH/PUT /responsibilities/1
@@ -42,6 +43,7 @@ class ResponsibilitiesController < ApplicationController
         format.json { render json: @responsibility.errors, status: :unprocessable_entity }
       end
     end
+    @responsibility.default_color
   end
 
   # DELETE /responsibilities/1
@@ -62,6 +64,6 @@ class ResponsibilitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def responsibility_params
-      params.require(:responsibility).permit(:first_name, :last_name, :action, :date_of_action, :comments, :done)
+      params.require(:responsibility).permit(:first_name, :last_name, :action, :date_of_action, :comments, :done, :color)
     end
 end

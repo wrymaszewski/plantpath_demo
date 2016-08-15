@@ -4,8 +4,15 @@ class BacterialStocksController < ApplicationController
   before_action :set_bacterial_stock, only: [:show, :edit, :update, :destroy]
 
   def index
-    @bacterial_stocks = BacterialStock.where({species: params[:species]}) 
     @bacterial_stocks_all = BacterialStock.all
+    if params[:species]
+      @bacterial_stocks = BacterialStock.where({species: params[:species]})
+      @selector = true 
+    else
+      @bacterial_stocks = @bacterial_stocks_all
+      @selector = false
+    end
+    
     respond_to do |format|
       format.html
       format.csv {send_data @bacterial_stocks_all.to_csv}

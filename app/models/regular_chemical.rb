@@ -1,5 +1,6 @@
 class RegularChemical < ApplicationRecord
 	validates :short_name, presence: true
+  default_scope {order :short_name}
 
 	def self.to_csv
       attributes = %W{short_name full_name formula producer catalogue_number delivery_date place

@@ -1,6 +1,7 @@
 class Vector < ApplicationRecord
 	has_many :vector_attachments
 	validates :name, presence: true
+  default_scope {order :name}
 
 	def self.to_csv
       attributes = %W{name size antibiotic_resistance copy_number usage tag casette comments}

@@ -5,6 +5,7 @@
 	  <span class = "button_array"><%= button_to "#{bac}", {:controller => 'bacterial_fronts',
 	  :action => 'filter_species', :species => bac}, {:method => :post} %></span>
 	<%end%>
-	<span class = "button_array"><%=button_to "Competent cells", {:controller => 'competent_cells',
+	<span class = "button_array button_special"><%=button_to "All bacterial stocks", bacterial_stocks_url, {:method => :get} %></span>
+	<span class = "button_array button_special"><%=button_to "Competent cells", {:controller => 'competent_cells',
 		:action => "index"}, {:method => :get} %></span>
 </div>

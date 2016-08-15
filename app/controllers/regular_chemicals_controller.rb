@@ -4,8 +4,14 @@ class RegularChemicalsController < ApplicationController
   # GET /regular_chemicals
   # GET /regular_chemicals.json
   def index
-    @regular_chemicals = RegularChemical.where({rodzaj: params[:rodzaj]})
     @regular_chemicals_all = RegularChemical.all
+    if params[:rodzaj]
+      @regular_chemicals = RegularChemical.where({rodzaj: params[:rodzaj]})
+      @selector = true
+    else
+      @regular_chemicals = @regular_chemicals_all
+      @selector = false
+    end
     respond_to do |format|
       format.html
       format.csv {send_data @regular_chemicals_all.to_csv}

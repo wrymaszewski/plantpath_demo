@@ -1,5 +1,9 @@
 <p id="notice"><%= notice %></p>
-<h1 class = "text-center"><%= @regular_chemicals.first.rodzaj %></h1>
+<% if @selector == true %>
+  <h1 class = "text-center"><%= @regular_chemicals.first.rodzaj %></h1>
+<% else %>
+  <h1 class="text-center">All regular chemicals</h1>
+<%end%>
 
 <div class="container-fluid">
   <table id="regular_chemicals" class="display">

@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
-<h1 class="text-center"><%= @bacterial_stocks.first.species %></h1>
+<% if @selector %>
+  <h1 class="text-center"><%= @bacterial_stocks.first.species %></h1>
+<% else %>
+  <h1 class="text-center">All bacterial stocks</h1>
+<% end %>
+
 
 <div class="container-fluid">
   <table id="bacterial_stocks" class="display">

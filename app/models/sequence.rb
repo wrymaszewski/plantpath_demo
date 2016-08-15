@@ -4,24 +4,7 @@ class Sequence < ActiveRecord::Base
 	has_many :sequence_attachments	
 	has_many :bacterial_stocks
 	validates :name, presence: true
-
-	def calculate_product_size
-	    	if self.primers.where({checked: true}).count==2
-		    	if self.primers.where({checked: true, direction: 'reverse'}).count==1 && 
-		    		self.primers.where({checked: true, direction: 'forward'}).count==1
-		    		forward_pos = self.primers.where({checked: true, direction: 'forward'}).position
-		    		reverse_pos = self.primers.where({checked: true, direction: 'reverse'}).position
-		    		sum = forward_pos+reverse_pos
-		    		return "Amplicon size is: #{sum} bp"
-		    	else
-		    		return "Select one forward and one reverse primer"
-		    	end
-		    elsif self.primers.where({checked: true}).count>2
-		    	return "To many primers selected"
-		    else
-		    	return "Select primers"
-		    end
-		end
+	default_scope {order :name}
 
 	def change_names
 		seq_id = self.id
@@ -35,4 +18,15 @@ class Sequence < ActiveRecord::Base
 			stock.save
 		end
 	end
+
+	def self.to_csv
+      attributes = %W{name organism comments}
+      CSV.generate(headers: true) do |csv|
+        csv << attributes
+
+        all.each do |r|
+          csv << attributes.map {|attr| r.send(attr)}
+        end
+      end
+    end
 end
