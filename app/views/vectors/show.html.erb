@@ -27,8 +27,10 @@
               <td><%= vector_attachment.file_type %></td>
               <td><%= vector_attachment.comments %></td>
               <% if current_user.username == 'admin' %>
-                  <td><%= link_to [@vector, vector_attachment], method: :delete, data: { confirm: 'Are you sure?' } do %>
-                  <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td> 
+                  <td><%= link_to edit_vector_vector_attachment_path(@vector, vector_attachment) do %>
+                  <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
+                <%= link_to [@vector, vector_attachment], method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
               <%end%>
             </tr>
           <% end %>

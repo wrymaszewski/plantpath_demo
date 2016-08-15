@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :vectors do
     resources :vector_attachments, except: [:index, :show]
   end
-  resources :manuals, except: [:edit, :show, :update]
+  resources :manuals, except: [:show]
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :responsibilities
@@ -24,11 +24,7 @@ Rails.application.routes.draw do
       post 'users'
     end
   end
-
-
-
-
-
+  
   resources :regular_chemicals
   resources :mol_front, only: [:index] do
     collection do

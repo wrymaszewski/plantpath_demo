@@ -21,9 +21,11 @@
           <td><%= link_to manual.name, manual.file.url  %></td>
           <td><%= manual.author %></td>
           <td><%= manual.comments %></td>
-            <% if current_user.username == "admin" %>
-              <td><%= link_to manual, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
+          <% if current_user.username == "admin" %>
+            <td><%= link_to edit_manual_path(manual) do %>
+                  <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
+                <%= link_to manual, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
           <%end%>
         </tr>
       <% end %>

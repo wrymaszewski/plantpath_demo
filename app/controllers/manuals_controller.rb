@@ -30,6 +30,18 @@ class ManualsController < ApplicationController
     end
   end
 
+   def update
+    respond_to do |format|
+      if @manual.update(manual_params)
+        format.html { redirect_to manuals_url, notice: 'Manual was successfully updated.' }
+        format.json { render :show, status: :ok, location: @manual }
+      else
+        format.html { render :edit }
+        format.json { render json: @manual.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
  
   # DELETE /manuals/1
   # DELETE /manuals/1.json

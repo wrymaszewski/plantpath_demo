@@ -22,6 +22,18 @@ class SequenceAttachmentsController < ApplicationController
     end
   end
 
+  def update
+    respond_to do |format|
+      if @sequence_attachment.update(sequence_attachment_params)
+        format.html { redirect_to @sequence, notice: 'Sequence attachment was successfully updated.' }
+        format.json { render :show, status: :ok, location: @sequence }
+      else
+        format.html { render :edit }
+        format.json { render json: @sequence.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   # DELETE /sequence_attachments/1
   # DELETE /sequence_attachments/1.json
   def destroy

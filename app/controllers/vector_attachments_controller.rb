@@ -1,11 +1,12 @@
 class VectorAttachmentsController < ApplicationController
-  before_action :set_vector, only: [:new, :create, :destroy]
-  before_action :set_vector_attachment, only: [:edit, :destroy]
+  before_action :set_vector, only: [:new, :create, :destroy, :edit, :update]
+  before_action :set_vector_attachment, only: [:edit, :destroy, :update]
 
   def new
     @vector_attachment = @vector.vector_attachments.new
   end
-
+  def edit
+  end
   def create
     @vector_attachment = @vector.vector_attachments.new(vector_attachment_params)
 
@@ -19,7 +20,19 @@ class VectorAttachmentsController < ApplicationController
       end
     end
   end
-  
+
+  def update
+    respond_to do |format|
+      if @vector_attachment.update(vector_attachment_params)
+        format.html { redirect_to @vector, notice: 'Vector attachment was successfully updated.' }
+        format.json { render :show, status: :ok, location: @vector }
+      else
+        format.html { render :edit }
+        format.json { render json: @vector.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
   def destroy
     @vector_attachment.destroy
     respond_to do |format|
@@ -39,6 +52,6 @@ class VectorAttachmentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vector_attachment_params
-      params.require(:vector_attachment).permit(:name, :type, :file, :vector_id, :comments)
+      params.require(:vector_attachment).permit(:name, :file_type, :file, :vector_id, :comments)
     end
 end

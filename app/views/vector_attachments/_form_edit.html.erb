@@ -1,0 +1,42 @@
+<style type="text/css">
+    input, select, textarea {
+      padding: 8px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      width: 100%;
+      background: #fff;
+      font-size: 120%;
+    }
+</style>
+<%= form_for [@vector, @vector_attachment] do |f| %>
+  <% if @vector_attachment.errors.any? %>
+    <div id="error_explanation" class="container">
+      <h2><%= pluralize(@vector_attachment.errors.count, "error") %> prohibited this vector_attachment from being saved:</h2>
+
+      <ul>
+      <% @vector_attachment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div class="container form_container">
+    <div class="row">
+      <span class = "form_label">Name</span><span class = "form_field"><%= f.text_field :name %></span>
+    </div><br>
+    <div class="row">
+      <span class = "form_label">Type</span><span class = "form_field"><%= f.text_field :file_type %></span>
+    </div><br>    
+    <div class="row">
+      <span class = "form_label">Comments</span><span class = "form_field"><%= f.text_area :comments %></span>
+    </div><br>
+    <div class="actions submit_button form_submit">
+      <%= f.submit "Submit" %>
+    </div>
+  <% end %>
+</div>
+ 
