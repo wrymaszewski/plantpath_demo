@@ -1,6 +1,6 @@
 class BacterialStock < ApplicationRecord
 	belongs_to :sequence
-	validates :sequence_name, presence: true
+	# validates :sequence_name, presence: true
 	validates :wstawka, presence: true
 	# default_scope {order :sequence_names}
 
