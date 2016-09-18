@@ -49,7 +49,7 @@ class SequencesController < ApplicationController
   def update
     respond_to do |format|
       if @sequence.update(sequence_params)
-        format.html { redirect_to @sequence, notice: 'Sequence was successfully updated.' }
+        format.html { redirect_to sequences_path, notice: 'Sequence was successfully updated.' }
         format.json { render :show, status: :ok, location: @sequence }
       else
         format.html { render :edit }
@@ -76,7 +76,7 @@ class SequencesController < ApplicationController
     end
     # Never trust parameters from the scary internet, only allow the white list through.
     def sequence_params
-      params.require(:sequence).permit(:name, sequence_attachments_attributes: [:name, :id, :sequence_id, :file],
+      params.require(:sequence).permit(:name, :organism, sequence_attachments_attributes: [:name, :id, :sequence_id, :file],
         primers_attributes: [:id, :sequence_id, :checked, :gene_sequence], bacterial_stocks: [:id, :sequence_id, :sequence_name, :wstawka, :strain, :species, :tag, :antibiotic_resistance, :methods_of_cloning, :source, :comments])
     end
 end
