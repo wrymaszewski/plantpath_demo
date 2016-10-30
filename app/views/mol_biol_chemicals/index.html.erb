@@ -15,6 +15,7 @@
         <th>Catalogue number</th>
         <th>Quantity</th>
         <th>Delivery date</th>
+        <th>Image</th>
         <th>Place</th>
         <th>Comments</th>
         <th>Modify</th>
@@ -29,6 +30,13 @@
           <td><%= mol_biol_chemical.catalogue_number %></td>
           <td><%= mol_biol_chemical.quantity %></td>
           <td><%= mol_biol_chemical.delivery_date %></td>
+          <td>
+          <% if mol_biol_chemical.file.url %>
+                <%= link_to mol_biol_chemical.name, mol_biol_chemical.file.url %>
+          <% else %>
+            
+          <% end %>
+          </td>
           <td><%= mol_biol_chemical.place %></td>
           <td><%= mol_biol_chemical.comments %></td>
           <td><%= link_to edit_mol_biol_chemical_path(mol_biol_chemical) do %>

@@ -1,4 +1,5 @@
 class MolBiolChemical < ApplicationRecord
+  mount_uploader :file, FileUploader
 	validates :name, presence: true
   # default_scope {order :name}
 

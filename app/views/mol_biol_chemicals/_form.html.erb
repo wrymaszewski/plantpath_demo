@@ -60,6 +60,9 @@
     <div class="row">
       <span class = "form_label">Stock</span><span class = "form_field" id = "state"><%= f.select :state, options_for_select([["full",0], ["almost empty", 1], ["empty", 2]],:selected => f.object.state) %></span>
     </div><br>
+   <div class="row">
+      <span class = "form_label">File</span><span class = "btn btn-default btn-file">Browse...<%= f.file_field :file %>
+      <%= f.hidden_field :file_cache %></span></div><br>
     <div class="row">
       <span class = "form_label">Comments</span><span class = "form_field"><%= f.text_area :comments %></span>
     </div><br>
