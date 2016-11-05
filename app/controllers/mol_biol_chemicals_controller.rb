@@ -76,6 +76,6 @@ class MolBiolChemicalsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def mol_biol_chemical_params
       params.require(:mol_biol_chemical).permit(:name, :producer, :catalogue_number,
-       :quantity, :delivery_date, :rodzaj, :state, :comments, :file)
+       :quantity, :delivery_date, :rodzaj, :state, :comments, :file, :place)
     end
 end

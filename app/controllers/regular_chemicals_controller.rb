@@ -75,6 +75,6 @@ class RegularChemicalsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def regular_chemical_params
       params.require(:regular_chemical).permit(:short_name, :full_name, :formula,
-       :producer, :catalogue_number, :delivery_date, :comments, :state, :rodzaj)
+       :producer, :catalogue_number, :delivery_date, :comments, :state, :rodzaj, :place)
     end
 end

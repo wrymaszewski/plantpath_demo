@@ -58,6 +58,9 @@
       <span class = "form_label">Delivery date</span><span class = "form_field"><%= f.date_select :delivery_date %></span>
     </div><br>
     <div class="row">
+      <span class = "form_label">Place</span><span class = "form_field"><%= f.text_field :place %></span>
+    </div><br>
+    <div class="row">
       <span class = "form_label">Stock</span><span class = "form_field" id = "state"><%= f.select :state, options_for_select([["full",0], ["almost empty", 1], ["empty", 2]],:selected => f.object.state) %></span>
     </div><br>
     <div class="row">
