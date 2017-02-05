@@ -1,0 +1,83 @@
+<style type="text/css">
+  .category {
+    font-weight: bold;
+  }
+  .category_1 {
+    font-size: 150%;
+    padding: 5px;
+    padding-top: 20px;
+  }
+  .category_2 {
+    font-size: 120%;
+    padding: 2px;
+    padding-left: 30px;
+  }
+
+</style>
+<p id="notice"><%= notice %></p>
+
+<div class="container-fluid">
+  <h1 class="text-center">Order</h1>
+
+
+  <table id="invoices" class="display">
+    <thead>
+      <tr>
+        <th>Catalogue number</th>
+        <th>Supplier</th>
+        <th>Category[1]</th>
+        <th>Category[2]</th>
+        <th>Name</th>
+        <th>Price[PLN]</th>
+        <th>Date</th>
+        <th>Comments</th>
+        <% if current_user.username == 'admin' %>
+          <th>Modify</th>
+        <%end%>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @invoices.each do |invoice| %>
+        <tr>
+          <td><%= invoice.cat_no %></td>
+          <td><%= invoice.supplier %></td>
+          <td><%= invoice.category_1 %></td>
+          <td><%= invoice.category_2 %></td>
+          <td><%= link_to invoice.name, invoice.file.url %></td>
+          <td><%= invoice.price %></td>
+          <td><%= invoice.date %></td>
+          <td><%= invoice.comments %></td>
+          <% if current_user.username == "admin" %>
+            <td><%= link_to edit_invoice_path(invoice) do %>
+                <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
+                <%= link_to invoice, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
+          <%end%>
+        </tr>
+      <% end %>
+    </tbody>
+  </table><br>
+  <div class = "button"><%= button_to 'New Order', new_invoice_path,
+     :method => :get %></div>
+     <div class="button"><%= button_to 'Download CSV', invoices_path(format: "csv"), :method => :get %></div><br>
+  </div>
+  <div class="container form_container">
+    <h1 class = "text-center">Summary</h1>
+    <% [Date.today.year, Date.today.year-1, Date.today.year-2].each do |year| %>
+      <hr>
+      <h2 class="text-center"><%= year %></h2>
+      <% @invoices.unique_categories.each do |inv| %>
+        <div class = "category_1"><span class="category"><%= inv[0] %>: </span><span><%= @invoices.summary(inv[0], inv[1][0], year)[0] %> PLN</span></div>
+          <% inv[1].each do |cat| %>
+            <div class = "category_2"><span class = "category"><%= cat %>: </span><span><%= @invoices.summary(inv[0], cat, year)[1]%> PLN </span></div>
+          <%end%>
+        <% end %>
+    <%end%>
+  </div>
+</div>
+
+
+
+
+

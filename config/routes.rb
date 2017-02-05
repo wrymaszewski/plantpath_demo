@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :invoices
   root to: 'fronts#index'
   resources :competent_cells, except: :show
   resources :vectors do
@@ -22,6 +23,7 @@ Rails.application.routes.draw do
       post 'responsibilities'
       post 'manuals'
       post 'users'
+      post 'invoices'
     end
   end
   

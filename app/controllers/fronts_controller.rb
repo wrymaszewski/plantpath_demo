@@ -102,6 +102,13 @@ class FrontsController < ApplicationController
       format.csv {send_data @data.to_csv}
     end
   end
+  def invoices
+    @data = Invoice.all
+    respond_to do |format|
+      format.html
+      format.csv {send_data @data.to_csv}
+    end
+  end
   
   private
     def done_responsibilities
