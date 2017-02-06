@@ -41,7 +41,7 @@
       <%end%>
     </tbody>
   </table><br>
-  <div class="button"><%= button_to 'New regular chemical', new_regular_chemical_path, :method => :get %></div>
+  <div class="button"><%= button_to 'New regular chemical', new_regular_chemical_path, :method => :get, form: {:target => "_blank"}  %></div>
   <div class="button"><%= button_to 'Download CSV', regular_chemicals_path(format: "csv"), :method => :get %></div>
 </div>
 

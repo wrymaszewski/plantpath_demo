@@ -3,6 +3,9 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
   $('#primers').dataTable
-    sPaginationType: "full_numbers"
     bJQueryUI: true
+    scrollY: "350px"
+    scrollX: true
+    scrollCollapse: true
+    paging: false
 

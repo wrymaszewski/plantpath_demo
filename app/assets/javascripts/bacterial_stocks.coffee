@@ -3,5 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
   $('#bacterial_stocks').dataTable
-    sPaginationType: "full_numbers"
-    bJQueryUI: true
+   	bJQueryUI: true
+    scrollY: "350px"
+    scrollX: true
+    scrollCollapse: true
+    paging: false

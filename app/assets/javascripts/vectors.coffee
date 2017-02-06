@@ -3,5 +3,7 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
   $('#vectors').dataTable
-    sPaginationType: "full_numbers"
     bJQueryUI: true
+    scrollY: "350px"
+    scrollCollapse: true
+    paging: false

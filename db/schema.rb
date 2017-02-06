@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170204165745) do
+ActiveRecord::Schema.define(version: 20170206230939) do
 
   create_table "bacterial_stocks", force: :cascade do |t|
     t.integer  "number"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(version: 20170204165745) do
     t.date     "date"
     t.text     "comments"
     t.string   "file"
+    t.string   "grant"
   end
 
   create_table "manuals", force: :cascade do |t|

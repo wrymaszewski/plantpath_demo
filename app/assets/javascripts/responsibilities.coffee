@@ -3,6 +3,8 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
   $('#responsibilities').dataTable
-    sPaginationType: "full_numbers"
-    bJQueryUI: true
+   	bJQueryUI: true
+    scrollY: "350px"
+    scrollCollapse: true
+    paging: false
  

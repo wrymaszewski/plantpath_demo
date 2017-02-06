@@ -36,7 +36,7 @@
         <% end %>
       </tbody>
     </table><br>
-  <div class="button"><%= button_to 'Create competent cells stock', new_competent_cell_path, :method => :get %></div>
+  <div class="button"><%= button_to 'Create competent cells stock', new_competent_cell_path, :method => :get, form: {:target => "_blank"}  %></div>
   <div class="button"><%= button_to 'Download CSV', competent_cells_path(format: "csv"), :method => :get %></div> 
 
 </div>

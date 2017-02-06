@@ -17,7 +17,7 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container-fluid">
-  <h1 class="text-center">Order</h1>
+  <h1 class="text-center">Orders</h1>
 
 
   <table id="invoices" class="display">
@@ -30,6 +30,7 @@
         <th>Name</th>
         <th>Price[PLN]</th>
         <th>Date</th>
+        <th>Grant</th>
         <th>Comments</th>
         <% if current_user.username == 'admin' %>
           <th>Modify</th>
@@ -47,6 +48,7 @@
           <td><%= link_to invoice.name, invoice.file.url %></td>
           <td><%= invoice.price %></td>
           <td><%= invoice.date %></td>
+          <td><%= invoice.grant %></td>
           <td><%= invoice.comments %></td>
           <% if current_user.username == "admin" %>
             <td><%= link_to edit_invoice_path(invoice) do %>
@@ -59,7 +61,7 @@
     </tbody>
   </table><br>
   <div class = "button"><%= button_to 'New Order', new_invoice_path,
-     :method => :get %></div>
+     :method => :get, form: {:target => "_blank"} %></div>
      <div class="button"><%= button_to 'Download CSV', invoices_path(format: "csv"), :method => :get %></div><br>
   </div>
   <div class="container form_container">

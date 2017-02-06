@@ -38,7 +38,7 @@
       </table>
       <br>
     <%end%>
-    <%= button_to 'Create sequence attachment', new_sequence_sequence_attachment_path(@sequence), :method => :get %>
+    <%= button_to 'Create sequence attachment', new_sequence_sequence_attachment_path(@sequence), :method => :get, form: {:target => "_blank"}  %>
     <br><hr>
 </div>
 
@@ -80,7 +80,7 @@
         </tbody>
       </table><br>
       <%end%>
-    <div class = "button"><%= button_to 'Create primer', new_sequence_primer_path(@sequence), :method => :get %></div><br><hr>
+    <div class = "button"><%= button_to 'Create primer', new_sequence_primer_path(@sequence), :method => :get, form: {:target => "_blank"}  %></div><br><hr>
 </div>
 
 
@@ -132,5 +132,5 @@
       </table>
     <%end%>
      <br>
-  <div class="button"><%= button_to 'Create bacterial stock', new_sequence_bacterial_stock_path(@sequence), :method => :get %></div>
+  <div class="button"><%= button_to 'Create bacterial stock', new_sequence_bacterial_stock_path(@sequence), :method => :get, form: {:target => "_blank"}  %></div>
 </div>

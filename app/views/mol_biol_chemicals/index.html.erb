@@ -50,7 +50,7 @@
     </tbody>
   </table><br>
   <div class = "button"><%= button_to 'New molecular biology chemical', new_mol_biol_chemical_path,
-   :method => :get %></div>
+   :method => :get, form: {:target => "_blank"}  %></div>
    <div class="button"><%= button_to 'Download CSV', mol_biol_chemicals_path(format: "csv"), :method => :get %></div>
  </div>
 

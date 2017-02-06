@@ -3,14 +3,20 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 jQuery ->
   $('#pending_resp').dataTable
-    sPaginationType: "full_numbers"
     bJQueryUI: true
+    scrollY: "250px"
+    scrollCollapse: true
+    paging: false
 jQuery ->
   $('#regular_chem').dataTable
-    sPaginationType: "full_numbers"
     bJQueryUI: true
+    scrollY: "250px"
+    scrollCollapse: true
+    paging: false
 jQuery ->
   $('#mol_biol_chem').dataTable
-    sPaginationType: "full_numbers"
     bJQueryUI: true
+    scrollY: "250px"
+    scrollCollapse: true
+    paging: false
 
