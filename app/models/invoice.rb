@@ -59,6 +59,6 @@ class Invoice < ApplicationRecord
       end
       sum_all = sum_all + p
     end
-    return [sum_all, sum]
+    return [sum_all.round(2), sum.round(2)]
   end
 end
