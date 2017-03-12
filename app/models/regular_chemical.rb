@@ -1,5 +1,5 @@
 class RegularChemical < ApplicationRecord
-	validates :short_name, presence: true
+	# validates :short_name, presence: true
   # default_scope {order :short_name}
 
 	def self.to_csv
