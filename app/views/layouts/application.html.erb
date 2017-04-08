@@ -30,6 +30,7 @@
       <li class=<%='active' if params[:controller] == 'manuals' %>><%=link_to "Manuals", manuals_path %></li>
       <li class=<%='active' if params[:controller] == 'vectors' %>><%=link_to "Vectors", vectors_path %></li>
       <li class=<%="active"if params[:controller] == 'invoices' %>><%=link_to "Orders", invoices_path %></li>
+      <li class=<%="active"if params[:controller] == 'apps' %>><%=link_to "Apps", apps_path %></li>
       <li id = "loadImage"><%= image_tag("loading_new.gif", :height => 40, :width => 40) %></li>
     </ul>
 

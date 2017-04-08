@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :apps
   resources :invoices
   root to: 'fronts#index'
   resources :competent_cells, except: :show

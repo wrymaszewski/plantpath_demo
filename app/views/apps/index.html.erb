@@ -1,0 +1,39 @@
+<div class="container-fluid">
+  <h1 class="text-center">Apps</h1>
+  <table id="apps" class="display">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Manual</th>
+      <th>Comments</th>
+      <% if current_user.username == 'admin' %>
+          <th>Modify</th>
+        <%end%>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apps.each do |app| %>
+      <tr>
+          <td><%= link_to app.name, app.url, :method => :get, form: {:target => "_blank"}  %></td>
+          <td><%= app.author %></td>
+          <% if app.manual %>
+              <td><%= link_to app.name, app.manual.url  %></td>
+          <% else %>
+              <td>none</td>
+          <% end %>
+            <td><%= app.comments %></td>
+          <% if current_user.username == "admin" %>
+            <td><%= link_to edit_app_path(app) do %>
+                  <i class = "glyphicon glyphicon-edit ikona"></i><%end%>
+                <%= link_to app, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                  <i class = "glyphicon glyphicon-floppy-remove ikona"></i><%end%></td>
+         <%end%>
+      </tr>
+    <% end %>
+  </tbody>
+  </table><br>
+  <div class="button"> <%= button_to 'New App', new_app_path, :method => :get, form: {:target => "_blank"}  %>
+  </div>
+</div>
