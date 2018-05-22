@@ -10,7 +10,7 @@
 # Sequence.destroy_all
 
 users = User.create! [
-#   { username: "wrymaszewski", password: "123", first_name: "Wojciech", last_name: "Rymaszewski" },
+  { username: "user", password: "1234", first_name: "User", last_name: "User" },
   { username: "admin", password: "1234" , first_name: "Admin", last_name: "Admin"}
 ]
 
