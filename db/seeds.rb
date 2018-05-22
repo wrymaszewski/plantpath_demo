@@ -1,13 +1,13 @@
-# User.destroy_all
-# RegularChemical.destroy_all
-# VectorAttachment.destroy_all
-# Vector.destroy_all
-# MolBiolChemical.destroy_all
-# Primer.destroy_all
-# SequenceAttachment.destroy_all
-# BacterialStock.destroy_all
-# CompetentCell.destroy_all
-# Sequence.destroy_all
+User.destroy_all
+RegularChemical.destroy_all
+VectorAttachment.destroy_all
+Vector.destroy_all
+MolBiolChemical.destroy_all
+Primer.destroy_all
+SequenceAttachment.destroy_all
+BacterialStock.destroy_all
+CompetentCell.destroy_all
+Sequence.destroy_all
 
 users = User.create! [
   { username: "user", password: "1234", first_name: "User", last_name: "User" },
@@ -112,7 +112,7 @@ end
 
 
 csvbac.each do |bac|
-		t = Sequence.where(:name == bac.sequence_name)
+		t = Sequence.where(:name == bac['sequence_name'])
 		b = t.bacterial_stocks.new
 		b.number = bac['number']
 		b.wstawka = bac['wstawka']
