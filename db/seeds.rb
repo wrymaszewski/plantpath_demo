@@ -27,8 +27,8 @@ csv = File.read(Rails.root.join('lib', 'seeds', 'mol_biol.csv')).scrub
 csvmolbiol= CSV.parse(csv, :headers => true)
 csv = File.read(Rails.root.join('lib', 'seeds', 'competent.csv')).scrub
 csvcompetent= CSV.parse(csv, :headers => true)
-csv = File.read(Rails.root.join('lib', 'seeds', 'baza_poprawiona.csv')).scrub
-csvbac= CSV.parse(csv, :headers => true)
+# csv = File.read(Rails.root.join('lib', 'seeds', 'baza_poprawiona.csv')).scrub
+# csvbac= CSV.parse(csv, :headers => true)
 
 csvregchem.each do |r|
 	t = RegularChemical.new
