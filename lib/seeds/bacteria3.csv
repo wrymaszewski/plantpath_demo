@@ -1,4 +1,4 @@
-number,insert,sequence_name,plasmid,tag,species,strain,"antibiotics resistance","methods of cloning",source,comments,place
+number,insert,sequence,plasmid,tag,species,strain,"antibiotics resistance","methods of cloning",source,comments,place
 70,"YFP-NES-2 (aa: 371-384) z HopQ1",HopQ1,pGWB442,N-eYFP,"Escherichia coli",DH5α,Sp,Gateway,PPR,,"nowe Revco 209"
 76,"YFP-NES-1 z HopQ1 (aa: 144-157)",HopQ1,pENTR-D/Topo,,"Escherichia coli",DH5α,Km,Gateway,PPR,,"nowe Revco 209"
 30,YFP,YFP,pGWB441-empty,,"Agrobacterium tumefaciens",GV3101,"Rf; Gn;Sp",Gateway,LPP,,"nowe Revco 209"

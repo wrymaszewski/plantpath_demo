@@ -110,22 +110,22 @@ csvseq.each do |r|
 	t.save
 end
 
-
-csvbac.each do |bac|
-		t = Sequence.where(:name == bac['sequence_name'])
-		b = t.bacterial_stocks.new
-		b.number = bac['number']
-		b.wstawka = bac['wstawka']
-		b.sequence_name = bac['sequence_name']
-		b.plasmid = bac['plasmid']
-		b.tag = bac['tag']
-		b.species = bac['species']
-		b.strain = bac['strain']
-		b.antibiotic_resistance = bac['antibiotic_resistance']
-		b.methods_of_cloning = bac['methods_of_cloning']
-		b.source = bac['source']
-		b.comments = bac['comments']
-		b.place = bac['place']
-		puts "Bacterial stock #{b.wstawka} added"
-		t.save
-end
+#
+# csvbac.each do |bac|
+# 		t = Sequence.where(:name == bac['sequence_name'])
+# 		b = t.bacterial_stocks.new
+# 		b.number = bac['number']
+# 		b.wstawka = bac['wstawka']
+# 		b.sequence_name = bac['sequence_name']
+# 		b.plasmid = bac['plasmid']
+# 		b.tag = bac['tag']
+# 		b.species = bac['species']
+# 		b.strain = bac['strain']
+# 		b.antibiotic_resistance = bac['antibiotic_resistance']
+# 		b.methods_of_cloning = bac['methods_of_cloning']
+# 		b.source = bac['source']
+# 		b.comments = bac['comments']
+# 		b.place = bac['place']
+# 		puts "Bacterial stock #{b.wstawka} added"
+# 		t.save
+# end
